@@ -107,7 +107,8 @@ pythonw proces_img.py
 
 ./examples/images/weapon/
 
-также вы можете выбрать порог confidence. Тут необходимо поменять модель - вы найдете нужную в папке config:   
+также вы можете выбрать порог confidence. Тут необходимо поменять модель - 
+вы найдете нужную в папке config:   
 
 
 путь ./detection/configs/COCO-InstanceSegmentation_weapon/mask_rcnn_R_50_FPN_3x.yaml. 
