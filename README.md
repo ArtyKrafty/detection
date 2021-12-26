@@ -1,7 +1,7 @@
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
 
 
-Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) and генераторов Python с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами DS. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.
+Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов Python с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами DS. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.
 
 
 Здесь представлено два варианта работы модели:   
@@ -27,7 +27,7 @@ source ENV/bin/activate
 
 ```
 1. git clone https://github.com/ArtyKrafty/detection
-2. pip install -r /path/to/requirements.txt - этот шаг можно проспутить, если у вас 
+2. pip install -r /path/to/requirements.txt - этот шаг можно пропустить, если у вас 
 установлены torch, trochvision, cv2
 
 Для работы необходимо, чтобы были установлены Detectron и wxPython
