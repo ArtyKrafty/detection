@@ -3,6 +3,7 @@
 
 Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов Python с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами DS. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.
 
+<h3> 1. Скрипт proces_img.py</h3>
 
 Здесь представлено два варианта работы модели:   
 
