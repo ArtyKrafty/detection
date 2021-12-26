@@ -18,10 +18,11 @@
 
 ```
 pip install virtualenv
-virtualenv ENV
-source ENV/bin/activate
+virtualenv detection
+source detection/bin/activate
 
  Windows путь модет отличаться. Scripts вместо bins. н-р
+ Не используйте conda если у вас M1 silicone - detectron2 тогда может работать некорректно и не бует установлен
 
 ```
 Шаги настройки модуля
@@ -41,15 +42,19 @@ source ENV/bin/activate
 <img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0">
 
 ```
-cd ..
+cd
+
 git clone https://github.com/facebookresearch/detectron2.git
-cd detectron2
-python setup.py build develop
+python -m pip install -e detectron2
+
+# На macOS, необходимо установить так (особенно, если у вас M1)
+CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron2
 
 Если возникнут сложности, можно обратиться к официальной документации
 
 ```
-[Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md)
+[Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md). 
+[Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
 
 ___
