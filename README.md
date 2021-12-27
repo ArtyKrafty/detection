@@ -24,7 +24,8 @@ virtualenv detection
 source detection/bin/activate
 
  Windows путь модет отличаться. Scripts вместо bins. н-р
- Не используйте conda если у вас M1 silicone - detectron2 тогда может работать некорректно и не бует установлен
+ Не используйте conda если у вас M1 silicone - detectron2 тогда может 
+ работать некорректно и не бует установлен
 
 ```
 Шаги настройки модуля
