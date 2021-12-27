@@ -17,7 +17,6 @@ class AnnotateImage(Pipeline):
     def map(self, data):
         dst_image = data["image"].copy()
         data[self.dst] = dst_image
-
         self.annotate_predictions(data)
         return data
 
