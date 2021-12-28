@@ -35,7 +35,7 @@ source detection/bin/activate
 
 ```
 git clone https://github.com/ArtyKrafty/detection
-pip install -r /path/to/requirements.txt - если требуется. Шаг можно пропустить,  
+pip install -r requirements.txt - если требуется. Шаг можно пропустить,  
 установить требуемые библиотеки вручную
 
 Для работы необходимо, чтобы были установлены Detectron, wxPython  - важно установить. Необходимо для работы GUI, torch, trochvision, cv2
