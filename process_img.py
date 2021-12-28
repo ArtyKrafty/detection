@@ -6,6 +6,7 @@ from detection.capture_img import CaptureImg
 from detection.predict import Predict
 from detection.save_img import SaveImg
 from detection.annotate_img import AnnotateImg
+from detection.separate_background import Separate
 from detection.utils import detectron
 from detectron2.data.datasets import register_coco_instances
 from detectron2.data import MetadataCatalog
@@ -28,6 +29,8 @@ def parse_args():
                     help="путь для сохранения результатов (по-умолчанию: output)", widget='DirChooser')
     ap.add_argument("-p", "--progress", action="store_true",
                     help="показывать прогресс обработки")
+    ap.add_argument("-sb", "--separate-background", action="store_true",
+                    help="отделить фон")
 
     # Detectron2 гиперпараметры
     ap.add_argument("--config-file",
@@ -55,17 +58,21 @@ def main(args):
                               confidence_threshold=args.confidence_threshold)
 
     predict = Predict(cfg)
-    
-    metadata_name = cfg.DATASETS.TEST[0] if len(cfg.DATASETS.TEST) else "__unused"
-    metadata_name = MetadataCatalog.get(metadata_name)
 
-    
-
-    annotate_image = AnnotateImg("vis_image", metadata_name)
+    if args.separate_background:
+        separate_background = Separate("vis_image")
+        annotate_image = None
+    else:
+        separate_background = None
+        metadata_name = cfg.DATASETS.TEST[0] if len(cfg.DATASETS.TEST) else "__unused"
+        metadata_name = MetadataCatalog.get(metadata_name)
+        annotate_image = AnnotateImg("vis_image", metadata_name)
+        
     save_image = SaveImg("vis_image", args.output)
 
     pipeline = (capture_images |
                 predict |
+                separate_background |
                 annotate_image |
                 save_image)
 
