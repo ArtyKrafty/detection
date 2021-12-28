@@ -38,12 +38,15 @@ git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements.txt - если требуется. Шаг можно пропустить,  
 установить требуемые библиотеки вручную
 
-Для работы необходимо, чтобы были установлены Detectron, wxPython  - важно установить. Необходимо для работы GUI, torch, trochvision, cv2
+Для работы необходимо, чтобы были установлены Detectron, wxPython  - важно установить. 
+Необходимо для работы GUI, torch, trochvision, cv2
 
 pip install -U wxPython
-Detectron2 
 
-необходимо установить в соседний каталог с папкой модуля
+
+Detectron2 необходимо установить в соседний каталог с папкой модуля
+
+
 
 ```
 
