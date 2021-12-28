@@ -110,6 +110,7 @@ pythonw process_img.py
 
 У вас откроется окно:
 
+
 <img src="https://i.ibb.co/NLfhpYc/2021-12-28-08-53-59.png" alt="2021-12-28-08-53-59" border="0">
 
 
