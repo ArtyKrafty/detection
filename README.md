@@ -11,6 +11,7 @@
 
 - `instance segmentation` на классы `COCO`
 - `instance segmentation` для обнаружения оружия на кастомном [датасете](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). Изображения были взяты с репозитория [MLWhiz](https://github.com/MLWhiz/object_detection), которые я разметил вручную с помощью [supervise.ly](https://supervise.ly/). Обучение вы можете посмотреть в этом [ноутбуке](https://nbviewer.org/github/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_detection_ipynb__.ipynb), если захотите обучить свой детектор (доступно и в [Collab](https://colab.research.google.com/drive/1TOSFHYrQrxToQ4v5azP8xzpuLcgEKrQ3?usp=sharing)). Веса базовых моделей можно брать из [зоопарка](https://github.com/facebookresearch/detectron2/blob/main/detectron2/model_zoo/model_zoo.py) - формировать `.yaml` аналогично представленным в папке `config`
+- `separate background` - отделение фона, вместо аннотации. Идея предложена [Arosław Gilewski](https://medium.com/deepvisionguru/how-to-embed-detectron2-in-your-computer-vision-project-817f29149461)
 
 
 Для удобства запуска, данному модулю было добавлено простое `GUI`, с помощью [GOOEY](https://github.com/chriskiehl/Gooey)
@@ -80,7 +81,7 @@ pythonw process_img.py
 
 У вас откроется окно:
 
-<img src="https://i.ibb.co/fxTtpK0/2021-12-26-19-41-55.png" alt="2021-12-26-19-41-55" border="0">
+<img src="https://i.ibb.co/6r5JQQQ/2021-12-28-10-09-59.png" alt="2021-12-28-10-09-59" border="0">
 
 ```
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
@@ -110,7 +111,7 @@ pythonw process_img.py
 
 У вас откроется окно:
 
-<img src="https://i.ibb.co/t4Q58Kt/2021-12-28-08-59-17.png" alt="2021-12-28-08-59-17" border="0">
+<img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0">
 
 
 ```
@@ -128,6 +129,12 @@ pythonw process_img.py
 Нажимаем START и в папке outputs у вас обработанные изображения
 ```
 <img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0">
+
+3. Отделение фона - работает аналогично - достаточно поставить отметку separate_background
+
+Получаем изображение с blur-эффектом на фон
+
+<img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0">
 
 
 <h3> 2. Скрипт process_video.py</h3>
