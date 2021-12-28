@@ -1,4 +1,4 @@
-pytorch == 4.8.2
+torch == 1.10.1
 python
 pip == 21.2.4
 wxPython == 4.1.1
