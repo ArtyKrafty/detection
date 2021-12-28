@@ -34,14 +34,16 @@ source detection/bin/activate
 Шаги настройки модуля
 
 ```
-1. git clone https://github.com/ArtyKrafty/detection
-2. pip install -r /path/to/requirements.txt - если требуется. Шаг можно пропустить,  
+git clone https://github.com/ArtyKrafty/detection
+pip install -r /path/to/requirements.txt - если требуется. Шаг можно пропустить,  
 установить требуемые библиотеки вручную
 
-Для работы необходимо, чтобы были установлены Detectron, wxPython, torch, trochvision, cv2
+Для работы необходимо, чтобы были установлены Detectron, wxPython  - важно установить. Необходимо для работы GUI, torch, trochvision, cv2
 
-3. pip install -U wxPython - важно установить. Необходимо для работы GUI
-4. Detectron2 необходимо установить в соседний каталог с папкой модуля
+pip install -U wxPython
+Detectron2 
+
+необходимо установить в соседний каталог с папкой модуля
 
 ```
 
