@@ -1,11 +1,11 @@
 import os
 from tqdm import tqdm
 from gooey import Gooey, GooeyParser
-from detection.capture_video import CaptureVideo
+from detection.capture_vid import CaptureVid
 from detection.predict import Predict
-from detection.annotate_video import AnnotateVideo
-from detection.display_video import DisplayVideo
-from detection.save_video import SaveVideo
+from detection.annotate_vid import AnnotateVid
+from detection.display_vid import DisplayVid
+from detection.save_vid import SaveVid
 from detection.utils import detectron
 from detectron2.data.datasets import register_coco_instances
 from detectron2.data import MetadataCatalog
@@ -55,9 +55,9 @@ def main(args):
 
     # Создаем шаги пайплайна
     if args.input.isdigit():
-        capture_video = CaptureVideo(int(args.input))
+        capture_video = CaptureVid(int(args.input))
     elif os.path.isfile(args.input):
-        capture_video = CaptureVideo(args.input)
+        capture_video = CaptureVid(args.input)
 
 
     cfg = detectron.setup_cfg(config_file=args.config_file,
@@ -71,12 +71,12 @@ def main(args):
     metadata_name = cfg.DATASETS.TEST[0]
     metadata = MetadataCatalog.get(metadata_name)
     
-    annotate_video = AnnotateVideo("vis_image", metadata)
+    annotate_video = AnnotateVid("vis_image", metadata)
 
-    display_video = DisplayVideo("vis_image") \
+    display_video = DisplayVid("vis_image") \
         if args.display else None
 
-    save_video = SaveVideo("vis_image", os.path.join(args.output, args.out_video)) if args.out_video else None
+    save_video = SaveVid("vis_image", os.path.join(args.output, args.out_video)) if args.out_video else None
 
     pipeline = (capture_video |
                 predict |
@@ -95,12 +95,12 @@ def main(args):
     except KeyboardInterrupt:
         return
     finally:
-        if isinstance(predict, CaptureVideo):
-            capture_video.cleanup()
-        if display_video:
-            display_video.cleanup()
+        if isinstance(predict, CaptureVid):
+            capture_vid.cleanup()
+        if display_vid:
+            display_vid.cleanup()
         if save_video:
-            save_video.cleanup()
+            save_vid.cleanup()
 
 
 if __name__ == "__main__":

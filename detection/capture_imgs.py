@@ -1,11 +1,11 @@
 import cv2
 
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 import detection.utils.files as fs
 
 
 
-class CaptureImages(Pipeline):
+class CaptureImgs(Pipeline):
 
     def __init__(self, path, valid_exts=(".jpg", ".png", ".jpeg"), level=None, contains=None):
         self.path = path

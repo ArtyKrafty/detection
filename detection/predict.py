@@ -1,4 +1,4 @@
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 from detectron2.engine.defaults import DefaultPredictor
 
 

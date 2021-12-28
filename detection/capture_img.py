@@ -1,9 +1,9 @@
 import cv2
 
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 
 
-class CaptureImage(Pipeline):
+class CaptureImg(Pipeline):
 
     def __init__(self, src):
         self.src = src

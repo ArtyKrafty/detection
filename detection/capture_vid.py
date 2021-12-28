@@ -1,8 +1,8 @@
 import cv2
 
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 
-class CaptureVideo(Pipeline):
+class CaptureVid(Pipeline):
     def __init__(self, src):
 
         self.cap = cv2.VideoCapture(src)

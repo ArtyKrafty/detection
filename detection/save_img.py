@@ -1,10 +1,10 @@
 import os
 import cv2
 
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 
 
-class SaveImage(Pipeline):
+class SaveImg(Pipeline):
 
     def __init__(self, src, path, image_ext="jpg", jpg_quality=None, png_compression=None):
         self.src = src

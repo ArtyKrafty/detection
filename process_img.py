@@ -1,11 +1,11 @@
 import os
 from tqdm import tqdm
 from gooey import Gooey, GooeyParser
-from detection.capture_images import CaptureImages
-from detection.capture_image import CaptureImage
+from detection.capture_imgs import CaptureImgs
+from detection.capture_img import CaptureImg
 from detection.predict import Predict
-from detection.save_image import SaveImage
-from detection.annotate_image import AnnotateImage
+from detection.save_img import SaveImg
+from detection.annotate_img import AnnotateImg
 from detection.utils import detectron
 from detectron2.data.datasets import register_coco_instances
 from detectron2.data import MetadataCatalog
@@ -47,8 +47,8 @@ def main(args):
     os.makedirs(args.output, exist_ok=True)
 
     # Создаем шаги пайплайна
-    capture_images = CaptureImages(args.input) \
-        if os.path.isdir(args.input) else CaptureImage(args.input)
+    capture_images = CaptureImgs(args.input) \
+        if os.path.isdir(args.input) else CaptureImg(args.input)
 
     cfg = detectron.setup_cfg(config_file=args.config_file,
                               weights_file=args.weights,
@@ -61,8 +61,8 @@ def main(args):
 
     
 
-    annotate_image = AnnotateImage("vis_image", metadata_name)
-    save_image = SaveImage("vis_image", args.output)
+    annotate_image = AnnotateImg("vis_image", metadata_name)
+    save_image = SaveImg("vis_image", args.output)
 
     pipeline = (capture_images |
                 predict |

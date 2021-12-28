@@ -1,10 +1,10 @@
 import cv2
 import os
 
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 
 
-class SaveVideo(Pipeline):
+class SaveVid(Pipeline):
 
     def __init__(self, src, filename, fps=30, fourcc=('m', 'p', '4', 'v')):
         dirname = os.path.dirname(os.path.abspath(filename))

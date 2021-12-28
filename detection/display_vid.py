@@ -1,9 +1,9 @@
 import cv2
 
-from detection.pipeline import Pipeline
+from detection.pipe import Pipeline
 
 
-class DisplayVideo(Pipeline):
+class DisplayVid(Pipeline):
 
     def __init__(self, src, window_name=None, org=None):
         self.src = src
