@@ -1,7 +1,7 @@
---find-links https://download.pytorch.org/whl/torch_stable.html
+-find-links https://download.pytorch.org/whl/torch_stable.html
 torch>=1.5.0+cu101
 # Detectron
---find-links https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/index.html
+-find-links https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/index.html
 detectron2
 
 torchvision==0.6.0+cu101
