@@ -46,7 +46,7 @@ def main():
     method = request.method
     if method == 'GET':
         url = request.args.get("url")
-        upload_result = upload(url, public_id="image_001.jpeg")
+        upload_result = upload(url, public_id="image_001")
         dump_response(upload_result)
         url, options = (cloudinary_url(
             upload_result['public_id'],
@@ -56,8 +56,8 @@ def main():
             crop="fill"
         )
         )
-        print(url)
-        response = requests.get(url[5:])
+        url = upload_result['url']
+        response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
         mode = "instance_segmentation"
     elif method == 'POST':
@@ -65,7 +65,7 @@ def main():
             file = request.files['file']
             if file and allowed_file(file.filename):
                 upload_result = upload(file,
-                                       public_id="image_001.jpeg")
+                                       public_id="image_001")
                 dump_response(upload_result)
                 url, options = (cloudinary_url(
                     upload_result['public_id'],
@@ -75,7 +75,8 @@ def main():
                     crop="fill"
                 )
                 )
-                response = requests.get(url[5:])
+                url = upload_result['url']
+                response = requests.get(url)
                 image = Image.open(io.BytesIO(response.content))
                 print(image)
                 mode = request.form["mode"]
