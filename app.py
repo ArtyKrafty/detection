@@ -47,14 +47,16 @@ def main():
                             public_id = "image_001.jpeg", overwrite=True)
 
         dump_response(upload_result)
-        url = cloudinary_url(
-        upload_result['url']
-        )
+        url, options = cloudinary_url(
+                        upload_result['public_id'],
+                        format=upload_result['format'],
+                        width=200,
+                        height=150,
+                        crop="fill"
+                )
         print(url)
         response = requests.get(url)
-        print(response)
         image = Image.open(io.BytesIO(response.content))
-        print(response)
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
@@ -63,14 +65,16 @@ def main():
                 upload_result = upload(url, 
                             public_id = "image_001.jpeg", overwrite=True)
                 dump_response(upload_result)
-                url = cloudinary_url(
-                upload_result['url']
+                url, options = cloudinary_url(
+                                upload_result['public_id'],
+                                format=upload_result['format'],
+                                width=200,
+                                height=150,
+                                crop="fill"
                 )
                 print(url)
                 response = requests.get(url)
-                print(response)
                 image = Image.open(io.BytesIO(response.content))
-                print(response)
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
