@@ -1,5 +1,9 @@
 # https://github.com/facebookresearch/detectron2/blob/main/docker/Dockerfile
 
+FROM python:latest
+RUN pip install --upgrade pip
+RUN pip install ortools
+
 FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
 # use an older system (18.04) to avoid opencv incompatibility (issue#3524)
 
@@ -36,11 +40,6 @@ ARG TORCH_CUDA_ARCH_LIST="Kepler;Kepler+Tesla;Maxwell;Maxwell+Tegra;Pascal;Volta
 ENV TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}"
 
 RUN pip install --user -e detectron2_repo
-
-# add dir
-COPY requirements.txt /home/appuser/detectron2_repo
-RUN pip install --user -r /home/appuser/detectron2_repo/requirements.txt
-RUN pip install --user 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 
 
 # Set a fixed model cache directory.
