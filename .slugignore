@@ -7,3 +7,4 @@
 /exmaples/
 /output/
 .gitignore
+Dockerfile
