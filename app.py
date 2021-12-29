@@ -16,10 +16,10 @@ from detectron2.engine.defaults import DefaultPredictor
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-# UPLOAD_FOLDER = 'static/client/img/'
+UPLOAD_FOLDER = 'static/client/img/'
 
 app = Flask(__name__)
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -39,16 +39,16 @@ def main():
         url = request.args.get("url")
         response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
-        image.save(IMG_PATH)
-        src = IMG_PATH
+        image.save(os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg"))
+        src = os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg")
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
             file = request.files['file'].stream
-            if file and allowed_file(request.files['file'].filename):
-                filename = request.files['file'].filename
-                file.save(IMG_PATH)
-                src = IMG_PATH
+            if file and allowed_file(file.filename):
+                filename = file.filename
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                src = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
