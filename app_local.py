@@ -1,4 +1,5 @@
 import requests
+import os
 import cv2
 import numpy as np
 import io
@@ -38,16 +39,16 @@ def main():
         url = request.args.get("url")
         response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
-        image.save("static/client/img//image_001.jpeg")
-        src = "static/client/img//image_001.jpeg"
+        image.save(os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg"))
+        src = os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg")
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
             file = request.files['file']
             if file and allowed_file(file.filename):
                 filename = file.filename
-                file.save("static/client/img//image_001.jpeg")
-                src = "static/client/img//image_001.jpeg"
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                src = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
@@ -96,9 +97,10 @@ def main():
     file_object = io.BytesIO()
     vis_image.save(file_object, 'JPEG')
     file_object.seek(0)
+    os.remove(src)
     return send_file(file_object, mimetype='image/jpeg')
 
 if __name__ == "__main__":
 
-
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=True)
