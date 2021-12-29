@@ -14,7 +14,7 @@ from flask import Flask, render_template, request, send_file, jsonify
 from detectron2.engine.defaults import DefaultPredictor
 from cloudinary.uploader import upload
 from cloudinary.utils import cloudinary_url
-
+from detectron2 import model_zoo
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
@@ -76,8 +76,8 @@ def main():
             return render_template("error.html")
 
     image = cv2.imread(src)
-    cfg = detectron.setup_cfg(config_file="./configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
-                              weights_file=None,
+    cfg = detectron.setup_cfg(config_file=model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"),
+                              weights_file=model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"),
                               confidence_threshold=CONFIDENCE)
     predictor = DefaultPredictor(cfg)
     outputs = predictor(image)
