@@ -17,7 +17,6 @@ from cloudinary.utils import cloudinary_url
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-UPLOAD_FOLDER = 'static/client/img/'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -48,16 +47,14 @@ def main():
                             public_id = "image_001.jpeg", overwrite=True)
 
         dump_response(upload_result)
-        url, options = cloudinary_url(
-        upload_result['public_id'],
-        format=upload_result['format'],
-        width=200,
-        height=150,
-        crop="fill"
+        url = cloudinary_url(
+        upload_result['url']
         )
-
+        print(url)
         response = requests.get(url)
+        print(response)
         image = Image.open(io.BytesIO(response.content))
+        print(response)
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
@@ -66,16 +63,14 @@ def main():
                 upload_result = upload(url, 
                             public_id = "image_001.jpeg", overwrite=True)
                 dump_response(upload_result)
-                url, options = cloudinary_url(
-                upload_result['public_id'],
-                format=upload_result['format'],
-                width=200,
-                height=150,
-                crop="fill"
+                url = cloudinary_url(
+                upload_result['url']
                 )
-
+                print(url)
                 response = requests.get(url)
+                print(response)
                 image = Image.open(io.BytesIO(response.content))
+                print(response)
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
