@@ -39,9 +39,8 @@ def main():
     if method == 'GET':
         url = request.args.get("url")
         response = requests.get(url)
-        image = Image.open(io.BytesIO(response.content))
-        image.save(os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg"))
-        src = os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg")
+        upload_result = cloudinary.uploader.upload("url", 
+                                        public_id = "image_001.jpeg")
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
