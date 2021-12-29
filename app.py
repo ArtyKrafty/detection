@@ -6,10 +6,11 @@ import io
 from tqdm import tqdm
 from PIL import Image
 from detection.utils import detectron
-from detectron2.data.datasets import register_coco_instances
-from detectron2.data import DatasetCatalog
-from detectron2.data import MetadataCatalog
-from detectron2.utils.visualizer import ColorMode, Visualizer
+# from detectron2.data.datasets import register_coco_instances
+# from detectron2.data import DatasetCatalog
+# from detectron2.data import MetadataCatalog
+# from detectron2.utils.visualizer import ColorMode, Visualizer
+import detectron2
 from flask import Flask, render_template, request, send_file, send_from_directory
 from detectron2.engine.defaults import DefaultPredictor
 
