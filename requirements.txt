@@ -11,5 +11,10 @@ cython == 0.29.21
 munkres == 1.1.4
 pillow == 8.2.0
 opencv-python == 4.5.4.60
+Flask==1.1.1
+Jinja2==2.11.3
+gunicorn==19.9.0
+certifi==2019.11.28
+itsdangerous==1.1.0
 git+https://github.com/facebookresearch/fvcore.git
 git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI

@@ -25,10 +25,6 @@ body {
 
 }
 
-.lable {
-
-  text-align:center;
-}
 
 .container {
   margin: 20px auto;
@@ -74,12 +70,6 @@ body {
 }
 
 
-.dropdown {
-
-    height:28px;
-    width:400px;
-
-}
 .dropdown:before {
   border-bottom-style: solid;
   border-top: none;
@@ -93,7 +83,7 @@ body {
 
 .dropdown-select {
   position: relative;
-  width:200px;
+  width: 130%;
   margin: 0;
   padding: 6px 8px 6px 10px;
   height: 28px;
@@ -178,14 +168,14 @@ body {
 }
 
 .dropdown-dark .dropdown-select > option {
-  background: #444;
+  background: #444
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
 }
 
 .login { 
 	position: absolute;
-	top: 40%;
-	left: 50%;
+	top: 25%;
+	left: 45%;
 	margin: -150px 0 0 -150px;
 	width:500px;
 	height:500px;

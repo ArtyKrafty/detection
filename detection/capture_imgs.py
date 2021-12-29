@@ -22,7 +22,7 @@ class CaptureImgs(Pipeline):
             try:
                 image_file = next(source)
                 image = cv2.imread(image_file)
-
+                
                 data = {
                     "image_id": image_file,
                     "image": image
