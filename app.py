@@ -12,8 +12,8 @@ from detectron2.data import MetadataCatalog
 from detectron2.utils.visualizer import ColorMode, Visualizer
 from flask import Flask, render_template, request, send_file, jsonify
 from detectron2.engine.defaults import DefaultPredictor
-import cloudinary.uploader
-
+from cloudinary.uploader import upload
+from cloudinary.utils import cloudinary_url
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -24,6 +24,11 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def dump_response(response):
+    print("Upload response:")
+    for key in sorted(response.keys()):
+        print("  %s: %s" % (key, response[key]))
 
 @app.route("/")
 def home():
@@ -39,22 +44,37 @@ def main():
     if method == 'GET':
         url = request.args.get("url")
         response = requests.get(url)
-        upload_result = cloudinary.uploader.upload(url, 
-                                        public_id = "image_001.jpeg")
-        app.logger.info(upload_result)
-        jsonify(upload_result)['url']
-        image_url = jsonify(upload_result)['url']
-        response = requests.get(image_url)
+        upload_result = upload(url, 
+                            public_id = "image_001.jpeg", overwrite = true)
+
+        dump_response(upload_result)
+        url, options = cloudinary_url(
+        response['public_id'],
+        format=response['format'],
+        width=200,
+        height=150,
+        crop="fill"
+        )
+
+        response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
             file = request.files['file']
             if file and allowed_file(file.filename):
-                upload_result = cloudinary.uploader.upload(file)
-                app.logger.info(upload_result)
-                image_url = jsonify(upload_result)['url']
-                response = requests.get(image_url)
+                upload_result = upload(url, 
+                            public_id = "image_001.jpeg", overwrite = true)
+                dump_response(upload_result)
+                url, options = cloudinary_url(
+                response['public_id'],
+                format=response['format'],
+                width=200,
+                height=150,
+                crop="fill"
+                )
+
+                response = requests.get(url)
                 image = Image.open(io.BytesIO(response.content))
                 mode = request.form["mode"]
         except:
