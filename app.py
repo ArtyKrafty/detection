@@ -1,6 +1,5 @@
 import requests
 import os 
-os.system('pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.9/index.html')
 import cv2
 import numpy as np
 import io
@@ -17,10 +16,10 @@ from detectron2.engine.defaults import DefaultPredictor
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-UPLOAD_FOLDER = 'static/client/img/'
+# UPLOAD_FOLDER = 'static/client/img/'
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -32,7 +31,7 @@ def home():
 
 @app.route("/predict", methods=['POST', 'GET'])
 def main():
-
+    IMG_PATH = 'file.jpg'
     CONFIDENCE = .7
 
     method = request.method
@@ -40,16 +39,16 @@ def main():
         url = request.args.get("url")
         response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
-        image.save(os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg"))
-        src = os.path.join(app.config['UPLOAD_FOLDER'], "image_001.jpeg")
+        image.save(IMG_PATH)
+        src = IMG_PATH
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
-            file = request.files['file']
-            if file and allowed_file(file.filename):
-                filename = file.filename
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                src = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file = request.files['file'].stream
+            if file and allowed_file(request.files['file'].filename):
+                filename = request.files['file'].filename
+                file.save(IMG_PATH)
+                src = IMG_PATH
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
