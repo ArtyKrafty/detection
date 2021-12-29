@@ -4,5 +4,6 @@
 *.jpeg
 *.png
 *.jpg
-/exmaples
-/output
+/exmaples/
+/output/
+/configs/COCO-InstanceSegmentation_weapon/
