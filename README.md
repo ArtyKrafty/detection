@@ -190,6 +190,15 @@ pythonw process_video.py
 
 3. Скрипт app.py
 
+Находится по адресу: 
+
+Если хотите запустить локально  - необходимо в файле app.py поменять строку: `app.run(debug=True)` на следующие (уже в прекоде):
+```
+
+```    
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=True)
+
 ```
  cd detection
  python app.py
