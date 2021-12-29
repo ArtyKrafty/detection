@@ -56,9 +56,11 @@ def main():
             crop="fill"
         )
         )
-        url = upload_result['url']
+        url = upload_result['secure_url']
         response = requests.get(url)
+        print(url)
         image = Image.open(io.BytesIO(response.content))
+        print(image)
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
@@ -75,10 +77,9 @@ def main():
                     crop="fill"
                 )
                 )
-                url = upload_result['url']
+                url = upload_result['secure_url']
                 response = requests.get(url)
                 image = Image.open(io.BytesIO(response.content))
-                print(image)
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
