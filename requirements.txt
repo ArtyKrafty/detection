@@ -1,9 +1,9 @@
 
 -f https://download.pytorch.org/whl/torch_stable.html
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.8/index.html
+detectron2
 torch== 1.8.1+cpu 
 torchvision==0.9.1+cpu
-git clone https://github.com/facebookresearch/detectron2.git
-python -m pip install -e detectron2
 pillow>=8.3.2
 opencv-python-headless
 requests==2.22.0
