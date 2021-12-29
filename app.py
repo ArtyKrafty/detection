@@ -49,8 +49,8 @@ def main():
 
         dump_response(upload_result)
         url, options = cloudinary_url(
-        response['public_id'],
-        format=response['format'],
+        upload_result['public_id'],
+        format=upload_result['format'],
         width=200,
         height=150,
         crop="fill"
@@ -67,8 +67,8 @@ def main():
                             public_id = "image_001.jpeg", overwrite=True)
                 dump_response(upload_result)
                 url, options = cloudinary_url(
-                response['public_id'],
-                format=response['format'],
+                upload_result['public_id'],
+                format=upload_result['format'],
                 width=200,
                 height=150,
                 crop="fill"
