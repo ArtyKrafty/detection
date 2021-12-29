@@ -39,7 +39,7 @@ RUN pip install --user -e detectron2_repo
 
 # add dir
 COPY requirements.txt /home/appuser/detectron2_repo
-RUN pip install --user -r /home/appuser/detectron2_repo/requirements_dev.txt
+RUN pip install --user -r /home/appuser/detectron2_repo/requirements.txt
 RUN pip install --user 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 
 
