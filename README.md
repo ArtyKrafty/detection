@@ -215,6 +215,8 @@ pythonw process_video.py
 Другой вариант - запуск через Docker:
 
 ```
+cd detection
+
 docker build . -f Dockerfile -t detectron2
 docker run -d -p 8080:8080 detectron2
 
