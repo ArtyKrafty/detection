@@ -48,15 +48,15 @@ def main():
         url = request.args.get("url")
         response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
-        image.save("image_001")
-        src = "image_001"
+        image.save("image_001.jpeg")
+        src = "image_001.jpeg"
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
             file = request.files['file']
             if file and allowed_file(file.filename):
                 upload_result = upload(file,
-                                       public_id="image_001")
+                                       public_id="image_001.jpeg")
                 dump_response(upload_result)
                 url, options = (cloudinary_url(
                     upload_result['public_id'],
@@ -69,8 +69,8 @@ def main():
                 url = upload_result['secure_url']
                 response = requests.get(url)
                 image = Image.open(io.BytesIO(response.content))
-                image.save("image_001")
-                src = "image_001"
+                image.save("image_001.jpeg")
+                src = "image_001.jpeg"
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
