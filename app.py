@@ -10,7 +10,7 @@ from detectron2.data.datasets import register_coco_instances
 from detectron2.data import DatasetCatalog
 from detectron2.data import MetadataCatalog
 from detectron2.utils.visualizer import ColorMode, Visualizer
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, jsonify
 from detectron2.engine.defaults import DefaultPredictor
 import cloudinary.uploader
 
@@ -34,24 +34,33 @@ def home():
 def main():
 
     CONFIDENCE = .7
-
+    app.logger.info('in upload route')
     method = request.method
     if method == 'GET':
         url = request.args.get("url")
         response = requests.get(url)
-        upload_result = cloudinary.uploader.upload("url", 
+        upload_result = cloudinary.uploader.upload(url, 
                                         public_id = "image_001.jpeg")
+        app.logger.info(upload_result)
+        jsonify(upload_result)['url']
+        image_url = jsonify(upload_result)['url']
+        response = requests.get(image_url)
+        image = Image.open(io.BytesIO(response.content))
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
             file = request.files['file']
             if file and allowed_file(file.filename):
                 upload_result = cloudinary.uploader.upload(file)
+                app.logger.info(upload_result)
+                image_url = jsonify(upload_result)['url']
+                response = requests.get(image_url)
+                image = Image.open(io.BytesIO(response.content))
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
 
-    image = cv2.imread(upload_result)
+    image = cv2.imread(image)
     cfg = detectron.setup_cfg(config_file="./configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
                               weights_file=None,
                               confidence_threshold=CONFIDENCE)
