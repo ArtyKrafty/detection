@@ -45,7 +45,7 @@ def main():
         url = request.args.get("url")
         response = requests.get(url)
         upload_result = upload(url, 
-                            public_id = "image_001.jpeg", overwrite = true)
+                            public_id = "image_001.jpeg", overwrite=True)
 
         dump_response(upload_result)
         url, options = cloudinary_url(
@@ -64,7 +64,7 @@ def main():
             file = request.files['file']
             if file and allowed_file(file.filename):
                 upload_result = upload(url, 
-                            public_id = "image_001.jpeg", overwrite = true)
+                            public_id = "image_001.jpeg", overwrite=True)
                 dump_response(upload_result)
                 url, options = cloudinary_url(
                 response['public_id'],
