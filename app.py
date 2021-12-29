@@ -1,5 +1,6 @@
 import requests
-import os
+import os 
+os.system('pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.9/index.html')
 import cv2
 import numpy as np
 import io
