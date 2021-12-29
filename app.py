@@ -12,7 +12,7 @@ from detectron2.data import MetadataCatalog
 from detectron2.utils.visualizer import ColorMode, Visualizer
 from flask import Flask, render_template, request, send_file
 from detectron2.engine.defaults import DefaultPredictor
-import cloudinary
+import cloudinary.uploader
 
 
 
@@ -46,9 +46,6 @@ def main():
         try:
             file = request.files['file']
             if file and allowed_file(file.filename):
-                filename = file.filename
-                cloudinary.config(cloud_name = os.getenv('CLOUD_NAME'), api_key=os.getenv('API_KEY'), 
-                        api_secret=os.getenv('API_SECRET'))
                 upload_result = cloudinary.uploader.upload(file)
                 mode = request.form["mode"]
         except:
