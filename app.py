@@ -12,6 +12,7 @@ from detectron2.data import MetadataCatalog
 from detectron2.utils.visualizer import ColorMode, Visualizer
 from flask import Flask, render_template, request, send_file
 from detectron2.engine.defaults import DefaultPredictor
+import cloudinary
 
 
 
@@ -31,7 +32,7 @@ def home():
 
 @app.route("/predict", methods=['POST', 'GET'])
 def main():
-    IMG_PATH = 'file.jpg'
+
     CONFIDENCE = .7
 
     method = request.method
@@ -44,16 +45,17 @@ def main():
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
-            file = request.files['file'].stream
+            file = request.files['file']
             if file and allowed_file(file.filename):
                 filename = file.filename
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                src = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                cloudinary.config(cloud_name = os.getenv('CLOUD_NAME'), api_key=os.getenv('API_KEY'), 
+                        api_secret=os.getenv('API_SECRET'))
+                upload_result = cloudinary.uploader.upload(file)
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
 
-    image = cv2.imread(src)
+    image = cv2.imread(upload_result)
     cfg = detectron.setup_cfg(config_file="./configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
                               weights_file=None,
                               confidence_threshold=CONFIDENCE)
