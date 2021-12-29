@@ -1,0 +1,8 @@
+*.pth
+*.tar
+*.gif
+*.jpeg
+*.png
+*.jpg
+/exmaples
+/output
