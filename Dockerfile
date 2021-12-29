@@ -34,7 +34,7 @@ RUN pip install --user 'git+https://github.com/facebookresearch/fvcore'
 RUN git clone https://github.com/facebookresearch/detectron2 detectron2_repo
 
 
-RUN CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron2
+RUN pip install --user -e detectron2_repo
 
 
 # Set a fixed model cache directory.
