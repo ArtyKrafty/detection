@@ -1,5 +1,5 @@
 import requests
-import os 
+import os
 import cv2
 import numpy as np
 import io
@@ -20,14 +20,18 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 def dump_response(response):
     print("Upload response:")
     for key in sorted(response.keys()):
         print("  %s: %s" % (key, response[key]))
+
 
 @app.route("/")
 def home():
@@ -42,19 +46,17 @@ def main():
     method = request.method
     if method == 'GET':
         url = request.args.get("url")
-        response = requests.get(url)
-        upload_result = upload(url, 
-                            public_id = "image_001.jpeg", overwrite=True)
-
+        upload_result = upload(url, public_id="image_001.jpeg", overwrite=True)
         dump_response(upload_result)
-        url, options = cloudinary_url(
-                        upload_result['public_id'],
-                        format=upload_result['format'],
-                        width=200,
-                        height=150,
-                        crop="fill"
-                )
-        print(url)
+        url, options = (cloudinary_url(
+            upload_result['public_id'],
+            format=upload_result['format'],
+            width=200,
+            height=150,
+            crop="fill"
+        )
+        )
+        print("Fill 200x150 url: " + url)
         response = requests.get(url)
         image = Image.open(io.BytesIO(response.content))
         mode = "instance_segmentation"
@@ -62,17 +64,17 @@ def main():
         try:
             file = request.files['file']
             if file and allowed_file(file.filename):
-                upload_result = upload(url, 
-                            public_id = "image_001.jpeg", overwrite=True)
+                upload_result = upload(file,
+                                       public_id="image_001.jpeg", overwrite=True)
                 dump_response(upload_result)
-                url, options = cloudinary_url(
-                                upload_result['public_id'],
-                                format=upload_result['format'],
-                                width=200,
-                                height=150,
-                                crop="fill"
+                url, options = (cloudinary_url(
+                    upload_result['public_id'],
+                    format=upload_result['format'],
+                    width=200,
+                    height=150,
+                    crop="fill"
                 )
-                print(url)
+                )
                 response = requests.get(url)
                 image = Image.open(io.BytesIO(response.content))
                 mode = request.form["mode"]
@@ -86,16 +88,19 @@ def main():
     predictor = DefaultPredictor(cfg)
     outputs = predictor(image)
     if mode == 'instance_segmentation':
-        metadata_name = cfg.DATASETS.TEST[0] if len(cfg.DATASETS.TEST) else "__unused"
+        metadata_name = cfg.DATASETS.TEST[0] if len(
+            cfg.DATASETS.TEST) else "__unused"
         metadata_name = MetadataCatalog.get(metadata_name)
-        visualizer = Visualizer(image[...,::-1], metadata_name)
-        vis_image = visualizer.draw_instance_predictions(outputs["instances"].to("cpu"))
-        vis_image = Image.fromarray(np.uint8(vis_image.get_image()[:, :, ::-1]))
+        visualizer = Visualizer(image[..., ::-1], metadata_name)
+        vis_image = visualizer.draw_instance_predictions(
+            outputs["instances"].to("cpu"))
+        vis_image = Image.fromarray(
+            np.uint8(vis_image.get_image()[:, :, ::-1]))
 
     else:
-        me_kernel=(7, 7)
-        bg_kernel=(21, 21)
-        desaturate=True
+        me_kernel = (7, 7)
+        bg_kernel = (21, 21)
+        desaturate = True
         instances = outputs["instances"]
         if not instances.has("pred_masks"):
             return
@@ -119,14 +124,13 @@ def main():
         vis_image = cv2.add(foreground, background)
         vis_image = Image.fromarray(np.uint8(vis_image[:, :, ::-1]))
 
-
     file_object = io.BytesIO()
     vis_image.save(file_object, 'JPEG')
     file_object.seek(0)
     os.remove(src)
     return send_file(file_object, mimetype='image/jpeg')
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
 
     app.run(debug=True)
