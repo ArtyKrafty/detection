@@ -2,7 +2,7 @@
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.8/index.html
 detectron2
 pillow>=8.3.2
-opencv-python == 4.5.4.60
+opencv-python-headless
 requests==2.22.0
 Flask==1.1.1
 Jinja2==2.11.3
