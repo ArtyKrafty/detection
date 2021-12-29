@@ -7,3 +7,4 @@
 /exmaples/
 /output/
 /configs/COCO-InstanceSegmentation_weapon/
+.gitignore
