@@ -1,8 +1,11 @@
 
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.8/index.html
 detectron2
--f https://download.pytorch.org/whl/cpu/torchvision-0.9.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
+-f https://download.pytorch.org/whl/torch_stable.html 
+torch
+-f https://download.pytorch.org/whl/torch_stable.html
 torchvision
+
 pillow>=8.3.2
 opencv-python-headless
 requests==2.22.0
@@ -12,5 +15,6 @@ gunicorn==19.9.0
 certifi==2019.11.28
 itsdangerous==1.1.0
 docutils==0.16
+
 
 
