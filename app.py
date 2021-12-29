@@ -19,7 +19,7 @@ from cloudinary.utils import cloudinary_url
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 
 
 def allowed_file(filename):
