@@ -46,21 +46,10 @@ def main():
     method = request.method
     if method == 'GET':
         url = request.args.get("url")
-        upload_result = upload(url, public_id="image_001")
-        dump_response(upload_result)
-        url, options = (cloudinary_url(
-            upload_result['public_id'],
-            format=upload_result['format'],
-            width=200,
-            height=150,
-            crop="fill"
-        )
-        )
-        url = upload_result['secure_url']
         response = requests.get(url)
-        print(url)
         image = Image.open(io.BytesIO(response.content))
-        print(image)
+        image.save("image_001")
+        src = "image_001"
         mode = "instance_segmentation"
     elif method == 'POST':
         try:
@@ -80,11 +69,13 @@ def main():
                 url = upload_result['secure_url']
                 response = requests.get(url)
                 image = Image.open(io.BytesIO(response.content))
+                image.save("image_001")
+                src = "image_001"
                 mode = request.form["mode"]
         except:
             return render_template("error.html")
 
-    image = cv2.imread(image)
+    image = cv2.imread(src)
     cfg = detectron.setup_cfg(config_file="./configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
                               weights_file=None,
                               confidence_threshold=CONFIDENCE)
