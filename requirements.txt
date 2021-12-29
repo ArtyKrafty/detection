@@ -1,6 +1,6 @@
-wxPython == 4.1.1
-Gooey == 1.0.8.1
 tqdm == 4.62.3
+--find-links https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/index.html
+detectron2
 pytest == 6.1.1
 torchvision == 0.11.2
 cython == 0.29.21
