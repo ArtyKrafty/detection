@@ -37,7 +37,7 @@ source detection/bin/activate
  работать некорректно и не будет установлен
 
 ```
-Шаги настройки модуля
+Шаги настройки модуля. Устанавливать requirements.txt рекомендуется только если у вас еще нет `Anaconda`
 
 ```
 git clone https://github.com/ArtyKrafty/detection
@@ -48,7 +48,7 @@ pip install -r requirements.txt - если требуется. Шаг можно
 Необходимо для работы GUI, torch, trochvision, cv2
 
 pip install -U wxPython
-
+pip install Gooey 
 
 Detectron2 необходимо установить в соседний каталог с папкой модуля
 
