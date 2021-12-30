@@ -2,7 +2,6 @@ import os
 from tqdm import tqdm
 from gooey import Gooey, GooeyParser
 from detection.capture_imgs import CaptureImgs
-from detection.capture_img import CaptureImg
 from detection.predict import Predict
 from detection.save_img import SaveImg
 from detection.annotate_img import AnnotateImg
