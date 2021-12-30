@@ -1,5 +1,18 @@
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
 
+<a id='link6'></a>
+
+
+Содержание:  
+
+- [Введение](#link1)  
+- [Локальная работа](#link2)  
+   - [Скрипт process_img.py](#link3)  
+   - [Скрипт process_video.py](#link4)   
+- [Web-приложение](#link5) 
+
+
+<h3>Введение</h3><a id='link1'></a>
 
 Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов Python с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами DS. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.  
 
@@ -12,8 +25,11 @@
 Интерфейс позволяет, не углубляясь в код, производить сегментацию изображений, в том числе и затенять фон.
 
 2. **Web-приложение**. Реализовно дополнительно web-приложение с ограниченной функциональностью - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, воможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория - запус через `app_local.py`
+----
+[К содержанию](#link6)
 
-<h3> 1. Скрипт process_img.py</h3>
+<h3>Локальная работа</h3><a id='link2'></a>
+<h4> 1. Скрипт process_img.py</h4><a id='link3'></a>
 
 Здесь представлено три варианта работы модели:   
 
@@ -153,8 +169,9 @@ pythonw process_img.py
 
 <img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0">
 
-
-<h3> 2. Скрипт process_video.py</h3>
+----
+[К содержанию](#link6)
+<h4> 2. Скрипт process_video.py</h4><a id='link4'></a>
 
 **Использование модуля**
 
@@ -191,8 +208,10 @@ pythonw process_video.py
 поэтому маски от кадра к кадру меняются. Возможно bug наблюдается только на M1 silicone
 
 ![](sample.gif)
-
-3. Скрипт app_local.py
+----
+[К содержанию](#link6)
+<h3>Web-приложение</h3><a id='link5'></a>
+Скрипт app_local.py - для запуска локально
 
 <a id='link'></a>
 
