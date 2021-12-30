@@ -74,7 +74,7 @@ CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron
 Если возникнут сложности, можно обратиться к официальной документации
 
 ```
-[Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md). 
+[Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).   
 [Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
 
