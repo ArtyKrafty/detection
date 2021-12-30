@@ -7,6 +7,15 @@ import detection.utils.files as fs
 
 class CaptureImgs(Pipeline):
 
+    """
+    
+    Класс входит в pipeline обработки изображений. 
+    Принимает на вход путь к файлам. Собирает словарь,
+    составленный из названия изображения в папке input,
+    изображения и передает словарь в модель для предсказаний
+
+    """
+
     def __init__(self, path, valid_exts=(".jpg", ".png", ".jpeg"), level=None, contains=None):
         self.path = path
         self.valid_exts = valid_exts

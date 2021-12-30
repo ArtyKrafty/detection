@@ -5,6 +5,14 @@ from detection.pipe import Pipeline
 
 class DisplayVid(Pipeline):
 
+    """
+    
+    Класс входит в pipeline обработки видео. 
+    Принимает на вход путь к готовым файлам. Позволяет в реальном
+    времени налюдать за процессом обработки. Необходимо Gpu
+    
+    """
+
     def __init__(self, src, window_name=None, org=None):
         self.src = src
         self.window_name = window_name if window_name else src

@@ -20,7 +20,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
 
-
+# скрипт app.py нужен для работы web-приложения на сервере heroku
 
 def allowed_file(filename):
     return '.' in filename and \

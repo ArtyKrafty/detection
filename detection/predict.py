@@ -4,6 +4,13 @@ from detectron2.engine.defaults import DefaultPredictor
 
 class Predict(Pipeline):
 
+    """
+    
+    Класс, общий и для видео и для изображений.
+    Создает и загружает модель и производит инференс
+    
+    """
+
     def __init__(self, cfg):
         self.predictor = DefaultPredictor(cfg)
         

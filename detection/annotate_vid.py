@@ -8,6 +8,23 @@ from detectron2.utils.video_visualizer import VideoVisualizer
 from detection.pipe import Pipeline
 
 class AnnotateVid(Pipeline):
+
+    """
+    
+    Класс входит в pipeline обработки видео. 
+    Принимает на вход предсказания. Производит аннотацию видео
+    и передает итог в класс сохранения. 
+
+    __________________________________________________________
+
+    примечание: на данный момент наблюдается bug у Detectron2
+    поэтому работает на Visualizer, вместо VideoVisualizer
+    код закомментирован под VideoVisualizer
+
+
+    """
+
+
     def __init__(self, vis, metadata, instance_mode=ColorMode.IMAGE):
         self.vis = vis
         self.metadata = metadata

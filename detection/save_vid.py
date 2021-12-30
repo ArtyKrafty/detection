@@ -6,6 +6,12 @@ from detection.pipe import Pipeline
 
 class SaveVid(Pipeline):
 
+    """
+    
+    Класс, для сохранения видео по указанному пути
+    
+    """
+
     def __init__(self, src, filename, fps=30, fourcc=('m', 'p', '4', 'v')):
         dirname = os.path.dirname(os.path.abspath(filename))
         os.makedirs(dirname, exist_ok=True)

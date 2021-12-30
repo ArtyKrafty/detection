@@ -8,6 +8,15 @@ import cv2
 
 class Separate(Pipeline):
 
+    """
+    
+    Класс, для отделения фона изображения.
+    Предсказанная маска инвертируется, по сути мы выделяем
+    обратное маске часть изображения и не наносим аннотацию 
+    в виде классов и уверенности
+    
+    """
+
     def __init__(self, vis, me_kernel=(7, 7), bg_kernel=(21, 21), desaturate=True):
         self.vis = vis
         self.me_kernel = me_kernel

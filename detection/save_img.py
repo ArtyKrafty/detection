@@ -6,6 +6,13 @@ from detection.pipe import Pipeline
 
 class SaveImg(Pipeline):
 
+    """
+    
+    Класс, для сохранения изображений по указанному пути
+    
+    """
+
+
     def __init__(self, src, path, image_ext="jpg", jpg_quality=None, png_compression=None):
         self.src = src
         self.path = path

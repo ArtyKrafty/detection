@@ -12,6 +12,8 @@ from detectron2.data.datasets import register_coco_instances
 from detectron2.data import MetadataCatalog
 from detectron2.data import DatasetCatalog
 
+# скрипт для запуска локального приложения. Через pythonw. Обработка изображений
+
 @Gooey(progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
        progress_expr="current / total * 100",
        timing_options = {

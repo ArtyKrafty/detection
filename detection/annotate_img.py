@@ -7,6 +7,17 @@ from detection.pipe import Pipeline
 
 
 class AnnotateImg(Pipeline):
+
+    """
+    
+    Класс входит в pipeline обработки изображений. 
+    Принимает на вход предсказания. Производит аннотацию изображения
+    и передает итог в класс сохранения. Работает, 
+    если не выбран параметр - отделение фона
+
+
+    """
+
     def __init__(self, vis, metadata_name):
         self.vis = vis
         self.metadata_name = metadata_name

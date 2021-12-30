@@ -13,7 +13,7 @@ from detectron2.utils.visualizer import ColorMode, Visualizer
 from flask import Flask, render_template, request, send_file
 from detectron2.engine.defaults import DefaultPredictor
 
-
+# скрипт app_local.py нужен для работы web-приложения на локальной машине
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 UPLOAD_FOLDER = 'static/client/img/'
