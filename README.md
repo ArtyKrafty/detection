@@ -64,14 +64,10 @@ source detection/bin/activate
 git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements_loc.txt
 
-Для работы необходимо, чтобы были установлены Detectron, wxPython  - важно установить. 
-Необходимо для работы GUI, torch, trochvision, cv2
-
-Detectron2 необходимо установить в соседний каталог с папкой модуля
-
-
 
 ```
+
+Detectron2 необходимо установить в соседний каталог с папкой модуля
 
 <img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0">
 
