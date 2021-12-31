@@ -35,8 +35,7 @@ ENV FORCE_CUDA="1"
 ARG TORCH_CUDA_ARCH_LIST="Kepler;Kepler+Tesla;Maxwell;Maxwell+Tegra;Pascal;Volta;Turing"
 ENV TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}"
 
-RUN pip install --user -e detectron2_repo
-
+RUN python -m pip install --user -e detectron2_repo
 # Set a fixed model cache directory.
 ENV FVCORE_CACHE="/tmp"
 WORKDIR /home/appuser/detectron2_repo
