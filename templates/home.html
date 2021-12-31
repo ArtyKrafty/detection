@@ -16,8 +16,6 @@
         <h3>загрузите Ваш файл в формате .jpeg, .jpg, .png или укажите ссылку на него</h3> 
                 <br>
         <h4 for="number"> Если вы хотите классифицировать изображения - Ваш режим Сегментация. Для выделения фона - Затенить фон. Также вы можете выбрать Blur или сделать изображение черно-белым. Некоторые режимы могут занять некоторое время. Для ссылок доступна только сегментация</h4> 
-        <br>
-        <br>
         <hr size="4" width="100%" color="white"> 
 
           
@@ -37,7 +35,6 @@
                     </select>
                 </div>
             <br>
-            <br>
             <input type="file" name="file">
             <input name="submit" type="submit" class="btn btn-primary btn-block btn-large">
             </form>
@@ -49,7 +46,7 @@
     <form action="/predict" enctype = "multipart/form-data" method="GET" style="text-align: left;">
         <label for="url">Введите для изображения ссылку https:// URL. Доступна только сегментация: </label>
         <br>
-        <br>
+
         <input type="url" name="url" id="url"
            placeholder="https://img_001.com"
            value = "https://i.ibb.co/fGc8xgf/0001.jpg"
