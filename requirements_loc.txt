@@ -6,5 +6,4 @@ tqdm
 requests==2.22.0
 Flask==1.1.1
 Gooey
-
-
+git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
