@@ -63,12 +63,9 @@ source detection/bin/activate
 ```
 git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements_loc.txt
-pip install -U wxPython
-pip install Gooey 
 
 Для работы необходимо, чтобы были установлены Detectron, wxPython  - важно установить. 
 Необходимо для работы GUI, torch, trochvision, cv2
-
 
 Detectron2 необходимо установить в соседний каталог с папкой модуля
 
