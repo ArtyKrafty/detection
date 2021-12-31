@@ -74,7 +74,15 @@ Detectron2 необходимо установить в соседний кат�
 выбираем Package - PIP и копируем команду для установки
 
 
-<img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0">
+<img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0">  
+
+
+Например, для `CPU`:
+
+```
+pip3 install torch torchvision torchaudio
+
+```
 
 ```
 cd
