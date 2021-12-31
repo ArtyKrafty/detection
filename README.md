@@ -67,7 +67,7 @@ Detectron2 необходимо установить в соседний кат�
 <img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0">
 
 Для Win у вас должно быть установлено Visual C++ 2015 build tools   
-Если нет - установите [отсюда](https://go.microsoft.com/fwlink/?LinkId=691126)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
+Если нет - установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
 
 
 ```
