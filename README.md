@@ -47,15 +47,19 @@
 ---
 **Установка локально**  
 
-Рекомендуется устанавливать в `virtuenv`.
-Также рекомендуется дочитать инструкции до конца перед началом установки. Для `Win` рекомендуется использовать `Ubuntu 20.04.3 LTS` с `WLS2` или `Conda` терминал
+Рекомендуется устанавливать в `virtuenv`. Необязательный шаг - можно пропустить
 
 ```
 pip install virtualenv
 virtualenv detection
 source detection/bin/activate
 ```
-Шаги настройки модуля. Устанавливать requirements.txt рекомендуется только если у вас еще нет `Anaconda`
+
+
+Также рекомендуется дочитать инструкции до конца перед началом установки. Для `Win` рекомендуется использовать `Ubuntu 20.04.3 LTS` с `WLS2` или `Conda` терминал. Желательно, чтобы у вас уже стояла [Anaconda](https://www.anaconda.com/products/individual)
+
+
+Шаги настройки модуля. 
 
 ```
 git clone https://github.com/ArtyKrafty/detection
