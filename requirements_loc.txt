@@ -1,8 +1,10 @@
-pillow>=8.3.2
+-f https://download.pytorch.org/whl/cu111/torch_stable.html
+torch==1.10
+torchvision==0.11.1 
 opencv-python
+tqdm
 requests==2.22.0
 Flask==1.1.1
-numpy
-gunicorn
-git+https://github.com/facebookresearch/detectron2.git
+Gooey
+
 
