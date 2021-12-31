@@ -70,6 +70,12 @@ Detectron2 необходимо установить в соседний кат�
 Если нет - установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
 
 
+Также, рекомендуется проверить версию torch и torchvision - проверить можно [тут](https://pytorch.org/get-started/locally/) - 
+выбираем Package - PIP и копируем команду для установки
+
+
+<img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0">
+
 ```
 cd
 
@@ -87,7 +93,6 @@ conda install -c conda-forge compilers
 ```
 [Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).   
 [Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
-
 
 ___
 
