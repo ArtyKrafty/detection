@@ -60,7 +60,6 @@ source detection/bin/activate
 ```
 git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements_loc.txt
-pip install -U wxPython
 ```
 
 Detectron2 необходимо установить в соседний каталог с папкой модуля
