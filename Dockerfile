@@ -4,8 +4,8 @@ FROM python:latest
 RUN pip install --upgrade pip
 RUN pip install ortools
 
-# FROM nvidia/cuda:10.2-cudnn7-devel
-FROM nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
+FROM nvidia/cuda:10.2-cudnn7-devel
+
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
