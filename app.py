@@ -91,7 +91,7 @@ def main():
                 vis_image = visualizer.draw_instance_predictions(
                     outputs["instances"].to("cpu"))
                 vis_image = Image.fromarray(
-                    np.uint8(vis_image.get_image()[:, :, ::-1]))
+                    np.uint8(vis_image.get_image()))
 
             else:
                 me_kernel = (7, 7)
