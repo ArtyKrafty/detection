@@ -27,7 +27,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py && \
 # install dependencies
 # See https://pytorch.org/ for other options if you use a different version of CUDA
 RUN pip install --user tensorboard
-RUN pip install --user torch==1.5 torchvision==0.6 -f https://download.pytorch.org/whl/cu101/torch_stable.html
+RUN pip install --user torch== 1.8.1+cpu torchvision==0.9.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN pip install --user 'git+https://github.com/facebookresearch/fvcore'
 # install detectron2
@@ -42,8 +42,8 @@ ENV TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}"
 RUN pip install --user -e detectron2_repo
 
 # add dir
-COPY requirements.txt /home/appuser/detectron2_repo
-RUN pip install --user -r /home/appuser/detectron2_repo/requirements.txt
+COPY requirements_loc.txt /home/appuser/detectron2_repo
+RUN pip install --user -r /home/appuser/detectron2_repo/requirements_loc.txt
 RUN pip install --user 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 
 
