@@ -51,20 +51,15 @@
 Также рекомендуется дочитать инструкции до конца перед началом установки. Для `Win` рекомендуется использовать `Ubuntu 20.04.3 LTS` с `WLS2`
 
 ```
-
 pip install virtualenv
 virtualenv detection
 source detection/bin/activate
-
-
 ```
 Шаги настройки модуля. Устанавливать requirements.txt рекомендуется только если у вас еще нет `Anaconda`
 
 ```
 git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements_loc.txt
-
-
 ```
 
 Detectron2 необходимо установить в соседний каталог с папкой модуля
