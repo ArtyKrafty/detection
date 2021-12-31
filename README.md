@@ -56,9 +56,6 @@ pip install virtualenv
 virtualenv detection
 source detection/bin/activate
 
- Windows путь модет отличаться. Scripts вместо bins. н-р
- Не используйте conda если у вас M1 silicone - detectron2 тогда может 
- работать некорректно и не будет установлен
 
 ```
 Шаги настройки модуля. Устанавливать requirements.txt рекомендуется только если у вас еще нет `Anaconda`
