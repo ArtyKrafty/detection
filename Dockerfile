@@ -1,16 +1,12 @@
 # https://github.com/facebookresearch/detectron2/blob/main/docker/Dockerfile
 
-FROM python:latest
-RUN pip install --upgrade pip
-RUN pip install ortools
-
-FROM nvidia/cuda:10.2-cudnn7-devel
-
+FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
+# use an older system (18.04) to avoid opencv incompatibility (issue#3524)
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
-	python3-opencv ca-certificates python3-dev git wget sudo curl && \
-  rm -rf /var/lib/apt/lists/*
+	python3-opencv ca-certificates python3-dev git wget sudo ninja-build
+RUN ln -sv /usr/bin/python3 /usr/bin/python
 
 # create a non-root user
 ARG USER_ID=1000
@@ -26,8 +22,8 @@ RUN wget https://bootstrap.pypa.io/get-pip.py && \
 
 # install dependencies
 # See https://pytorch.org/ for other options if you use a different version of CUDA
-RUN pip install --user tensorboard
-RUN pip install --user torch== 1.8.1+cpu torchvision==0.9.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install --user tensorboard cmake   # cmake from apt-get is too old
+RUN pip install --user torch==1.10 torchvision==0.11.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 
 RUN pip install --user 'git+https://github.com/facebookresearch/fvcore'
 # install detectron2
@@ -41,12 +37,6 @@ ENV TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}"
 
 RUN pip install --user -e detectron2_repo
 
-# add dir
-COPY requirements_loc.txt /home/appuser/detectron2_repo
-RUN pip install --user -r /home/appuser/detectron2_repo/requirements_loc.txt
-RUN pip install --user 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-
-
 # Set a fixed model cache directory.
 ENV FVCORE_CACHE="/tmp"
 WORKDIR /home/appuser/detectron2_repo
@@ -59,6 +49,6 @@ COPY . /home/appuser/detectron2_repo
 ENV PORT 8080
 EXPOSE 8080
 
-
-# CMD python app_local.py
+# CMD python app.py
 CMD ["python3", "app_local.py"] 
+
