@@ -1,5 +1,8 @@
-<p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
+RUS | [ENG](#ENG)
 
+
+<p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
+<a id='RUS'></a>
 <a id='link6'></a>
 
 
@@ -31,6 +34,7 @@
 
 ----
 [К содержанию](#link6)
+----
 
 <h3>Локальная работа</h3><a id='link2'></a>
 <h4> 1. Скрипт process_img.py</h4><a id='link3'></a>
@@ -82,6 +86,8 @@ Detectron2 необходимо установить в соседний кат�
 
 <img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0">  
 
+
+Если у вас появляется ошибка - `Torchvision error: Could not find module image.pyd` - рекомендую ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением
 
 Например, для `CPU`:
 
@@ -187,6 +193,8 @@ pythonw process_img.py
 
 ----
 [К содержанию](#link6)
+----
+
 <h4> 2. Скрипт process_video.py</h4><a id='link4'></a>
 
 **Использование модуля**
@@ -264,3 +272,10 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
 ```
+----
+[К содержанию](#link6)
+----
+
+[RUS](#RUS) | ENG
+
+<a id='ENG'></a>
