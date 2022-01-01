@@ -258,18 +258,18 @@ pythonw process_video.py
 
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
-Другой вариант - запуск через Docker (на М1 MAC OS данный способ может не сработать) - вес образа 14.4 GB:
+Другой вариант - запуск через Docker - вес образа 14.4 GB:
 
 ```
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run -d -p 127.0.0.1:8080:8080 detectron2
+docker run -d --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 
 
 затем - после того, как закончили:
 
-docker kill $(docker ps -q)
+docker stop detectron2
 docker rm $(docker ps -a -q)
 
 или использовать docker-desktop приложение, что может быть удобнее
@@ -552,18 +552,18 @@ An application with limited functionality will start at the address - `http: // 
 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
-Another option is to run via Docker (on M1 MAC OS, this method may not work) - weight of Image 14.4 GB:
+Another option is to run via Docker - weight of Image 14.4 GB:
 
 ```
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run -d -p 127.0.0.1:8080:8080 detectron2
+docker run -d --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 
 
-then, after finish:
+and after finish:
 
-docker kill $(docker ps -q)
+docker stop detectron2
 docker rm $(docker ps -a -q)
 
 or you can use docker-desktop app
