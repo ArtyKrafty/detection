@@ -15,6 +15,8 @@ from detectron2.engine.defaults import DefaultPredictor
 
 # скрипт app_local.py нужен для работы web-приложения на локальной машине
 
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 UPLOAD_FOLDER = 'static/client/img/'
 if not os.path.exists(UPLOAD_FOLDER):
