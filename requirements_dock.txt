@@ -1,0 +1,4 @@
+opencv-python
+tqdm
+requests==2.22.0
+Flask==1.1.1
