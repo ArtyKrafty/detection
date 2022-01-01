@@ -572,7 +572,7 @@ docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | aw
 
 <h3>Credits</h3><a id='linkeng001'></a>
 
-1. [Курс Deep learning school](https://www.dlschool.org/pro-track)  
+1. [Deep learning school](https://www.dlschool.org/pro-track)  
 2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - CV engineer  
 3. [Detectron2](https://github.com/facebookresearch/detectron2) - Meta library for working with images  
 4. [OpenCV](https://opencv.org/) - video and image processing tool  
