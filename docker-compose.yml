@@ -10,8 +10,6 @@ services:
       resources:
         reservations:
           devices:
-            - capabilities:
-              - gpu
     shm_size: "8gb"
     ulimits:
       memlock: -1
