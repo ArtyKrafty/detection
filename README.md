@@ -265,7 +265,6 @@ pythonw process_video.py
 
 ```
 git clone https://github.com/ArtyKrafty/detection
-docker pull nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
 
 cd detection
 
@@ -564,7 +563,6 @@ Another option is to run via Docker - weight of Image 14.4 GB:
 
 ```
 git clone https://github.com/ArtyKrafty/detection
-docker pull nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
 cd detection
 
 docker build . -f Dockerfile -t detectron2
