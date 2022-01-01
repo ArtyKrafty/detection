@@ -38,4 +38,4 @@ COPY . /home/appuser/detectron2_repo
 
 ENV PORT 8080
 EXPOSE 8080
-CMD ["python3", "app_local.py"] 
+CMD ["python3", "app_local.py", "-e", "production"] 
