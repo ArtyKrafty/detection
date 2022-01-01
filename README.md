@@ -13,6 +13,7 @@ RUS | [ENG](#ENG)
    - [Скрипт process_img.py](#link3)  
    - [Скрипт process_video.py](#link4)   
 - [Web-приложение](#link5) 
+- [Ссылки](#linkru001)
 
 *Примечание* Приложение в спящем режим. Для запуска потребуется время. Также, возможны сбои в работе - приложение на бесплатном сервере. 
 Фото после загрузки удаляются. 
@@ -276,6 +277,21 @@ docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | aw
 ----
 [К содержанию](#link6)
 
+
+<h3>Ссылки</h3><a id='linkru001'></a>
+
+1. [Курс Deep learning school](https://www.dlschool.org/pro-track)  
+2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - инженер CV  
+3. [Detectron2](https://github.com/facebookresearch/detectron2) - библиотека Meta для работы с изображениями  
+4. [OpenCV](https://opencv.org/) - средство обработки видео и изображений  
+5. [Heroku](https://www.heroku.com/) - быстрый способ разработки и размещения приложений  
+6. [pyTorch](https://pytorch.org/docs/stable/torch.html) - фреймворк работы с нейронными сетями  
+7. [Docker](https://www.docker.com/) - средство упаковки и перемещения изображений  
+8. [MLWhiz](https://github.com/MLWhiz/object_detection) - предоставлены образцы изображений для разметки
+
+----
+[К содержанию](#link6)
+
 [RUS](#RUS) | ENG
 
 <a id='ENG'></a>
@@ -293,6 +309,7 @@ Table of content:
    - [Script process_img.py](#link10)  
    - [Script process_video.py](#link11)   
 - [Web-application](#link12) 
+- [Credits](#linkeng001)
 
 *Note* Application is in sleep mode. It will take time to launch. Also, malfunctions are possible - the application is on a free server.
 Photos are deleted after upload.
@@ -549,5 +566,21 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
 ```
+----
+[Back to contest](#link7)
+
+
+<h3>Credits</h3><a id='linkeng001'></a>
+
+1. [Курс Deep learning school](https://www.dlschool.org/pro-track)  
+2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - CV engineer  
+3. [Detectron2](https://github.com/facebookresearch/detectron2) - Meta library for working with images  
+4. [OpenCV](https://opencv.org/) - video and image processing tool  
+5. [Heroku](https://www.heroku.com/) - a fast way to develop and host applications  
+6. [pyTorch](https://pytorch.org/docs/stable/torch.html) - framework for working with neural networks  
+7. [Docker](https://www.docker.com/) - packaging and image transfer tool
+8. [MLWhiz](https://github.com/MLWhiz/object_detection) - provided sample images for markup
+
+
 ----
 [Back to contest](#link7)
