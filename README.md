@@ -269,7 +269,7 @@ docker run -d -p 8080:8080 detectron2
 
 затем - после того, как закончили:
 
-docker stop $(docker ps -a -q) 
+docker stop -t detectron2
 docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
 ```
