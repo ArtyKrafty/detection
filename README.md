@@ -264,14 +264,15 @@ pythonw process_video.py
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run -d -p 8080:8080 detectron2
+docker run -d -p 127.0.0.1:8080:8080 detectron2
 
 
 затем - после того, как закончили:
 
-docker stop -t detectron2
-docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
+docker kill $(docker ps -q)
+docker rm $(docker ps -a -q)
 
+или использовать docker-desktop приложение, что может быть удобнее
 ```
 <img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
 
@@ -557,15 +558,15 @@ Another option is to run via Docker (on M1 MAC OS, this method may not work) - w
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run -d -p 8080:8080 detectron2
+docker run -d -p 127.0.0.1:8080:8080 detectron2
 
 
+then, after finish:
 
-then - after finished:
+docker kill $(docker ps -q)
+docker rm $(docker ps -a -q)
 
-docker stop $(docker ps -a -q) 
-docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
-
+or you can use docker-desktop app
 ```
 
 <img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
