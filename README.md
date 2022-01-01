@@ -390,7 +390,7 @@ the most common problem is the lack of a C ++ compiler:
 conda install -c conda-forge compilers
 
 ```
-[Detectron2 Official Installation Guide](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).
+[Detectron2 Official Installation Guide](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).  
 [Official Installation Guide for Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
 ___
@@ -462,7 +462,7 @@ Press START and in the outputs folder you have processed images
 
 3. Separating the background - works the same way - just check the separate_background
 
-Getting an image with a blur effect on the backgroundн
+Getting an image with a blur effect on the background
 
 <img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0">
 
