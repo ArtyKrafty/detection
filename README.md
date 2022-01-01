@@ -308,7 +308,7 @@ The aim of the work was to implement various approaches to integrating Detectron
 weapons, including video. By expanding the training data, you can get more accurate results.
 The interface allows, without delving into the code, to perform image segmentation, including shading the background.
 
-2. **Web Application**. An additional web application with limited functionality has been implemented - Located at: https://detartyseg.herokuapp.com/. Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker] (https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
+2. **Web Application**. An additional web application with limited functionality has been implemented - Located at: https://detartyseg.herokuapp.com/. Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
 
 ----
 [Back to contest](#link7)
@@ -322,7 +322,7 @@ Here are three options for how the model works:
 - `instance segmentation` into classes` COCO`
 - `instance segmentation` for detecting weapons on a custom [dataset](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). The images were taken from the [MLWhiz](https://github.com/MLWhiz/object_detection) repository, which I mapped out manually using [supervise.ly](https://supervise.ly/).
 
-You can watch the training in this [notebook](https://nbviewer.org/github/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_detection_ipynb__.ipynb), if you want to train your detector (available in [Collab ] (https://colab.research.google.com/drive/1TOSFHYrQrxToQ4v5azP8xzpuLcgEKrQ3?usp=sharing)). The weights of the base models can be taken from the [zoo](https://github.com/facebookresearch/detectron2/blob/main/detectron2/model_zoo/model_zoo.py) - form `.yaml` similarly to those presented in the` config` folder
+You can watch the training in this [notebook](https://nbviewer.org/github/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_detection_ipynb__.ipynb), if you want to train your detector (available in [Collab](https://colab.research.google.com/drive/1TOSFHYrQrxToQ4v5azP8xzpuLcgEKrQ3?usp=sharing)). The weights of the base models can be taken from the [zoo](https://github.com/facebookresearch/detectron2/blob/main/detectron2/model_zoo/model_zoo.py) - form `.yaml` similarly to those presented in the` config` folder
 - `separate background` - separation of the background, instead of annotation. Idea suggested by [Arosław Gilewski](https://medium.com/deepvisionguru/how-to-embed-detectron2-in-your-computer-vision-project-817f29149461)
 
 
@@ -355,7 +355,7 @@ Detectron2 must be installed in the adjacent directory with the module folder
 <img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0">
 
 For Win, you must have Visual C ++ 2015 build tools installed
-If not, install [from here](https://www.microsoft.com/en-ru/download/confirmation.aspx?id=48159) - this is required for [Detectron2] (https://github.com/philferriere/ cocoapi)
+If not, install [from here](https://www.microsoft.com/en-ru/download/confirmation.aspx?id=48159) - this is required for [Detectron2](https://github.com/philferriere/cocoapi)
 
 
 Also, it is recommended to check the version of torch and torchvision - you can check [here](https://pytorch.org/get-started/locally/) - select Package - copy the command to install
