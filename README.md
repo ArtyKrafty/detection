@@ -273,6 +273,8 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
 ```
+<img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
+
 ----
 [К содержанию](#link6)
 
@@ -565,6 +567,8 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 
 ```
+
+<img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
 ----
 [Back to contest](#link7)
 
