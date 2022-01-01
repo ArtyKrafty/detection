@@ -258,7 +258,7 @@ pythonw process_video.py
 
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
-Другой вариант - запуск через Docker (на М1 MAC OS данный способ может не сработать):
+Другой вариант - запуск через Docker (на М1 MAC OS данный способ может не сработать) - вес образа 14.4 GB:
 
 ```
 cd detection
@@ -549,7 +549,7 @@ An application with limited functionality will start at the address - `http: // 
 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
-Another option is to run via Docker (on M1 MAC OS, this method may not work):
+Another option is to run via Docker (on M1 MAC OS, this method may not work) - weight of Image 14.4 GB:
 
 ```
 cd detection
