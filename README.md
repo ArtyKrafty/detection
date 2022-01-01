@@ -34,7 +34,7 @@ RUS | [ENG](#ENG)
 
 ----
 [К содержанию](#link6)
-----
+
 
 <h3>Локальная работа</h3><a id='link2'></a>
 <h4> 1. Скрипт process_img.py</h4><a id='link3'></a>
@@ -193,7 +193,6 @@ pythonw process_img.py
 
 ----
 [К содержанию](#link6)
-----
 
 <h4> 2. Скрипт process_video.py</h4><a id='link4'></a>
 
@@ -234,6 +233,7 @@ pythonw process_video.py
 ![](sample.gif)
 ----
 [К содержанию](#link6)
+
 <h3>Web-приложение</h3><a id='link5'></a>
 Скрипт app_local.py - для запуска локально
 
@@ -274,7 +274,6 @@ docker rm $(docker ps -a -q) && docker rmi $(docker images | grep '^<none>' | aw
 ```
 ----
 [К содержанию](#link6)
-----
 
 [RUS](#RUS) | ENG
 
