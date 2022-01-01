@@ -25,8 +25,8 @@ RUN pip3 install --user torch torchvision torchaudio
 RUN pip install --user 'git+https://github.com/facebookresearch/fvcore'
 RUN git clone https://github.com/facebookresearch/detectron2 detectron2_repo
 RUN pip install --user -e detectron2_repo
-COPY requirements_loc.txt /home/appuser/detectron2_repo
-RUN pip install --user -r /home/appuser/detectron2_repo/requirements_loc.txt
+COPY requirements_dock.txt /home/appuser/detectron2_repo
+RUN pip install --user -r /home/appuser/detectron2_repo/requirements_dock.txt
 RUN pip install --user 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 
 ENV FVCORE_CACHE="/tmp"
@@ -39,4 +39,3 @@ COPY . /home/appuser/detectron2_repo
 ENV PORT 8080
 EXPOSE 8080
 CMD ["python3", "app_local.py"] 
-
