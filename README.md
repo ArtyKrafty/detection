@@ -238,7 +238,7 @@ pythonw process_video.py
 <h3>Web-приложение</h3><a id='link5'></a>
 Скрипт app_local.py - для запуска локально
 
-<a id='link'></a>
+
 
 зеркало для app.py, который находится по адресу: https://detartyseg.herokuapp.com/. 
 К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение
@@ -247,6 +247,7 @@ pythonw process_video.py
 
 
 ```
+ git clone https://github.com/ArtyKrafty/detection
  cd detection
  python app_local.py
  
@@ -258,9 +259,12 @@ pythonw process_video.py
 
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
+<a id='link'></a>
+
 Другой вариант - запуск через Docker - вес образа 14.4 GB:
 
 ```
+git clone https://github.com/ArtyKrafty/detection
 cd detection
 
 docker build . -f Dockerfile -t detectron2
@@ -532,7 +536,6 @@ therefore the masks change from frame to frame. Probably the bug is only observe
 <h3>Web-application</h3><a id='link12'></a>
 Script app_local.py - for local work
 
-<a id='linkdock'></a>
 
 mirror for app.py, which is located at: https://detartyseg.herokuapp.com/.
 Unfortunately - I had to cut the functionality, due to the size restrictions for the application
@@ -541,6 +544,7 @@ If you want to run locally, run `app_local.py`:
 
 
 ```
+ git clone https://github.com/ArtyKrafty/detection
  cd detection
  python app_local.py
  
@@ -552,9 +556,12 @@ An application with limited functionality will start at the address - `http: // 
 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
+<a id='linkdock'></a>
+
 Another option is to run via Docker - weight of Image 14.4 GB:
 
 ```
+git clone https://github.com/ArtyKrafty/detection
 cd detection
 
 docker build . -f Dockerfile -t detectron2
