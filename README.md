@@ -26,7 +26,8 @@ RUS | [ENG](#ENG)
 
 Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов Python с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами DS. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.  
 
-Целью работы была реализация различных подходв внедрения Detectron2 и OpenCV в проекты - как локальные, так и web
+Целью работы была реализация различных подходв внедрения Detectron2 и OpenCV в проекты - как локальные, так и web с использованием модулей 
+или же в виде скриптов с применением различных вариантов работы моделей
 
 *Примечание* Если у Вас не открывается ссылка на medium - включите режим инкогнито
 
@@ -40,6 +41,7 @@ RUS | [ENG](#ENG)
         - Instance segmentation на изображениях
         - Keypoints
         - Затемнение фона (separate background)
+        - Panoptic segmentation
         - Детекция оружия (custom dataset)
       - Видео:
         - Instance segmentation на видео
@@ -54,6 +56,7 @@ RUS | [ENG](#ENG)
       - Изображения:
         - Instance segmentation на изображениях
         - Keypoints на изображениях
+        - Panoptic segmentation на изображениях
         - Затемнение фона (separate background)
         - Blur эффект
         - Черно-белое изображение
@@ -76,6 +79,7 @@ RUS | [ENG](#ENG)
 Обучение вы можете посмотреть в этом [ноутбуке](https://nbviewer.org/github/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_detection_ipynb__.ipynb), если захотите обучить свой детектор (доступно и в [Collab](https://colab.research.google.com/drive/1TOSFHYrQrxToQ4v5azP8xzpuLcgEKrQ3?usp=sharing)). Веса базовых моделей можно брать из [зоопарка](https://github.com/facebookresearch/detectron2/blob/main/detectron2/model_zoo/model_zoo.py) - формировать `.yaml` аналогично представленным в папке `config`
 - `separate background` - отделение фона, вместо аннотации. Идея предложена [Arosław Gilewski](https://medium.com/deepvisionguru/how-to-embed-detectron2-in-your-computer-vision-project-817f29149461)
 - `keypoints` - для построения ключевых точек людей на изображениях (`pose-flow`)
+- `panoptic segmentation` - для паноптической сегментации изображений
 
 
 Для удобства запуска, данному модулю было добавлено простое `GUI`, с помощью [GOOEY](https://github.com/chriskiehl/Gooey)
@@ -223,12 +227,23 @@ pythonw process_img.py
 
 4. Построение ключевых точек - работает аналогично оружию - достаточно указать адрес к конфигурации
 ```
-configs/COCO-keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
+configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
 ```
 Получаем изображение с отмеченными ключевыми точками. 
 
 
 <img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0">
+
+5. Паноптическая сегментация изображений - достаточно указать адрес к конфигурации
+
+```
+configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml
+```
+
+<img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0">
+
+
+Целью было продемонстрировать различные варианты работы модели без углублений в код со стороны пользователя данного модуля
 
 ----
 [К содержанию](#link6)
@@ -371,7 +386,8 @@ Photos are deleted after upload.
 
 Modular image processing using [OpenCV](https://opencv.org/) and Python generators using [Detectron2](https://github.com/facebookresearch/detectron2). The idea of modularity allows the industrial processing pipeline to be programmed by several DS specialists. The idea of using generators is taken from [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - as a result, we get a full-fledged module that can be supplemented in the variations we need.
 
-The aim of the work was to implement various approaches to integrating Detectron2 and OpenCV into projects - both local and web
+The aim of the work was to implement various approaches to integrating Detectron2 and OpenCV into projects - both local and web using modules
+or in the form of scripts using different versions of the models
 
 *Note* If you do not have a link to medium - turn on incognito mode
 
@@ -384,6 +400,7 @@ The interface allows, without delving into the code, to perform image segmentati
       - Images:
         - Instance segmentation on images
         - Key points
+        - Panoptic segmentation
         - Separate background
         - Weapon detection (custom data set)
       - Video:
@@ -400,6 +417,7 @@ The interface allows, without delving into the code, to perform image segmentati
       - Images:
         - Instance segmentation on images
         - Keypoints on images
+        - Panoptic segmentation
         - Separate background
         - Blur effect
         - Black and white image
@@ -572,6 +590,16 @@ We get an image with marked key points.
 
 
 <img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0">
+
+5. Panoptic group of images - just specify the address to the configuration
+
+```
+configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml
+```
+
+<img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0">
+
+The goal was to demonstrate various options for the model without delving into the code on the part of the user of this module - it is enough to specify the address to the configuration
 
 ----
 [Back to contest](#link7)
