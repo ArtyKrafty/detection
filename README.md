@@ -1,9 +1,10 @@
 RUS | [ENG](#ENG)
 
+<a id='RUS'></a>
 <h2 align="center">Модульная обработка изображений с использованием OpenCV и генераторов Python с помощью Detectron2. Pipeline, web-приложение и локальное приложение </h2>
 
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
-<a id='RUS'></a>
+
 <a id='link6'></a>
 
 
