@@ -346,11 +346,11 @@ docker rm $(docker ps -qa)
 
 <h3>Ссылки</h3><a id='linkru001'></a>
 
-1. [Курс Deep learning school](https://www.dlschool.org/pro-track). 
-2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - инженер CV  
-3. [Detectron2](https://github.com/facebookresearch/detectron2) - библиотека Meta для работы с изображениями  
-4. [OpenCV](https://opencv.org/) - средство обработки видео и изображений  
-5. [Heroku](https://www.heroku.com/) - быстрый способ разработки и размещения приложений  
+1. [Курс Deep learning school](https://www.dlschool.org/pro-track) - обучают и направляют. 
+2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - инженер CV. Идея использования генераторов python и за baseline удаления фона. 
+3. [Detectron2](https://github.com/facebookresearch/detectron2) - библиотека Meta для работы с изображениями с огромным зоопарком обученных моделей.   
+4. [OpenCV](https://opencv.org/) - средство обработки видео и изображений. Без этой библиотеки было бы сложнее. 
+5. [Heroku](https://www.heroku.com/) - быстрый способ разработки и размещения приложений. 
 6. [pyTorch](https://pytorch.org/docs/stable/torch.html) - фреймворк работы с нейронными сетями  
 7. [Docker](https://www.docker.com/) - средство упаковки и перемещения изображений  
 8. [MLWhiz](https://github.com/MLWhiz/object_detection) - предоставлены образцы изображений для разметки
@@ -700,8 +700,8 @@ can't build `torch`.
 
 <h3>Credits</h3><a id='linkeng001'></a>
 
-1. [Deep learning school](https://www.dlschool.org/pro-track)  
-2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - CV engineer  
+1. [Deep learning school](https://www.dlschool.org/pro-track) - educate and guide.  
+2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - CV engineer. Idea of using pipelines and separate background baseline.   
 3. [Detectron2](https://github.com/facebookresearch/detectron2) - Meta library for working with images  
 4. [OpenCV](https://opencv.org/) - video and image processing tool  
 5. [Heroku](https://www.heroku.com/) - a fast way to develop and host applications  
