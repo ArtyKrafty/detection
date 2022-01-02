@@ -64,7 +64,7 @@ RUS | [ENG](#ENG)
       - Изображения:
         - Instance segmentation на изображениях
         - Keypoints на изображениях
-        - Panoptic segmentation на изображениях
+        - Panoptic segmentation на изображениях (УДАЛЕНО из web. Доступно в docker)
         - Затемнение фона (separate background)
         - Blur эффект
         - Черно-белое изображение
@@ -304,7 +304,8 @@ pythonw process_video.py
 
 
 зеркало для app.py, который находится по адресу: https://detartyseg.herokuapp.com/. 
-К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение
+К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Пришлось убрать паноптическую сегментацию -
+превышения памяти на приложение, на бесплатном сервере. Остался функционал в локальном приложении и docker
 
 Если хотите запустить локально  - запускаем `app_local.py`:
 
@@ -432,7 +433,7 @@ The interface allows, without delving into the code, to perform image segmentati
       - Images:
         - Instance segmentation on images
         - Keypoints on images
-        - Panoptic segmentation
+        - Panoptic segmentation (Deleted from web. Only in docker)
         - Separate background
         - Blur effect
         - Black and white image
@@ -664,7 +665,8 @@ Script app_local.py - for local work
 
 
 mirror for app.py, which is located at: https://detartyseg.herokuapp.com/.
-Unfortunately - I had to cut the functionality, due to the size restrictions for the application
+Unfortunately - I had to cut the functionality, due to the size restrictions for the application. I had to remove the panoptic segmentation -
+memory excess on the application, on a free server. Remained functional in the local application and docker
 
 If you want to run locally, run `app_local.py`:
 
