@@ -119,6 +119,19 @@ def main():
         vis_image = cv2.medianBlur(image, 5)
         vis_image = Image.fromarray(np.uint8(vis_image[:, :, ::-1]))
 
+    elif mode == 'key_points':
+
+        cfg = detectron.setup_cfg(config_file=model_zoo.get_config_file("COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml"),
+                                  weights_file=model_zoo.get_checkpoint_url("COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml"),
+                                  confidence_threshold=CONFIDENCE)
+        predictor = DefaultPredictor(cfg)
+        outputs = predictor(image)
+        metadata_name = cfg.DATASETS.TEST[0] if len(cfg.DATASETS.TEST) else "__unused"
+        metadata_name = MetadataCatalog.get(metadata_name)
+        visualizer = Visualizer(image[...,::-1], metadata_name)
+        vis_image = visualizer.draw_instance_predictions(outputs["instances"].to("cpu"))
+        vis_image = Image.fromarray(np.uint8(vis_image.get_image())) 
+
     file_object = io.BytesIO()
     vis_image.save(file_object, 'JPEG')
     file_object.seek(0)

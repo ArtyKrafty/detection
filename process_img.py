@@ -38,7 +38,7 @@ def parse_args():
     ap.add_argument("--config-file",
                     default="configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
                     help="путь к файлу с настройками модели в папке configs (по-умолчанию, COCO-InstanceSegmentation." 
-                    "Веса задавать не надо. Для оружия - COCO-InstanceSegmentation_weapon)", widget='FileChooser')
+                    "Веса задавать не надо. Для оружия - COCO-InstanceSegmentation_weapon. Keypoints - COCO-Keypoints)", widget='FileChooser')
     ap.add_argument("--weights", default=None,
                     help="путь к файлу с весами .pth", widget='FileChooser')
     ap.add_argument("--confidence-threshold", type=float, default=0.7,
