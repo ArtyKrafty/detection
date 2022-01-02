@@ -40,7 +40,16 @@ class AnnotateImg(Pipeline):
         dst_image = dst_image[..., ::-1]
 
         visualizer = Visualizer(dst_image, self.metadata_name)
-        instances = predictions["instances"]
-        vis_image = visualizer.draw_instance_predictions(instances.to(self.cpu_device))
+
+        if "panoptic_seg" in predictions:
+            pan_seg, seg_info = predictions["panoptic_seg"]
+            vis_image = visualizer.draw_panoptic_seg_predictions(pan_seg.to(self.cpu_device),
+                                                                 seg_info)
+        elif "instances" in predictions:
+            instances = predictions["instances"]
+            vis_image = visualizer.draw_instance_predictions(instances.to(self.cpu_device))
+        
         vis_image = cv2.cvtColor(vis_image.get_image(), cv2.COLOR_RGB2BGR)
-        data[self.vis] = vis_image
+        data[self.vis] = vis_image     
+        
+        

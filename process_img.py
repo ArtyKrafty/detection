@@ -37,8 +37,9 @@ def parse_args():
     # Detectron2 гиперпараметры
     ap.add_argument("--config-file",
                     default="configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
-                    help="путь к файлу с настройками модели в папке configs (по-умолчанию, COCO-InstanceSegmentation." 
-                    "Веса задавать не надо. Для оружия - COCO-InstanceSegmentation_weapon. Keypoints - COCO-Keypoints)", widget='FileChooser')
+                    help="путь к файлу с настройками модели в папке configs - .yaml (по-умолчанию, COCO-InstanceSegmentation." 
+                    "Для оружия выбери - COCO-InstanceSegmentation_weapon. Задать путь к весам. Keypoints - COCO-Keypoints. "
+                    "PanopticSegmentation - COCO-PanopticSegmentation)", widget='FileChooser')
     ap.add_argument("--weights", default=None,
                     help="путь к файлу с весами .pth", widget='FileChooser')
     ap.add_argument("--confidence-threshold", type=float, default=0.7,

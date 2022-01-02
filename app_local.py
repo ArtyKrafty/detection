@@ -135,6 +135,19 @@ def main():
             vis_image = visualizer.draw_instance_predictions(outputs["instances"].to("cpu"))
             vis_image = Image.fromarray(np.uint8(vis_image.get_image()))
 
+        elif mode == 'panoptic':
+
+            cfg = detectron.setup_cfg(config_file="./configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml",
+                                      weights_file=None,
+                                      confidence_threshold=CONFIDENCE)
+            predictor = DefaultPredictor(cfg)
+            pan_seg, seg_info = predictor(image)["panoptic_seg"]
+            metadata_name = cfg.DATASETS.TEST[0] if len(cfg.DATASETS.TEST) else "__unused"
+            metadata_name = MetadataCatalog.get(metadata_name)
+            visualizer = Visualizer(image[...,::-1], metadata_name)
+            vis_image = visualizer.draw_panoptic_seg_predictions(pan_seg.to("cpu"), seg_info)
+            vis_image = Image.fromarray(np.uint8(vis_image.get_image()))
+
         file_object = io.BytesIO()
         vis_image.save(file_object, 'JPEG')
         file_object.seek(0)
