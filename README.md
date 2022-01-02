@@ -21,6 +21,11 @@ RUS | [ENG](#ENG)
 *Примечание* Приложение в спящем режим. Для запуска потребуется время. Также, возможны сбои в работе - приложение на бесплатном сервере. 
 Фото после загрузки удаляются. 
 
+<img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0">
+
+
+Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
+
 
 <h3>Введение</h3><a id='link1'></a>
 
@@ -386,6 +391,11 @@ Table of content:
 
 *Note* Application is in sleep mode. It will take time to launch. Also, malfunctions are possible - the application is on a free server.
 Photos are deleted after upload.
+
+<img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0">
+
+
+The error may be related to out of memory. You can try again or take another picture. There will be no problems with local assembly
 
 <h3>Introduction</h3><a id='link8'></a>
 
