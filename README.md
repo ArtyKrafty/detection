@@ -284,6 +284,9 @@ docker rm $(docker ps -a -q)
 ```
 <img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
 
+*Примечание* Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
+не сможет собрать `torch`
+
 ----
 [К содержанию](#link6)
 
@@ -582,6 +585,11 @@ look files inside: docker run -t -i detectron2 /bin/bash
 ```
 
 <img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
+
+*Note* If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
+can't build `torch`. 
+
+
 ----
 [Back to contest](#link7)
 
