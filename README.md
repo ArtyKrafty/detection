@@ -261,7 +261,7 @@ pythonw process_video.py
 
 <a id='link'></a>
 
-Другой вариант - запуск через Docker - вес образа 14.4 GB:
+Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа 14.4 GB:
 
 ```
 git clone https://github.com/ArtyKrafty/detection
@@ -559,7 +559,7 @@ Here you can load an image from the desktop, select masks on it or darken the ba
 
 <a id='linkdock'></a>
 
-Another option is to run via Docker - weight of Image 14.4 GB:
+Another option is to run via Docker (local copy of https://detartyseg.herokuapp.com/) - weight of Image 14.4 GB:
 
 ```
 git clone https://github.com/ArtyKrafty/detection
