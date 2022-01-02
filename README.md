@@ -278,6 +278,8 @@ docker stop detectron2
 docker rm $(docker ps -a -q)
 
 или использовать docker-desktop приложение, что может быть удобнее
+
+посмотреть директории внутри: docker run -t -i detectron2 /bin/bash
 ```
 <img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
 
@@ -575,6 +577,7 @@ docker stop detectron2
 docker rm $(docker ps -a -q)
 
 or you can use docker-desktop app
+look files inside: docker run -t -i detectron2 /bin/bash
 ```
 
 <img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
