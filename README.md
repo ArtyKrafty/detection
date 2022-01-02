@@ -1,9 +1,11 @@
 RUS | [ENG](#ENG)
 
+<h2 align="center">Модульная обработка изображений с использованием OpenCV и генераторов Python с помощью Detectron2. Pipeline, web-приложение и локальное приложение </h2>
 
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
 <a id='RUS'></a>
 <a id='link6'></a>
+
 
 
 Содержание:  
@@ -270,7 +272,7 @@ git clone https://github.com/ArtyKrafty/detection
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run -d --name detectron2 -p 127.0.0.1:8080:8080 detectron2
+docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 
 
 затем - после того, как закончили:
@@ -308,6 +310,8 @@ docker rm $(docker ps -a -q)
 [RUS](#RUS) | ENG
 
 <a id='ENG'></a>
+
+<h2 align="center">Modular image and video processing with OpenCV and Detectron2. Pipeline, web-app and local-app </h2>
 
 
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
@@ -572,7 +576,7 @@ git clone https://github.com/ArtyKrafty/detection
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run -d --name detectron2 -p 127.0.0.1:8080:8080 detectron2
+docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 
 
 and after finish:
