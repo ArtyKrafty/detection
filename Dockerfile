@@ -22,9 +22,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py && \
 
 
 # Подберите тут https://pytorch.org/get-started/locally/
-RUN pip3 install --user torch torchvision torchaudio
-RUN pip install cython
-RUN pip install --user 'git+https://github.com/facebookresearch/fvcore'
+RUN pip install --user torch torchvision torchaudio cython 'git+https://github.com/facebookresearch/fvcore'
 RUN git clone https://github.com/facebookresearch/detectron2 detectron2_repo
 RUN pip install --user -e detectron2_repo
 
