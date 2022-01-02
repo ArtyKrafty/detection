@@ -228,7 +228,7 @@ configs/COCO-keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
 Получаем изображение с отмеченными ключевыми точками. 
 
 
-<img src="https://i.ibb.co/TvwnH4v/predict.jpg" alt="predict" border="0">
+<img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0">
 
 ----
 [К содержанию](#link6)
@@ -571,7 +571,7 @@ configs/COCO-keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
 We get an image with marked key points.
 
 
-<img src="https://i.ibb.co/TvwnH4v/predict.jpg" alt="predict" border="0">
+<img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0">
 
 ----
 [Back to contest](#link7)
