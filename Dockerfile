@@ -29,17 +29,16 @@ RUN git clone https://github.com/facebookresearch/detectron2 detectron2_repo
 RUN pip install --user -e detectron2_repo
 
 COPY requirements_dock.txt /home/appuser/detectron2_repo
+
 RUN pip install --user -r /home/appuser/detectron2_repo/requirements_dock.txt
 RUN pip install --user 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 
-ENV FVCORE_CACHE="/tmp"
+ENV FVCORE_CACHE="/home/appuser/detectron2_repo/tmp"
 RUN mkdir /home/appuser/detectron2_repo/uploads
 ENV UPLOADS=/home/appuser/detectron2_repo/uploads
-WORKDIR /home/appuser/detectron2_repo
-ENV PILLOW_VERSION=7.0.0
-
-COPY . /home/appuser/detectron2_repo
+COPY . /home/appuser/detection
+WORKDIR /home/appuser/detection
 
 ENV PORT 8080
 EXPOSE 8080
-CMD ["python3", "app_local_dock.py", "-e", "production"]
+CMD ["python3", "app_local_dock.py", "-e", "production", "--allow-root"]
