@@ -143,8 +143,8 @@ def main():
 
         elif mode == 'panoptic':
 
-            cfg = detectron.setup_cfg(config_file=model_zoo.get_config_file("COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml"),
-                                      weights_file=model_zoo.get_checkpoint_url("COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml"),
+            cfg = detectron.setup_cfg(config_file=model_zoo.get_config_file("COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml"),
+                                      weights_file=model_zoo.get_checkpoint_url("COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml"),
                                       confidence_threshold=CONFIDENCE)
             predictor = DefaultPredictor(cfg)
             pan_seg, seg_info = predictor(image)["panoptic_seg"]
