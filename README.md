@@ -261,7 +261,8 @@ pythonw process_video.py
 
 <a id='link'></a>
 
-Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа 14.4 GB:
+Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа 14.4 GB (у вас должен быть установлен
+[Docker](https://www.docker.com/) - дополнительно ничего не требуется):
 
 ```
 git clone https://github.com/ArtyKrafty/detection
