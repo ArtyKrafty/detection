@@ -34,7 +34,32 @@ RUS | [ENG](#ENG)
 оружия, в том числе на видео. При расширении обучающих данных, можно получить более точные результаты.
 Интерфейс позволяет, не углубляясь в код, производить сегментацию изображений, в том числе и затенять фон.
 
-2. **Web-приложение**. Реализовано дополнительно web-приложение с ограниченной функциональностью - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, воможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория - запус через `app_local.py`  
+   Доступный функционал:  
+
+      - Изображения:
+        - Instance segmentation на изображениях
+        - Keypoints
+        - Затемнение фона (separate background)
+        - Детекция оружия (custom dataset)
+      - Видео:
+        - Instance segmentation на видео
+        - Показ обработки в режиме реального времени
+        - Детекция оружия на видео
+  <img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0">
+  
+2. **Web-приложение**. Реализовано дополнительно web-приложение с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
+
+   Доступный функционал:  
+
+      - Изображения:
+        - Instance segmentation на изображениях
+        - Keypoints на изображениях
+        - Затемнение фона (separate background)
+        - Blur эффект
+        - Черно-белое изображение
+
+
+ <img src="https://i.ibb.co/1LqDP6P/2021-12-30-22-41-29.png" alt="2021-12-30-22-41-29" border="0">   
 
 ----
 [К содержанию](#link6)
@@ -50,6 +75,7 @@ RUS | [ENG](#ENG)
 
 Обучение вы можете посмотреть в этом [ноутбуке](https://nbviewer.org/github/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_detection_ipynb__.ipynb), если захотите обучить свой детектор (доступно и в [Collab](https://colab.research.google.com/drive/1TOSFHYrQrxToQ4v5azP8xzpuLcgEKrQ3?usp=sharing)). Веса базовых моделей можно брать из [зоопарка](https://github.com/facebookresearch/detectron2/blob/main/detectron2/model_zoo/model_zoo.py) - формировать `.yaml` аналогично представленным в папке `config`
 - `separate background` - отделение фона, вместо аннотации. Идея предложена [Arosław Gilewski](https://medium.com/deepvisionguru/how-to-embed-detectron2-in-your-computer-vision-project-817f29149461)
+- `keypoints` - для построения ключевых точек людей на изображениях (`pose-flow`)
 
 
 Для удобства запуска, данному модулю было добавлено простое `GUI`, с помощью [GOOEY](https://github.com/chriskiehl/Gooey)
@@ -195,6 +221,15 @@ pythonw process_img.py
 
 <img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0">
 
+4. Построение ключевых точек - работает аналогично оружию - достаточно указать адрес к конфигурации
+```
+configs/COCO-keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
+```
+Получаем изображение с отмеченными ключевыми точками. 
+
+
+<img src="https://i.ibb.co/TvwnH4v/predict.jpg" alt="predict" border="0">
+
 ----
 [К содержанию](#link6)
 
@@ -264,7 +299,7 @@ pythonw process_video.py
 
 <a id='link'></a>
 
-Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа 14.4 GB (у вас должен быть установлен
+Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа ~14.4 GB (у вас должен быть установлен
 [Docker](https://www.docker.com/) - дополнительно ничего не требуется):
 
 ```
@@ -279,7 +314,7 @@ docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 затем - после того, как закончили:
 
 docker stop detectron2
-docker rm $(docker ps -a -q)
+docker rm $(docker ps -qa)
 
 или использовать docker-desktop приложение, что может быть удобнее
 
@@ -296,7 +331,7 @@ docker rm $(docker ps -a -q)
 
 <h3>Ссылки</h3><a id='linkru001'></a>
 
-1. [Курс Deep learning school](https://www.dlschool.org/pro-track)  
+1. [Курс Deep learning school](https://www.dlschool.org/pro-track). 
 2. [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - инженер CV  
 3. [Detectron2](https://github.com/facebookresearch/detectron2) - библиотека Meta для работы с изображениями  
 4. [OpenCV](https://opencv.org/) - средство обработки видео и изображений  
@@ -344,7 +379,34 @@ The aim of the work was to implement various approaches to integrating Detectron
 weapons, including video. By expanding the training data, you can get more accurate results.
 The interface allows, without delving into the code, to perform image segmentation, including shading the background.
 
-2. **Web Application**. An additional web application with limited functionality has been implemented - Located at: https://detartyseg.herokuapp.com/. Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
+  Available functionality:
+
+      - Images:
+        - Instance segmentation on images
+        - Key points
+        - Separate background
+        - Weapon detection (custom data set)
+      - Video:
+        - Instance segmentation on video
+        - Show processing in real time
+        - Weapon detection on video
+        
+  <img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0">
+
+2. **Web Application**. An additional web application with limited functionality has been implemented (only images) - Located at: https://detartyseg.herokuapp.com/. Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
+
+ Available functionality:
+
+      - Images:
+        - Instance segmentation on images
+        - Keypoints on images
+        - Separate background
+        - Blur effect
+        - Black and white image
+
+
+ <img src="https://i.ibb.co/1LqDP6P/2021-12-30-22-41-29.png" alt="2021-12-30-22-41-29" border="0">   
+
 
 ----
 [Back to contest](#link7)
@@ -360,7 +422,7 @@ Here are three options for how the model works:
 
 You can watch the training in this [notebook](https://nbviewer.org/github/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_detection_ipynb__.ipynb), if you want to train your detector (available in [Collab](https://colab.research.google.com/drive/1TOSFHYrQrxToQ4v5azP8xzpuLcgEKrQ3?usp=sharing)). The weights of the base models can be taken from the [zoo](https://github.com/facebookresearch/detectron2/blob/main/detectron2/model_zoo/model_zoo.py) - form `.yaml` similarly to those presented in the` config` folder
 - `separate background` - separation of the background, instead of annotation. Idea suggested by [Arosław Gilewski](https://medium.com/deepvisionguru/how-to-embed-detectron2-in-your-computer-vision-project-817f29149461)
-
+- `keypoints` - for building key points of people on images (` pose-flow`). 
 
 For ease of launch, a simple `GUI` was added to this module, using [GOOEY](https://github.com/chriskiehl/Gooey)
 
@@ -500,7 +562,16 @@ Press START and in the outputs folder you have processed images
 
 Getting an image with a blur effect on the background
 
-<img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0">
+<img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"> 
+
+4. Building key points - works similarly to weapons - just specify the address to the configuration
+```
+configs/COCO-keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
+```
+We get an image with marked key points.
+
+
+<img src="https://i.ibb.co/TvwnH4v/predict.jpg" alt="predict" border="0">
 
 ----
 [Back to contest](#link7)
