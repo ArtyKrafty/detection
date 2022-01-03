@@ -16,6 +16,7 @@ RUS | [ENG](#ENG)
    - [Скрипт process_img.py](#link3)  
    - [Скрипт process_video.py](#link4)   
 - [Web-приложение](#link5) 
+- [Dockerfile](#link)
 - [Ссылки](#linkru001)
 
 
@@ -35,12 +36,12 @@ RUS | [ENG](#ENG)
 
 <h3>Введение</h3><a id='link1'></a>
 
-Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов Python с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами DS. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.  
+Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов `Python` с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами `DS`. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.  
 
-Целью работы была реализация различных подходв внедрения Detectron2 и OpenCV в проекты - как локальные, так и web с использованием модулей 
+Целью работы была реализация различных подходв внедрения `Detectron2` и `OpenCV` в проекты - как локальные, так и `web` с использованием модулей 
 или же в виде скриптов с применением различных вариантов работы моделей
 
-*Примечание* Если у Вас не открывается ссылка на medium - включите режим инкогнито
+*Примечание* Если у Вас не открывается ссылка на `medium` - включите режим инкогнито
 
 1. **Локальное исполнение**. В данном исполнении - вы можете работать со случаными изображениями, либо применять обученную модель для детекции
 оружия, в том числе на видео. При расширении обучающих данных, можно получить более точные результаты.
@@ -66,7 +67,7 @@ RUS | [ENG](#ENG)
   
   Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
   
-2. **Web-приложение**. Реализовано дополнительно web-приложение с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
+2. **Web-приложение**. Реализовано дополнительно `web-приложение` с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
 
    Доступный функционал:  
 
@@ -439,6 +440,7 @@ Table of content:
    - [Script process_img.py](#link10)  
    - [Script process_video.py](#link11)   
 - [Web-application](#link12) 
+- [Dockerfile](#linkdock)
 - [Credits](#linkeng001)
 
 
@@ -458,12 +460,12 @@ The error may be related to out of memory. You can try again or take another pic
 
 <h3>Introduction</h3><a id='link8'></a>
 
-Modular image processing using [OpenCV](https://opencv.org/) and Python generators using [Detectron2](https://github.com/facebookresearch/detectron2). The idea of modularity allows the industrial processing pipeline to be programmed by several DS specialists. The idea of using generators is taken from [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - as a result, we get a full-fledged module that can be supplemented in the variations we need.
+Modular image processing using [OpenCV](https://opencv.org/) and `Python` generators using [Detectron2](https://github.com/facebookresearch/detectron2). The idea of modularity allows the industrial processing pipeline to be programmed by several `DS` specialists. The idea of using generators is taken from [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - as a result, we get a full-fledged module that can be supplemented in the variations we need.
 
-The aim of the work was to implement various approaches to integrating Detectron2 and OpenCV into projects - both local and web using modules
+The aim of the work was to implement various approaches to integrating `Detectron2` and `OpenCV` into projects - both local and web using modules
 or in the form of scripts using different versions of the models
 
-*Note* If you do not have a link to medium - turn on incognito mode
+*Note* If you do not have a link to `medium` - turn on incognito mode
 
 1. **Local execution**. In this version, you can work with random images, or use a trained model for detection
 weapons, including video. By expanding the training data, you can get more accurate results.
