@@ -70,7 +70,7 @@ RUS | [ENG](#ENG)
         - Черно-белое изображение
 
 
- <img src="https://i.ibb.co/1LqDP6P/2021-12-30-22-41-29.png" alt="2021-12-30-22-41-29" border="0">   
+<img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0">  
  
  Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
 
@@ -680,7 +680,8 @@ If you want to run locally, run `app_local.py`:
 
 An application with limited functionality will start at the address - `http: // YOUR_URL_from_terminal: 8080 /`
 
-<img src="https://i.ibb.co/1LqDP6P/2021-12-30-22-41-29.png" alt="2021-12-30-22-41-29" border="0">
+
+<img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0">  
 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
