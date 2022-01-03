@@ -672,7 +672,7 @@ path ./detection/configs/COCO-InstanceSegmentation_weapon/mask_rcnn_R_50_FPN_3x.
 We load weights to it: ./detection/configs/COCO-InstanceSegmentation_weapon/model_final.pth
 Press START and in the outputs folder you have processed images
 ```
-<img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0">
+<p align="center"><img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0"></p>
 
 3. Separating the background - works the same way - just check the separate_background
 
