@@ -18,13 +18,19 @@ RUS | [ENG](#ENG)
 - [Web-приложение](#link5) 
 - [Ссылки](#linkru001)
 
+
+---
+
 *Примечание* Приложение в спящем режим. Для запуска потребуется время. Также, возможны сбои в работе - приложение на бесплатном сервере. 
 Фото после загрузки удаляются. 
 
-<img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0">
+
+<p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
 Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
+
+---
 
 
 <h3>Введение</h3><a id='link1'></a>
@@ -53,7 +59,10 @@ RUS | [ENG](#ENG)
         - Показ обработки в режиме реального времени
         - Детекция оружия на видео
         
-  <img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0">
+        
+        
+  <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
+  
   
   Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
   
@@ -70,7 +79,7 @@ RUS | [ENG](#ENG)
         - Черно-белое изображение
 
 
-<img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0">  
+<p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
  
  Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
 
@@ -118,7 +127,7 @@ pip install -r requirements_loc.txt
 
 Detectron2 необходимо установить в соседний каталог с папкой модуля
 
-<img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0">
+<p align="center"><img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0"></p>
 
 Для Win у вас должно быть установлено Visual C++ 2015 build tools   
 Если нет - установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
@@ -128,7 +137,7 @@ Detectron2 необходимо установить в соседний кат�
 выбираем Package - копируем команду для установки
 
 
-<img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0">  
+<p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p> 
 
 
 Если у вас появляется ошибка - `Torchvision error: Could not find module image.pyd` - рекомендую ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением
@@ -179,7 +188,7 @@ pythonw process_img.py
 
 У вас откроется окно:
 
-<img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0">
+<p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
 
 
 ```
@@ -192,7 +201,7 @@ pythonw process_img.py
 Нажимаем START и в папке outputs у вас обработанные изображения
 
 ```
-<img src="https://i.ibb.co/pz0Twxx/0299ce77-30e4-4b31-b8e5-fad85b140111.jpg" alt="0299ce77-30e4-4b31-b8e5-fad85b140111" border="0">
+<p align="center"><img src="https://i.ibb.co/pz0Twxx/0299ce77-30e4-4b31-b8e5-fad85b140111.jpg" alt="0299ce77-30e4-4b31-b8e5-fad85b140111" border="0"></p>
 
 
 2. `Instance segmentation` для обнаружения оружия на кастомном [датасете](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). Названиями классов пришлось пренебречь - иначе потеряли в универсальности. Если собрать сет больше - можно использовать подобные модели для обнаружения
@@ -210,7 +219,7 @@ pythonw process_img.py
 
 У вас откроется окно:
 
-<img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0">
+<p align="center"><img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0"></p>
 
 
 ```
@@ -227,30 +236,72 @@ pythonw process_img.py
 Грузим к ней веса: ./detection/configs/COCO-InstanceSegmentation_weapon/model_final.pth
 Нажимаем START и в папке outputs у вас обработанные изображения
 ```
-<img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0">
+<p align="center"><img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0"></p>
 
 3. Отделение фона - работает аналогично - достаточно поставить отметку separate_background
 
-Получаем изображение с blur-эффектом на фон
-
-<img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0">
-
-4. Построение ключевых точек - работает аналогично оружию - достаточно указать адрес к конфигурации
 ```
-configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
+Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
+Вы можете воспользоваться моими фотографиями - папка
+
+./examples/images/photos/
+
+также вы можете выбрать порог confidence. Тут необходимо поменять модель - 
+вы найдете нужную в папке config (и веса к ней):   
+
+
+путь ./detection/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml. 
+Ставим отметку - separate background:
+Нажимаем START и в папке outputs у вас обработанные изображения
+
+```
+
+Получаем изображение с blur-эффектом на фон - инвертируем маску и вместо предсказаний получаем выделенный от фона объектр
+
+<p align="center"><img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"></p>
+
+4. Построение ключевых точек:
+
+```
+Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
+Вы можете воспользоваться моими фотографиями - папка
+
+./examples/images/key_points/
+
+также вы можете выбрать порог confidence. Тут необходимо поменять модель - 
+вы найдете нужную в папке config (и веса к ней):   
+
+
+путь ./detection/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml. 
+Нажимаем START и в папке outputs у вас обработанные изображения
+
+Веса задавать не надо. 
+
 ```
 Получаем изображение с отмеченными ключевыми точками. Предназначено для работы с изображениями с людьми. 
 
 
-<img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0">
+<p align="center"><img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0"></p>
 
 5. Паноптическая сегментация изображений - достаточно указать адрес к конфигурации
+```
+Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
+Вы можете воспользоваться моими фотографиями - папка
+
+./examples/images/pan/
+
+также вы можете выбрать порог confidence. Тут необходимо поменять модель - 
+вы найдете нужную в папке config (и веса к ней):   
+
+
+путь ./detection/configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml 
+Нажимаем START и в папке outputs у вас обработанные изображения
+
+Веса задавать не надо. 
 
 ```
-configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml
-```
 
-<img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0">
+<p align="center"><img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0"></p>
 
 
 Целью было продемонстрировать различные варианты работы модели без углублений в код со стороны пользователя данного модуля
@@ -278,7 +329,7 @@ pythonw process_video.py
 
 У вас откроется окно:
 
-<img src="https://i.ibb.co/KKBhVRy/2021-12-27-23-26-40.png" alt="2021-12-27-23-26-40" border="0">
+<p align="center"><img src="https://i.ibb.co/KKBhVRy/2021-12-27-23-26-40.png" alt="2021-12-27-23-26-40" border="0"></p>
 
 ```
 Необходимо задать input. Это видео, на котором будут предсказываться объекты. 
@@ -319,7 +370,7 @@ pythonw process_video.py
 Запустится приложение с ограниченным функционалом по адресу - `http://ВАШ_URL_из_терминала:8080/`
 
 
-<img src="https://i.ibb.co/1LqDP6P/2021-12-30-22-41-29.png" alt="2021-12-30-22-41-29" border="0">
+<p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
 
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
@@ -346,7 +397,7 @@ docker rm $(docker ps -qa)
 
 посмотреть директории внутри: docker run -t -i detectron2 /bin/bash
 ```
-<img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
+<p align="center"><img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0"></p>
 
 *Примечание* Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
 не сможет собрать `torch`
@@ -390,13 +441,20 @@ Table of content:
 - [Web-application](#link12) 
 - [Credits](#linkeng001)
 
+
+---
+
+
 *Note* Application is in sleep mode. It will take time to launch. Also, malfunctions are possible - the application is on a free server.
 Photos are deleted after upload.
 
-<img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0">
+<p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
 The error may be related to out of memory. You can try again or take another picture. There will be no problems with local assembly
+
+---
+
 
 <h3>Introduction</h3><a id='link8'></a>
 
@@ -424,7 +482,7 @@ The interface allows, without delving into the code, to perform image segmentati
         - Show processing in real time
         - Weapon detection on video
         
-  <img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0">
+  <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
 
 2. **Web Application**. An additional web application with limited functionality has been implemented (only images) - Located at: https://detartyseg.herokuapp.com/. Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
 
@@ -439,7 +497,7 @@ The interface allows, without delving into the code, to perform image segmentati
         - Black and white image
 
 
- <img src="https://i.ibb.co/1LqDP6P/2021-12-30-22-41-29.png" alt="2021-12-30-22-41-29" border="0">   
+<p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
 
 
 ----
@@ -484,7 +542,7 @@ pip install -r requirements_loc.txt
 
 Detectron2 must be installed in the adjacent directory with the module folder
 
-<img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0">
+<p align="center"><img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0"></p>
 
 For Win, you must have Visual C ++ 2015 build tools installed
 If not, install [from here](https://www.microsoft.com/en-ru/download/confirmation.aspx?id=48159) - this is required for [Detectron2](https://github.com/philferriere/cocoapi)
@@ -493,7 +551,7 @@ If not, install [from here](https://www.microsoft.com/en-ru/download/confirmatio
 Also, it is recommended to check the version of torch and torchvision - you can check [here](https://pytorch.org/get-started/locally/) - select Package - copy the command to install
 
 
-<img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0">  
+<p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p>
 
 
 If you get an error - `Torchvision error: Could not find module image.pyd` - I recommend reading [here](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) with solution
@@ -544,7 +602,7 @@ Note that the call is made through `pythonw`, not` python` or `python3`
 
 A window will open:
 
-<img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0">
+<p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
 
 
 ```
@@ -556,7 +614,7 @@ You can use my photos - folder
 also you can choose the confidence threshold.
 Press START and in the outputs folder you have processed images
 ```
-<img src="https://i.ibb.co/pz0Twxx/0299ce77-30e4-4b31-b8e5-fad85b140111.jpg" alt="0299ce77-30e4-4b31-b8e5-fad85b140111" border="0">
+<p align="center"><img src="https://i.ibb.co/pz0Twxx/0299ce77-30e4-4b31-b8e5-fad85b140111.jpg" alt="0299ce77-30e4-4b31-b8e5-fad85b140111" border="0"></p>
 
 
 2. `Instance segmentation` for detecting weapons on a custom [dataset](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). The class names had to be neglected - otherwise they lost in universality. If you collect a larger set, you can use similar models to detect whether a person has a weapon
@@ -573,7 +631,7 @@ Note that the call is made through `pythonw`, not` python` or `python3`
 
 A window will open:
 
-<img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0">
+<p align="center"><img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0"></p>
 
 
 ```
@@ -594,26 +652,68 @@ Press START and in the outputs folder you have processed images
 
 3. Separating the background - works the same way - just check the separate_background
 
+```
+You must set input. These are the images on which objects will be predicted.
+You can use my photos - folder
+
+./examples/images/photos/
+
+also you can choose the confidence threshold. Here you need to change the model -
+you will find the needed one in the config folder (and weights to it):
+
+
+path ./detection/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml.
+We put a mark - separate background:
+Press START and in the outputs folder you have processed images
+
+```
+
 Getting an image with a blur effect on the background
 
 <img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"> 
 
 4. Building key points - works similarly to weapons - just specify the address to the configuration
 ```
-configs/COCO-keypoints/keypoint_rcnn_R_50_FPN_3x.yaml
+You must set input. These are the images on which objects will be predicted.
+You can use my photos - folder
+
+./examples/images/key_points/
+
+also you can choose the confidence threshold. Here you need to change the model -
+you will find the needed one in the config folder (and weights to it):
+
+
+path ./detection/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml.
+Press START and in the outputs folder you have processed images
+
+There is no need to set weights.
+
 ```
 We get an image with marked key points.
 
 
-<img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0">
+<p align="center"><img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0"></p>
 
 5. Panoptic group of images - just specify the address to the configuration
 
 ```
-configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml
+You must set input. These are the images on which objects will be predicted.
+You can use my photos - folder
+
+./examples/images/pan/
+
+also you can choose the confidence threshold. Here you need to change the model -
+you will find the needed one in the config folder (and weights to it):
+
+
+path ./detection/configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml
+Press START and in the outputs folder you have processed images
+
+There is no need to set weights.
+
 ```
 
-<img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0">
+<p align="center"><img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0"></p>
 
 The goal was to demonstrate various options for the model without delving into the code on the part of the user of this module - it is enough to specify the address to the configuration
 
@@ -640,7 +740,7 @@ for ethical reasons - it was customary not to add the file with armed attacks to
 
 A window will open:
 
-<img src="https://i.ibb.co/KKBhVRy/2021-12-27-23-26-40.png" alt="2021-12-27-23-26-40" border="0">
+<p align="center"><img src="https://i.ibb.co/KKBhVRy/2021-12-27-23-26-40.png" alt="2021-12-27-23-26-40" border="0"></p>
 
 ```
 You must set input. This is a video in which objects will be predicted.
@@ -681,7 +781,7 @@ If you want to run locally, run `app_local.py`:
 An application with limited functionality will start at the address - `http: // YOUR_URL_from_terminal: 8080 /`
 
 
-<img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0">  
+<p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
@@ -706,7 +806,7 @@ or you can use docker-desktop app
 look files inside: docker run -t -i detectron2 /bin/bash
 ```
 
-<img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0">
+<p align="center"><img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0"></p>
 
 *Note* If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
 can't build `torch`. 
