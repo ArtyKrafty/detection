@@ -29,7 +29,7 @@ RUS | [ENG](#ENG)
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
-Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
+> Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
 
 ---
 
@@ -41,7 +41,7 @@ RUS | [ENG](#ENG)
 Целью работы была реализация различных подходв внедрения `Detectron2` и `OpenCV` в проекты - как локальные, так и `web` с использованием модулей 
 или же в виде скриптов с применением различных вариантов работы моделей
 
-*Примечание* Если у Вас не открывается ссылка на `medium` - включите режим инкогнито
+> *Примечание* Если у Вас не открывается ссылка на `medium` - включите режим инкогнито
 
 1. **Локальное исполнение**. В данном исполнении - вы можете работать со случаными изображениями, либо применять обученную модель для детекции
 оружия, в том числе на видео. При расширении обучающих данных, можно получить более точные результаты.
@@ -65,7 +65,7 @@ RUS | [ENG](#ENG)
   <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
   
   
-  Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
+ > Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
   
 2. **Web-приложение**. Реализовано дополнительно `web-приложение` с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
 
@@ -82,7 +82,7 @@ RUS | [ENG](#ENG)
 
 <p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
  
- Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
+> Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
 
 ----
 [К содержанию](#link6)
@@ -109,7 +109,7 @@ RUS | [ENG](#ENG)
 
 Рекомендуется устанавливать в `virtuenv`. Необязательный шаг - можно пропустить
 
-```
+```python
 pip install virtualenv
 virtualenv detection
 source detection/bin/activate
@@ -121,7 +121,7 @@ source detection/bin/activate
 
 Шаги настройки модуля. 
 
-```
+```python
 git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements_loc.txt
 ```
@@ -141,18 +141,18 @@ Detectron2 необходимо установить в соседний кат�
 <p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p> 
 
 
-Если у вас появляется ошибка - `Torchvision error: Could not find module image.pyd` - рекомендую ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением
+> Если у вас появляется ошибка - `Torchvision error: Could not find module image.pyd` - рекомендую ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением
 
 Например, для `CPU`:
 
-```
+```python
 pip3 install torch torchvision torchaudio
 или
 conda install pytorch torchvision cpuonly -c pytorch
 
 ```
 
-```
+```python
 cd
 
 git clone https://github.com/facebookresearch/detectron2.git
@@ -177,7 +177,7 @@ ___
 
 1. `Instance segmentation` на классы `COCO`
 
-```
+```python
 Открываем терминал
 
 cd detection
@@ -192,7 +192,7 @@ pythonw process_img.py
 <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
 
 
-```
+```python
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
 Вы можете воспользоваться моими фотографиями - папка
 
@@ -208,7 +208,7 @@ pythonw process_img.py
 2. `Instance segmentation` для обнаружения оружия на кастомном [датасете](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). Названиями классов пришлось пренебречь - иначе потеряли в универсальности. Если собрать сет больше - можно использовать подобные модели для обнаружения
 наличия оружия у человека
 
-```
+```python
 Открываем терминал
 
 cd detection
@@ -223,7 +223,7 @@ pythonw process_img.py
 <p align="center"><img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0"></p>
 
 
-```
+```python
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
 Вы можете воспользоваться моими фотографиями - папка
 
@@ -241,7 +241,7 @@ pythonw process_img.py
 
 3. Отделение фона - работает аналогично - достаточно поставить отметку separate_background
 
-```
+```python
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
 Вы можете воспользоваться моими фотографиями - папка
 
@@ -263,7 +263,7 @@ pythonw process_img.py
 
 4. Построение ключевых точек:
 
-```
+```python
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
 Вы можете воспользоваться моими фотографиями - папка
 
@@ -285,7 +285,7 @@ pythonw process_img.py
 <p align="center"><img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0"></p>
 
 5. Паноптическая сегментация изображений - достаточно указать адрес к конфигурации
-```
+```python
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
 Вы можете воспользоваться моими фотографиями - папка
 
@@ -317,7 +317,7 @@ pythonw process_img.py
 
 `Instance segmentation` на классы `COCO`
 
-```
+```python
 Открываем терминал
 
 cd detection
@@ -332,7 +332,7 @@ pythonw process_video.py
 
 <p align="center"><img src="https://i.ibb.co/KKBhVRy/2021-12-27-23-26-40.png" alt="2021-12-27-23-26-40" border="0"></p>
 
-```
+```python
 Необходимо задать input. Это видео, на котором будут предсказываться объекты. 
 Вы можете воспользоваться моими примером
 
@@ -362,7 +362,7 @@ pythonw process_video.py
 Если хотите запустить локально  - запускаем `app_local.py`:
 
 
-```
+```python
  git clone https://github.com/ArtyKrafty/detection
  cd detection
  python app_local.py
@@ -380,7 +380,7 @@ pythonw process_video.py
 Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа ~14.4 GB (у вас должен быть установлен
 [Docker](https://www.docker.com/) - дополнительно ничего не требуется):
 
-```
+```python
 git clone https://github.com/ArtyKrafty/detection
 
 cd detection
@@ -400,7 +400,7 @@ docker rm $(docker ps -qa)
 ```
 <p align="center"><img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0"></p>
 
-*Примечание* Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
+> *Примечание* Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
 не сможет собрать `torch`
 
 ----
@@ -465,7 +465,7 @@ Modular image processing using [OpenCV](https://opencv.org/) and `Python` genera
 The aim of the work was to implement various approaches to integrating `Detectron2` and `OpenCV` into projects - both local and web using modules
 or in the form of scripts using different versions of the models
 
-*Note* If you do not have a link to `medium` - turn on incognito mode
+> *Note* If you do not have a link to `medium` - turn on incognito mode
 
 1. **Local execution**. In this version, you can work with random images, or use a trained model for detection
 weapons, including video. By expanding the training data, you can get more accurate results.
@@ -525,7 +525,7 @@ For ease of launch, a simple `GUI` was added to this module, using [GOOEY](https
 
 It is recommended to install to `virtuenv`. Optional step - can be skipped
 
-```
+```python
 pip install virtualenv
 virtualenv detection
 source detection/bin/activate
@@ -537,7 +537,7 @@ It is also recommended to read the instructions to the end before starting the i
 
 Module configuration steps.
 
-```
+```python
 git clone https://github.com/ArtyKrafty/detection
 pip install -r requirements_loc.txt
 ```
@@ -556,18 +556,18 @@ Also, it is recommended to check the version of torch and torchvision - you can 
 <p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p>
 
 
-If you get an error - `Torchvision error: Could not find module image.pyd` - I recommend reading [here](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) with solution
+> If you get an error - `Torchvision error: Could not find module image.pyd` - I recommend reading [here](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) with solution
 
 For example, for `CPU`:
 
-```
+```python
 pip3 install torch torchvision torchaudio
 или
 conda install pytorch torchvision cpuonly -c pytorch
 
 ```
 
-```
+```python
 cd
 
 git clone https://github.com/facebookresearch/detectron2.git
@@ -592,7 +592,7 @@ ___
 
 1. `Instance segmentation` with `COCO`
 
-```
+```python
 Open terminal
 
 cd detection
@@ -607,7 +607,7 @@ A window will open:
 <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
 
 
-```
+```python
 You must set input. These are the images on which objects will be predicted.
 You can use my photos - folder
 
@@ -621,7 +621,7 @@ Press START and in the outputs folder you have processed images
 
 2. `Instance segmentation` for detecting weapons on a custom [dataset](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). The class names had to be neglected - otherwise they lost in universality. If you collect a larger set, you can use similar models to detect whether a person has a weapon
 
-```
+```python
 Open terminal
 
 cd detection
@@ -636,7 +636,7 @@ A window will open:
 <p align="center"><img src="https://i.ibb.co/1TmBmfX/2021-12-28-10-10-42.png" alt="2021-12-28-10-10-42" border="0"></p>
 
 
-```
+```python
 You must set input. These are the images on which objects will be predicted.
 You can use my photos - folder
 
@@ -654,7 +654,7 @@ Press START and in the outputs folder you have processed images
 
 3. Separating the background - works the same way - just check the separate_background
 
-```
+```python
 You must set input. These are the images on which objects will be predicted.
 You can use my photos - folder
 
@@ -675,7 +675,7 @@ Getting an image with a blur effect on the background
 <img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"> 
 
 4. Building key points - works similarly to weapons - just specify the address to the configuration
-```
+```python
 You must set input. These are the images on which objects will be predicted.
 You can use my photos - folder
 
@@ -698,7 +698,7 @@ We get an image with marked key points.
 
 5. Panoptic group of images - just specify the address to the configuration
 
-```
+```python
 You must set input. These are the images on which objects will be predicted.
 You can use my photos - folder
 
@@ -729,7 +729,7 @@ The goal was to demonstrate various options for the model without delving into t
 
 `Instance segmentation` with `COCO`
 
-```
+```python
 Open terminal
 
 cd detection
@@ -737,14 +737,14 @@ pythonw process_video.py
 
 ```
 
-Note that the call is made through `pythonw`, not` python` or `python3`. The principle of operation is similar. Weapons can also be detected -
+> Note that the call is made through `pythonw`, not` python` or `python3`. The principle of operation is similar. Weapons can also be detected -
 for ethical reasons - it was customary not to add the file with armed attacks to the repository
 
 A window will open:
 
 <p align="center"><img src="https://i.ibb.co/KKBhVRy/2021-12-27-23-26-40.png" alt="2021-12-27-23-26-40" border="0"></p>
 
-```
+```python
 You must set input. This is a video in which objects will be predicted.
 You can use my example
 
@@ -754,7 +754,7 @@ also you can choose the confidence threshold.
 Press START and in the outputs folder you have the processed video. Takes some time
 
 ```
-**Note.** Important! At the moment, there is a [bug](https://github.com/facebookresearch/detectron2/issues/3780) for the class
+> **Note.** Important! At the moment, there is a [bug](https://github.com/facebookresearch/detectron2/issues/3780) for the class
 `VideoVisualizer`. To get around it, the `Visualizer` class was used, which is used for images
 therefore the masks change from frame to frame. Probably the bug is only observed on M1 silicone
 
@@ -773,7 +773,7 @@ memory excess on the application, on a free server. Remained functional in the l
 If you want to run locally, run `app_local.py`:
 
 
-```
+```python
  git clone https://github.com/ArtyKrafty/detection
  cd detection
  python app_local.py
@@ -791,7 +791,7 @@ Here you can load an image from the desktop, select masks on it or darken the ba
 
 Another option is to run via Docker (local copy of https://detartyseg.herokuapp.com/) - weight of Image 14.4 GB:
 
-```
+```python
 git clone https://github.com/ArtyKrafty/detection
 cd detection
 
@@ -810,7 +810,7 @@ look files inside: docker run -t -i detectron2 /bin/bash
 
 <p align="center"><img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0"></p>
 
-*Note* If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
+> *Note* If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
 can't build `torch`. 
 
 
