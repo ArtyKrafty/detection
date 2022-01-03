@@ -11,25 +11,26 @@ RUS | [ENG](#ENG)
 
 Содержание:  
 
-- [Введение](#link1)  
+ [Введение](#link1)  
 - [Локальная работа](#link2)  
    - [Скрипт process_img.py](#link3)  
    - [Скрипт process_video.py](#link4)   
 - [Web-приложение](#link5) 
 - [Dockerfile](#link)
+- [Техническая поддержка](#linkprobru)
 - [Ссылки](#linkru001)
 
 
 ---
 
-*Примечание* Приложение в спящем режим. Для запуска потребуется время. Также, возможны сбои в работе - приложение на бесплатном сервере. 
+📝 Приложение в спящем режим. Для запуска потребуется время. Также, возможны сбои в работе - приложение на бесплатном сервере. 
 Фото после загрузки удаляются. 
 
 
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
-> Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
+📝 Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
 
 ---
 
@@ -41,7 +42,7 @@ RUS | [ENG](#ENG)
 Целью работы была реализация различных подходв внедрения `Detectron2` и `OpenCV` в проекты - как локальные, так и `web` с использованием модулей 
 или же в виде скриптов с применением различных вариантов работы моделей
 
-> *Примечание* Если у Вас не открывается ссылка на `medium` - включите режим инкогнито
+> 📝 Если у Вас не открывается ссылка на `medium` - включите режим инкогнито
 
 1. **Локальное исполнение**. В данном исполнении - вы можете работать со случаными изображениями, либо применять обученную модель для детекции
 оружия, в том числе на видео. При расширении обучающих данных, можно получить более точные результаты.
@@ -65,7 +66,7 @@ RUS | [ENG](#ENG)
   <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
   
   
- > Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
+ > 📝 Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
   
 2. **Web-приложение**. Реализовано дополнительно `web-приложение` с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
 
@@ -82,7 +83,7 @@ RUS | [ENG](#ENG)
 
 <p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
  
-> Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
+> 📝 Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
 
 ----
 [К содержанию](#link6)
@@ -105,6 +106,7 @@ RUS | [ENG](#ENG)
 Для удобства запуска, данному модулю было добавлено простое `GUI`, с помощью [GOOEY](https://github.com/chriskiehl/Gooey)
 
 ---
+
 **Установка локально**  
 
 Рекомендуется устанавливать в `virtuenv`. Необязательный шаг - можно пропустить
@@ -141,7 +143,7 @@ Detectron2 необходимо установить в соседний кат�
 <p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p> 
 
 
-> Если у вас появляется ошибка - `Torchvision error: Could not find module image.pyd` - рекомендую ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением
+> 📝 Если у вас появляется ошибка - `Torchvision error: Could not find module image.pyd` - рекомендую ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением
 
 Например, для `CPU`:
 
@@ -185,7 +187,7 @@ pythonw process_img.py
 
 ```
 
-Обратите внимание, что вызов осуществляется через `pythonw`, не `python` или `python3`
+> 📝 Обратите внимание, что вызов осуществляется через `pythonw`, не `python` или `python3`
 
 У вас откроется окно:
 
@@ -216,7 +218,7 @@ pythonw process_img.py
 
 ```
 
-Обратите внимание, что вызов осуществляется через `pythonw`, не `python` или `python3`
+> 📝 Обратите внимание, что вызов осуществляется через `pythonw`, не `python` или `python3`
 
 У вас откроется окно:
 
@@ -325,8 +327,8 @@ pythonw process_video.py
 
 ```
 
-Обратите внимание, что вызов осуществляется через `pythonw`, не `python` или `python3`. Принцип работы аналогичный. Можно детектировать и оружие - 
-по соображениям этики - было принято не добавлять файл с вооруженными нападениями в репозиторий
+> 📝 Обратите внимание, что вызов осуществляется через `pythonw`, не `python` или `python3`. Принцип работы аналогичный. Можно детектировать и оружие - 
+> по соображениям этики - было принято не добавлять файл с вооруженными нападениями в репозиторий
 
 У вас откроется окно:
 
@@ -346,18 +348,20 @@ pythonw process_video.py
 `VideoVisualizer`. Чтобы его обойти, был использован класс `Visualizer`, который используется для изображений
 поэтому маски от кадра к кадру меняются. Возможно bug наблюдается только на M1 silicone
 
-![](sample.gif)
+<p align="center">![](sample.gif)</p>
 ----
 [К содержанию](#link6)
 
 <h3>Web-приложение</h3><a id='link5'></a>
-Скрипт app_local.py - для запуска локально
+
+
+Скрипт `app_local.py` - для запуска локально
 
 
 
-зеркало для app.py, который находится по адресу: https://detartyseg.herokuapp.com/. 
+зеркало для `app.py`, который находится по адресу: https://detartyseg.herokuapp.com/. 
 К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Пришлось убрать паноптическую сегментацию -
-превышения памяти на приложение, на бесплатном сервере. Остался функционал в локальном приложении и docker
+превышения памяти на приложение, на бесплатном сервере. Остался функционал в локальном приложении и `docker`
 
 Если хотите запустить локально  - запускаем `app_local.py`:
 
@@ -377,7 +381,7 @@ pythonw process_video.py
 
 <a id='link'></a>
 
-Другой вариант - запуск через Docker (локальная версия https://detartyseg.herokuapp.com/) - вес образа ~14.4 GB (у вас должен быть установлен
+Другой вариант - запуск через `Docker` (локальная версия https://detartyseg.herokuapp.com/) - вес образа `~14.1 GB` (у вас должен быть установлен
 [Docker](https://www.docker.com/) - дополнительно ничего не требуется):
 
 ```python
@@ -400,12 +404,27 @@ docker rm $(docker ps -qa)
 ```
 <p align="center"><img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0"></p>
 
-> *Примечание* Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
+> 📝 Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
 не сможет собрать `torch`
 
 ----
 [К содержанию](#link6)
 
+<h3>Техническая поддержка</h3><a id='linkprobru'></a>
+
+Проблемы возникают не с приложением, а могут возникнуть при установки сопутствующего окружения - `Detectron2`, `torch` и так далее. 
+Здесь собрал решения, которые помогут вам в установке, если вы решите работать не через `docker`. Тестировалось на `MacOs` и `Windows` - на `Win` - основная проблема - отсутствие `Microsoft Visual C++`. Данный сборник поможет решить основные проблемы по установке `torch` и `Detectron2`. Также, рекомендую, чтобы у вас уже была `Anaconda`
+
+| Источник  |  Описание |  Решение |
+|---|---|---|
+| Приложение Web-app  | Появляется ошибка `heroku` - `Application Error`  | Ошибка может быть связана с превышением памяти. Можно попробовать еще раз выполнить действие или взять другую картинку. С локальной сборкой проблем не возникнет  |
+|  torch, Detectron | C++ ошибка на Windows при установке на `pycatools`  |  У вас не установлен Visual Studio C++ - отсутствует компилятор. Установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159) |
+| torch, torchvision  | устаревшая версия или установлена не соответствющая вашему ПК  | проверить можно [тут](https://pytorch.org/get-started/locally/)|
+| torch  | `Torchvision error: Could not find module image.pyd`  | ознакомиться [здесь](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) с решением  |
+| Docker  | ошибка с `С++` при сборке или `os` | зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ|
+
+----
+[К содержанию](#link6)
 
 <h3>Ссылки</h3><a id='linkru001'></a>
 
@@ -441,19 +460,20 @@ Table of content:
    - [Script process_video.py](#link11)   
 - [Web-application](#link12) 
 - [Dockerfile](#linkdock)
+- [Help desk](#linkprobeng)
 - [Credits](#linkeng001)
 
 
 ---
 
 
-*Note* Application is in sleep mode. It will take time to launch. Also, malfunctions are possible - the application is on a free server.
+📝 Application is in sleep mode. It will take time to launch. Also, malfunctions are possible - the application is on a free server.
 Photos are deleted after upload.
 
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
-The error may be related to out of memory. You can try again or take another picture. There will be no problems with local assembly
+📝 The error may be related to out of memory. You can try again or take another picture. There will be no problems with local assembly
 
 ---
 
@@ -465,7 +485,7 @@ Modular image processing using [OpenCV](https://opencv.org/) and `Python` genera
 The aim of the work was to implement various approaches to integrating `Detectron2` and `OpenCV` into projects - both local and web using modules
 or in the form of scripts using different versions of the models
 
-> *Note* If you do not have a link to `medium` - turn on incognito mode
+> 📝 If you do not have a link to `medium` - turn on incognito mode
 
 1. **Local execution**. In this version, you can work with random images, or use a trained model for detection
 weapons, including video. By expanding the training data, you can get more accurate results.
@@ -521,6 +541,7 @@ You can watch the training in this [notebook](https://nbviewer.org/github/ArtyKr
 For ease of launch, a simple `GUI` was added to this module, using [GOOEY](https://github.com/chriskiehl/Gooey)
 
 ---
+
 **Install locally**
 
 It is recommended to install to `virtuenv`. Optional step - can be skipped
@@ -556,7 +577,7 @@ Also, it is recommended to check the version of torch and torchvision - you can 
 <p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p>
 
 
-> If you get an error - `Torchvision error: Could not find module image.pyd` - I recommend reading [here](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) with solution
+> 📝 If you get an error - `Torchvision error: Could not find module image.pyd` - I recommend reading [here](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) with solution
 
 For example, for `CPU`:
 
@@ -600,7 +621,7 @@ pythonw process_img.py
 
 ```
 
-Note that the call is made through `pythonw`, not` python` or `python3`
+> 📝 Note that the call is made through `pythonw`, not` python` or `python3`
 
 A window will open:
 
@@ -629,7 +650,7 @@ pythonw process_img.py
 
 ```
 
-Note that the call is made through `pythonw`, not` python` or `python3`
+> 📝 Note that the call is made through `pythonw`, not` python` or `python3`
 
 A window will open:
 
@@ -737,7 +758,7 @@ pythonw process_video.py
 
 ```
 
-> Note that the call is made through `pythonw`, not` python` or `python3`. The principle of operation is similar. Weapons can also be detected -
+> 📝 Note that the call is made through `pythonw`, not` python` or `python3`. The principle of operation is similar. Weapons can also be detected -
 for ethical reasons - it was customary not to add the file with armed attacks to the repository
 
 A window will open:
@@ -754,7 +775,7 @@ also you can choose the confidence threshold.
 Press START and in the outputs folder you have the processed video. Takes some time
 
 ```
-> **Note.** Important! At the moment, there is a [bug](https://github.com/facebookresearch/detectron2/issues/3780) for the class
+> 📝 Important! At the moment, there is a [bug](https://github.com/facebookresearch/detectron2/issues/3780) for the class
 `VideoVisualizer`. To get around it, the `Visualizer` class was used, which is used for images
 therefore the masks change from frame to frame. Probably the bug is only observed on M1 silicone
 
@@ -766,9 +787,9 @@ therefore the masks change from frame to frame. Probably the bug is only observe
 Script app_local.py - for local work
 
 
-mirror for app.py, which is located at: https://detartyseg.herokuapp.com/.
-Unfortunately - I had to cut the functionality, due to the size restrictions for the application. I had to remove the panoptic segmentation -
-memory excess on the application, on a free server. Remained functional in the local application and docker
+mirror for `app.py`, which is located at: https://detartyseg.herokuapp.com/.
+Unfortunately - I had to cut the functionality, due to the size restrictions for the application. I had to remove the `panoptic segmentation` -
+memory excess on the application, on a free server. Remained functional in the local application and `docker`
 
 If you want to run locally, run `app_local.py`:
 
@@ -810,9 +831,25 @@ look files inside: docker run -t -i detectron2 /bin/bash
 
 <p align="center"><img src="https://i.ibb.co/FwgVWJn/123.jpg" alt="123" border="0"></p>
 
-> *Note* If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
+> 📝 If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
 can't build `torch`. 
 
+
+----
+[Back to contest](#link7)
+
+<h3>Help desk</h3><a id='linkprobeng'></a>
+
+Problems do not arise with the application, but problems may arise when problems arise - `Detectron2`,` torch` and so on.
+Here are some solutions to help you install if you choose to work outside of `docker`. Tested on `MacOs` and` Windows` - on `Win` - the main problem is the lack of` Microsoft Visual C++ `. This collection will help to solve the main problems when installing `torch` and` Detectron2`. Also, it is recommended to have Anaconda on board
+
+| Problem  |  Description |  Solution |
+|---|---|---|
+| Web-app | Error `heroku` -` Application Error` appears | The error may be related to out of memory. You can try again to perform the action or take another picture. There will be no problems with local assembly |
+| torch, Detectron | C ++ error on Windows when installing on `pycatools` | You do not have Visual Studio C ++ installed - the compiler is missing. Install [from here](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159) |
+| torch, torchvision | outdated version or installed not matching your PC | you can check [here](https://pytorch.org/get-started/locally/) |
+| torch | `Torchvision error: Could not find module image.pyd` | read [here](https://kontext.tech/column/python/915/torchvision-error-could-not-find-module-imagepyd) with a solution |
+| Docker | error with `C ++` on assembly or `os` | go to `docker -> advanced` settings and increase the` RAM` memory from 2 GB to 4 GB |
 
 ----
 [Back to contest](#link7)
