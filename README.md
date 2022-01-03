@@ -75,7 +75,7 @@ RUS | [ENG](#ENG)
       - Изображения:
         - Instance segmentation на изображениях
         - Keypoints на изображениях
-        - Panoptic segmentation на изображениях (УДАЛЕНО из web. Доступно в docker)
+        - Panoptic segmentation на изображениях (`УДАЛЕНО из web. Доступно в docker`)
         - Затемнение фона (separate background)
         - Blur эффект
         - Черно-белое изображение
