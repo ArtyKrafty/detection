@@ -694,7 +694,7 @@ Press START and in the outputs folder you have processed images
 
 Getting an image with a blur effect on the background
 
-<img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"> 
+<p align="center"><img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"></p>
 
 4. Building key points - works similarly to weapons - just specify the address to the configuration
 ```python
