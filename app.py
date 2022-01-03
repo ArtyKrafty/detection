@@ -142,7 +142,7 @@ def main():
             vis_image = Image.fromarray(np.uint8(vis_image.get_image())) 
 
         elif mode == 'panoptic':
-            return render_template("error.html")
+            return render_template("panopt.html")
 
         file_object = io.BytesIO()
         vis_image.save(file_object, 'JPEG')
