@@ -348,7 +348,8 @@ pythonw process_video.py
 `VideoVisualizer`. Чтобы его обойти, был использован класс `Visualizer`, который используется для изображений
 поэтому маски от кадра к кадру меняются. Возможно bug наблюдается только на M1 silicone
 
-<p align="center">![](sample.gif)</p>
+![](sample.gif)
+
 ----
 [К содержанию](#link6)
 
