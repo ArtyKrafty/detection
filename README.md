@@ -51,12 +51,14 @@ RUS | [ENG](#ENG)
    Доступный функционал:  
 
       - Изображения:
+        - Работает с папками! не только единичными изображениями
         - Instance segmentation на изображениях
         - Keypoints
         - Затемнение фона (separate background)
         - Panoptic segmentation
         - Детекция оружия (custom dataset)
       - Видео:
+        - Работает с папками! не только единичными видео файлами
         - Instance segmentation на видео
         - Показ обработки в режиме реального времени
         - Детекция оружия на видео
@@ -73,6 +75,7 @@ RUS | [ENG](#ENG)
    Доступный функционал:  
 
       - Изображения:
+        - Работает с единичными изображениями
         - Instance segmentation на изображениях
         - Keypoints на изображениях
         - Panoptic segmentation на изображениях (`УДАЛЕНО из web. Доступно в docker`)
@@ -497,12 +500,14 @@ The interface allows, without delving into the code, to perform image segmentati
   Available functionality:
 
       - Images:
+        - Works with groups of image, not only single
         - Instance segmentation on images
         - Key points
         - Panoptic segmentation
         - Separate background
         - Weapon detection (custom data set)
       - Video:
+        - Works with groups of vidoe, not only single
         - Instance segmentation on video
         - Show processing in real time
         - Weapon detection on video
@@ -514,6 +519,7 @@ The interface allows, without delving into the code, to perform image segmentati
  Available functionality:
 
       - Images:
+        - Works with single image
         - Instance segmentation on images
         - Keypoints on images
         - Panoptic segmentation (Deleted from web. Only in docker)
