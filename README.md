@@ -34,6 +34,8 @@ RUS | [ENG](#ENG)
 📝 Ошибка может быть связана с превышением памяти. Можно попробовать еще раз (в браузере вернитесь на предыдущую 
 страницу и нажмите `Отправить` еще раз)или взять другую картинку. С локальной сборкой проблем не возникнет
 
+> 📝 `Update` - Для удобства, приложение дополнительно было развернуто на `ВМ` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - доступно по [этой ссылке](http://51.250.18.22:8080/)
+
 ---
 
 
@@ -80,7 +82,7 @@ RUS | [ENG](#ENG)
         - Работает с единичными изображениями
         - Instance segmentation на изображениях
         - Keypoints на изображениях
-        - Panoptic segmentation на изображениях (`УДАЛЕНО из web. Доступно в docker`)
+        - Panoptic segmentation на изображениях (`УДАЛЕНО из heroku. Доступно в docker и yaCloud`)
         - Затемнение фона (separate background)
         - Blur эффект
         - Черно-белое изображение
@@ -367,9 +369,11 @@ pythonw process_video.py
 
 
 
-зеркало для `app.py`, который находится по адресу: https://detartyseg.herokuapp.com/. 
+зеркало для `app.py`, который находится по адресу: https://detartyseg.herokuapp.com/ и дополнительно в [yaCloud](http://51.250.18.22:8080/) 
 К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Пришлось убрать паноптическую сегментацию -
 превышения памяти на приложение, на бесплатном сервере. Остался функционал в локальном приложении и `docker`
+
+> 📝 `Update` - Для удобства, приложение дополнительно было развернуто на `ВМ` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - доступно по [этой ссылке](http://51.250.18.22:8080/)
 
 Если хотите запустить локально  - запускаем `app_local.py`:
 
@@ -484,6 +488,8 @@ Photos are deleted after upload.
 📝 The error may be related to out of memory. You can try again (push back in your browser and again push `Отправить`) or 
 take another picture. There will be no problems with local assembly
 
+> 📝 `Update` - For convenience, the application has been additionally deployed to `VM` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - available at [this link](http://51.250.18.22:8080/)
+
 ---
 
 
@@ -525,7 +531,7 @@ The interface allows, without delving into the code, to perform image segmentati
         - Works with single image
         - Instance segmentation on images
         - Keypoints on images
-        - Panoptic segmentation (Deleted from web. Only in docker)
+        - Panoptic segmentation (`Deleted from heroku. Available in docker and yaCloud`)
         - Separate background
         - Blur effect
         - Black and white image
@@ -801,7 +807,7 @@ therefore the masks change from frame to frame. Probably the bug is only observe
 Script app_local.py - for local work
 
 
-mirror for `app.py`, which is located at: https://detartyseg.herokuapp.com/.
+mirror for `app.py`, which is located at: https://detartyseg.herokuapp.com/ and in [yaCloud](http://51.250.18.22:8080/) 
 Unfortunately - I had to cut the functionality, due to the size restrictions for the application. I had to remove the `panoptic segmentation` -
 memory excess on the application, on a free server. Remained functional in the local application and `docker`
 
