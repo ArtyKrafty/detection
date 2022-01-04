@@ -31,7 +31,8 @@ RUS | [ENG](#ENG)
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
-📝 Ошибка может быть связана с превышением памяти. Можно попробовать еще раз или взять другую картинку. С локальной сборкой проблем не возникнет
+📝 Ошибка может быть связана с превышением памяти. Можно попробовать еще раз (в браузере вернитесь на предыдущую 
+страницу и нажмите `Отправить` еще раз)или взять другую картинку. С локальной сборкой проблем не возникнет
 
 ---
 
@@ -480,7 +481,8 @@ Photos are deleted after upload.
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
-📝 The error may be related to out of memory. You can try again or take another picture. There will be no problems with local assembly
+📝 The error may be related to out of memory. You can try again (push back in your browser and again push `Отправить`) or 
+take another picture. There will be no problems with local assembly
 
 ---
 
