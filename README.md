@@ -153,6 +153,7 @@ pip3 install torch torchvision torchaudio
 conda install pytorch torchvision cpuonly -c pytorch
 
 ```
+Установка `Detectron2`
 
 ```python
 cd
@@ -588,6 +589,7 @@ pip3 install torch torchvision torchaudio
 conda install pytorch torchvision cpuonly -c pytorch
 
 ```
+`Detectron2` installation
 
 ```python
 cd
