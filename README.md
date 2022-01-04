@@ -34,7 +34,7 @@ RUS | [ENG](#ENG)
 📝 Ошибка может быть связана с превышением памяти. Можно попробовать еще раз (в браузере вернитесь на предыдущую 
 страницу и нажмите `Отправить` еще раз)или взять другую картинку. С локальной сборкой проблем не возникнет
 
-> 📝 `Update` - Для удобства, приложение дополнительно было развернуто на `ВМ` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - доступно по [этой ссылке](http://51.250.18.22:8080/)
+> 📝 `Update` - Для удобства, приложение дополнительно было развернуто на `ВМ` [Ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - доступно по [этой ссылке](http://51.250.18.22:8080/)
 
 ---
 
@@ -74,7 +74,7 @@ RUS | [ENG](#ENG)
   
  > 📝 Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
   
-2. **Web-приложение**. Реализовано дополнительно `web-приложение` с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/. К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
+2. **Web-приложение**. Реализовано дополнительно `web-приложение` с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/ и по [этой ссылке в Ya.Cloud](http://51.250.18.22:8080/). К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
 
    Доступный функционал:  
 
@@ -488,7 +488,7 @@ Photos are deleted after upload.
 📝 The error may be related to out of memory. You can try again (push back in your browser and again push `Отправить`) or 
 take another picture. There will be no problems with local assembly
 
-> 📝 `Update` - For convenience, the application has been additionally deployed to `VM` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - available at [this link](http://51.250.18.22:8080/)
+> 📝 `Update` - For convenience, the application has been additionally deployed to `VM` [Ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - available at [this link](http://51.250.18.22:8080/)
 
 ---
 
@@ -523,7 +523,7 @@ The interface allows, without delving into the code, to perform image segmentati
         
   <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
 
-2. **Web Application**. An additional web application with limited functionality has been implemented (only images) - Located at: https://detartyseg.herokuapp.com/. Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
+2. **Web Application**. An additional web application with limited functionality has been implemented (only images) - Located at: https://detartyseg.herokuapp.com/ and at [this link in Ya.Cloud](http://51.250.18.22:8080/). Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
 
  Available functionality:
 
