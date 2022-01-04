@@ -132,6 +132,26 @@ Detectron2 необходимо установить в соседний кат�
 
 <p align="center"><img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0"></p>
 
+Установка `Detectron2`
+
+```python
+cd
+
+git clone https://github.com/facebookresearch/detectron2.git
+python -m pip install -e detectron2
+
+# На macOS, необходимо установить так (особенно, если у вас M1)
+CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron2
+
+Если возникнут сложности, можно обратиться к официальной документации
+
+наиболее частая проблема - отсутствие С++ compiler 
+conda install -c conda-forge compilers
+
+```
+[Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).   
+[Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
+
 Для Win у вас должно быть установлено Visual C++ 2015 build tools   
 Если нет - установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
 
@@ -153,25 +173,6 @@ pip3 install torch torchvision torchaudio
 conda install pytorch torchvision cpuonly -c pytorch
 
 ```
-Установка `Detectron2`
-
-```python
-cd
-
-git clone https://github.com/facebookresearch/detectron2.git
-python -m pip install -e detectron2
-
-# На macOS, необходимо установить так (особенно, если у вас M1)
-CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron2
-
-Если возникнут сложности, можно обратиться к официальной документации
-
-наиболее частая проблема - отсутствие С++ compiler 
-conda install -c conda-forge compilers
-
-```
-[Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).   
-[Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
 ___
 
@@ -569,6 +570,26 @@ Detectron2 must be installed in the adjacent directory with the module folder
 
 <p align="center"><img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0"></p>
 
+`Detectron2` installation
+
+```python
+cd
+
+git clone https://github.com/facebookresearch/detectron2.git
+python -m pip install -e detectron2
+
+# On macOS, you need to install like this (especially if you have M1
+CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron2
+
+If you have any difficulties, you can refer to the official documentation
+
+the most common problem is the lack of a C ++ compiler:
+conda install -c conda-forge compilers
+
+```
+[Detectron2 Official Installation Guide](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).  
+[Official Installation Guide for Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
+
 For Win, you must have Visual C ++ 2015 build tools installed
 If not, install [from here](https://www.microsoft.com/en-ru/download/confirmation.aspx?id=48159) - this is required for [Detectron2](https://github.com/philferriere/cocoapi)
 
@@ -589,25 +610,6 @@ pip3 install torch torchvision torchaudio
 conda install pytorch torchvision cpuonly -c pytorch
 
 ```
-`Detectron2` installation
-
-```python
-cd
-
-git clone https://github.com/facebookresearch/detectron2.git
-python -m pip install -e detectron2
-
-# On macOS, you need to install like this (especially if you have M1
-CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install -e detectron2
-
-If you have any difficulties, you can refer to the official documentation
-
-the most common problem is the lack of a C ++ compiler:
-conda install -c conda-forge compilers
-
-```
-[Detectron2 Official Installation Guide](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).  
-[Official Installation Guide for Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
 ___
 
