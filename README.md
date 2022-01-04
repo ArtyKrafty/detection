@@ -155,11 +155,11 @@ conda install -c conda-forge compilers
 [Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).   
 [Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
-Для Win у вас должно быть установлено Visual C++ 2015 build tools   
+Для `Win` у вас должно быть установлено `Visual C++ 2015 build tools`   
 Если нет - установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
 
 
-Также, рекомендуется проверить версию torch и torchvision - проверить можно [тут](https://pytorch.org/get-started/locally/) - 
+Также, рекомендуется проверить версию `torch` и `torchvision` - проверить можно [тут](https://pytorch.org/get-started/locally/) - 
 выбираем Package - копируем команду для установки
 
 
@@ -264,7 +264,7 @@ pythonw process_img.py
 
 ```
 
-Получаем изображение с blur-эффектом на фон - инвертируем маску и вместо предсказаний получаем выделенный от фона объектр
+Получаем изображение с `blur`-эффектом на фон - инвертируем маску и вместо предсказаний получаем выделенный от фона объектр
 
 <p align="center"><img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"></p>
 
@@ -596,11 +596,11 @@ conda install -c conda-forge compilers
 [Detectron2 Official Installation Guide](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).  
 [Official Installation Guide for Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
 
-For Win, you must have Visual C ++ 2015 build tools installed
+For `Win`, you must have `Visual C++ 2015 build tools` installed
 If not, install [from here](https://www.microsoft.com/en-ru/download/confirmation.aspx?id=48159) - this is required for [Detectron2](https://github.com/philferriere/cocoapi)
 
 
-Also, it is recommended to check the version of torch and torchvision - you can check [here](https://pytorch.org/get-started/locally/) - select Package - copy the command to install
+Also, it is recommended to check the version of `torch` and `torchvision` - you can check [here](https://pytorch.org/get-started/locally/) - select Package - copy the command to install
 
 
 <p align="center"><img src="https://i.ibb.co/wc1NPMq/123.jpg" alt="123" border="0"></p>
