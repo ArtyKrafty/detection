@@ -23,7 +23,8 @@ RUS | [ENG](#ENG)
 
 ---
 
-📝 Приложение в спящем режим. Для запуска потребуется время. Также, возможны сбои в работе - приложение на бесплатном сервере. 
+📝 WEB-Приложение в спящем режим. Для запуска потребуется время - примерно `30 секунд` после нажатия перехода по ссылке. 
+Также, возможны сбои в работе - приложение на бесплатном сервере. 
 Фото после загрузки удаляются. 
 
 
@@ -473,7 +474,7 @@ Table of content:
 ---
 
 
-📝 Application is in sleep mode. It will take time to launch. Also, malfunctions are possible - the application is on a free server.
+📝 Web-Application is in sleep mode. It will take time to launch - about `30 sec`. Also, malfunctions are possible - the application is on a free server.
 Photos are deleted after upload.
 
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
