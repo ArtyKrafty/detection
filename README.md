@@ -11,7 +11,7 @@ RUS | [ENG](#ENG)
 
 Содержание:  
 
- [Введение](#link1)  
+- [Мотивировка](#link1)  
 - [Локальная работа](#link2)  
    - [Скрипт process_img.py](#link3)  
    - [Скрипт process_video.py](#link4)   
@@ -29,6 +29,8 @@ RUS | [ENG](#ENG)
 Фото после загрузки удаляются. 
 
 
+
+
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
 
 
@@ -40,13 +42,14 @@ RUS | [ENG](#ENG)
 
 ---
 
-
-<h3>Введение</h3><a id='link1'></a>
+<h3 align="center">Мотивировка</h3><a id='link1'></a>
 
 Модульная обработка изображений с использованием [OpenCV](https://opencv.org/) и генераторов `Python` с помощью [Detectron2](https://github.com/facebookresearch/detectron2). Идея модульности позволяет программировать промышленный `pipeline` обработки несколькими специалистами `DS`. Идея использования генераторов взята у [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - в итоге получаем полноценный модуль, который может дополняться в нужных нам вариациях.  
 
 Целью работы была реализация различных подходв внедрения `Detectron2` и `OpenCV` в проекты - как локальные, так и `web` с использованием модулей 
-или же в виде скриптов с применением различных вариантов работы моделей
+или же в виде скриптов с применением различных вариантов работы моделей, а также продемонстрировать различные варианты установки модулей и зафиксировать
+различные способы решения проблем, возникающих при работе с `torch` и `Detectron2` в разрезе приложений
+
 
 > 📝 Если у Вас не открывается ссылка на `medium` - включите режим инкогнито
 
@@ -98,7 +101,7 @@ RUS | [ENG](#ENG)
 [К содержанию](#link6)
 
 
-<h3>Локальная работа</h3><a id='link2'></a>
+<h3 align="center">Локальная работа</h3><a id='link2'></a>
 <h4> 1. Скрипт process_img.py</h4><a id='link3'></a>
 
 Здесь представлено три варианта работы модели:   
@@ -189,9 +192,11 @@ conda install pytorch torchvision cpuonly -c pytorch
 
 ```
 
-___
+---
 
-**Использование модуля**
+<h3 align="center">Использование модуля</h3>
+
+---
 
 
 1. `Instance segmentation` на классы `COCO`
@@ -331,7 +336,13 @@ pythonw process_img.py
 
 <h4> 2. Скрипт process_video.py</h4><a id='link4'></a>
 
-**Использование модуля**
+Данный модуль предназначен для обработки видео и показа результата обработки при необходимости
+
+---
+
+<h3 align="center">Использование модуля</h3>
+
+---
 
 
 `Instance segmentation` на классы `COCO`
@@ -370,7 +381,7 @@ pythonw process_video.py
 ----
 [К содержанию](#link6)
 
-<h3>Web-приложение</h3><a id='link5'></a>
+<h3 align="center">Web-приложение</h3><a id='link5'></a>
 
 
 Скрипт `app_local.py` - для запуска локально
@@ -383,12 +394,12 @@ pythonw process_video.py
 Если захотите воспользоваться сервисом [heroku](https://dashboard.heroku.com/login) - Вам достаточно создать репозиторий с Вашим приложением,
 и вам будет доступно - `deploy from git`
 
-<img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0">
+<p align="center"><img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0"></p>
 
 > 📝 `Update` - Для удобства, приложение дополнительно `временно, в демонстрационных целях`, 
 > было развернуто на `ВМ` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - доступно по [этой ссылке](http://51.250.20.81:8080/)
 
-Если хотите запустить локально  - запускаем `app_local.py`:
+Если хотите запустить локально  - запускаем `app_local.py`. но у вас должно быть настроено уже окружение (как мы настраивали выше):
 
 
 ```python
@@ -440,7 +451,7 @@ docker rm $(docker ps -qa)
 [К содержанию](#link6)
 
 
-<h3>Виртуальная машина</h3><a id='linkvmru'></a>
+<h3 align="center">Виртуальная машина</h3><a id='linkvmru'></a>
 
 С помощью `Dockerfile` Вы можете установить `web-приложение` на виртуальную машину.  
 
@@ -448,15 +459,15 @@ docker rm $(docker ps -qa)
 
 В консоли выбираем - `Compute Cloud`:
 
-<img src="https://i.ibb.co/qFrKRnF/2022-01-05-23-54-18.png" alt="2022-01-05-23-54-18" border="0">
+<p align="center"><img src="https://i.ibb.co/qFrKRnF/2022-01-05-23-54-18.png" alt="2022-01-05-23-54-18" border="0"></p>
 
 Выбираем в качестве операционной системы нашей ВМ - `Ubuntu`:
 
-<img src="https://i.ibb.co/RYgXGZR/2022-01-05-23-54-30.png" alt="2022-01-05-23-54-30" border="0">
+<p align="center"><img src="https://i.ibb.co/RYgXGZR/2022-01-05-23-54-30.png" alt="2022-01-05-23-54-30" border="0"></p>
 
 Нам необходимо создать `ssh-key` для обмена с виртуальной машиной и ввести его в это поле:
 
-<img src="https://i.ibb.co/Rgj1sVj/2022-01-05-23-54-36.png" alt="2022-01-05-23-54-36" border="0"> 
+<p align="center"><img src="https://i.ibb.co/Rgj1sVj/2022-01-05-23-54-36.png" alt="2022-01-05-23-54-36" border="0"></p>
 
 Для того, чтобы создать ssh ключ, на `MacOS` достаточно зайти в терминал, на `Windows` - вы можете скачать [git](https://git-scm.com/) - в который входит 
 улитита, необходимая для создания ключа.  
@@ -469,7 +480,7 @@ cd <your_app_name>
 ssh-keygen -t rsa
 
 ```
-<img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0">
+<p align="center"><img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0"></p>
 
 Вам будет предложено создать имя ключа и создать пароли. Дальше вам просто необходимо прочитать ваш публичный ключ и скопировать вывод 
 в специальное поле виртуальной машины
@@ -479,7 +490,7 @@ ssh-keygen -t rsa
 cat test_key.pub
 
 ```
-Копируем вывод и нажимаем создать ВМ. Теперь мы можем к ней подключить в терминале:
+Копируем вывод и нажимаем создать `ВМ` Теперь мы можем к ней подключить в терминале:
 
 ```python
 
@@ -502,7 +513,7 @@ docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 ----
 [К содержанию](#link6)
 
-<h3>Техническая поддержка</h3><a id='linkprobru'></a>
+<h3 align="center">Техническая поддержка</h3><a id='linkprobru'></a>
 
 Проблемы возникают не с приложением, а могут возникнуть при установки сопутствующего окружения - `Detectron2`, `torch` и так далее. 
 Здесь собрал решения, которые помогут вам в установке, если вы решите работать не через `docker`. Тестировалось на `MacOs` и `Windows` - на `Win` - основная проблема - отсутствие `Microsoft Visual C++`. Данный сборник поможет решить основные проблемы по установке `torch` и `Detectron2`. Также, рекомендую, чтобы у вас уже была `Anaconda`
@@ -546,7 +557,7 @@ docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
 
 Table of content:  
 
-- [Introduction](#link8)  
+- [Motivation](#link8)  
 - [Local installation](#link9)  
    - [Script process_img.py](#link10)  
    - [Script process_video.py](#link11)   
@@ -574,12 +585,13 @@ take another picture. There will be no problems with local assembly
 ---
 
 
-<h3>Introduction</h3><a id='link8'></a>
+<h3 align="center">Motivation</h3><a id='link8'></a>
 
 Modular image processing using [OpenCV](https://opencv.org/) and `Python` generators using [Detectron2](https://github.com/facebookresearch/detectron2). The idea of modularity allows the industrial processing pipeline to be programmed by several `DS` specialists. The idea of using generators is taken from [Arosław Gilewski](https://medium.com/deepvisionguru/modular-image-processing-pipeline-using-opencv-and-python-generators-9edca3ccb696) - as a result, we get a full-fledged module that can be supplemented in the variations we need.
 
 The aim of the work was to implement various approaches to integrating `Detectron2` and `OpenCV` into projects - both local and web using modules
-or in the form of scripts using different versions of the models
+or in the form of scripts using different versions of the models, as well as use various options for installing modules and fix
+various ways to solve problems, contributing to the work with `torch` and` Detectron2` in the context of applications
 
 > 📝 If you do not have a link to `medium` - turn on incognito mode
 
@@ -625,7 +637,7 @@ The interface allows, without delving into the code, to perform image segmentati
 [Back to contest](#link7)
 
 
-<h3>Local execution</h3><a id='link9'></a>
+<h3 align="center">Local execution</h3><a id='link9'></a>
 <h4> 1. Script process_img.py</h4><a id='link10'></a>
 
 Here are three options for how the model works:
@@ -711,9 +723,11 @@ conda install pytorch torchvision cpuonly -c pytorch
 
 ```
 
-___
+---
 
-**Module usage**
+<h3 align="center">Module usage</h3>
+
+---
 
 
 1. `Instance segmentation` with `COCO`
@@ -888,7 +902,7 @@ therefore the masks change from frame to frame. Probably the bug is only observe
 ----
 [Back to contest](#link7)
 
-<h3>Web-application</h3><a id='link12'></a>
+<h3 align="center">Web-application</h3><a id='link12'></a>
 Script app_local.py - for local work
 
 
@@ -898,7 +912,7 @@ memory excess on the application, on a free server. Remained functional in the l
 If you want to use the [heroku](https://dashboard.heroku.com/login) service  - you just need to create a repository with your application,
 and you will have access to - `deploy from git`
 
-<img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0">
+<p align="center"><img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0"></p>
 
 If you want to run locally, run `app_local.py`:
 
@@ -950,7 +964,7 @@ can't build `torch`.
 [Back to contest](#link7)
 
 
-<h3>Virtual machine</h3><a id='linkvmeng'></a>
+<h3 align="center">Virtual machine</h3><a id='linkvmeng'></a>
 
 With the `Dockerfile` you can install a` web application` on a virtual machine. 
 
@@ -958,15 +972,15 @@ We register on any service that provides VM services - for example, I used [Ya.C
 
 In the console, select - `Compute Cloud`:
 
-<img src="https://i.ibb.co/qFrKRnF/2022-01-05-23-54-18.png" alt="2022-01-05-23-54-18" border="0">
+<p align="center"><img src="https://i.ibb.co/qFrKRnF/2022-01-05-23-54-18.png" alt="2022-01-05-23-54-18" border="0"></p>
 
 We select `Ubuntu` as the operating system of our VM:
 
-<img src="https://i.ibb.co/RYgXGZR/2022-01-05-23-54-30.png" alt="2022-01-05-23-54-30" border="0">
+<p align="center"><img src="https://i.ibb.co/RYgXGZR/2022-01-05-23-54-30.png" alt="2022-01-05-23-54-30" border="0"></p>
 
 We need to create an `ssh-key` to communicate with the virtual machine and enter it in this field:
 
-<img src="https://i.ibb.co/Rgj1sVj/2022-01-05-23-54-36.png" alt="2022-01-05-23-54-36" border="0"> 
+<p align="center"><img src="https://i.ibb.co/Rgj1sVj/2022-01-05-23-54-36.png" alt="2022-01-05-23-54-36" border="0"></p>
 
 In order to create an ssh key, on `MacOS` just go to the terminal, on` Windows` - you can download [git](https://git-scm.com/) - which includes
 the utility needed to create the key.
@@ -1012,7 +1026,7 @@ If during building `Docker` the error` docker: Got permission denied issue` occu
 ----
 [Back to contest](#link7)
 
-<h3>Help desk</h3><a id='linkprobeng'></a>
+<h3 align="center">Help desk</h3><a id='linkprobeng'></a>
 
 Problems do not arise with the application, but problems may arise when problems arise - `Detectron2`,` torch` and so on.
 Here are some solutions to help you install if you choose to work outside of `docker`. Tested on `MacOs` and` Windows` - on `Win` - the main problem is the lack of` Microsoft Visual C++ `. This collection will help to solve the main problems when installing `torch` and` Detectron2`. Also, it is recommended to have Anaconda on board
