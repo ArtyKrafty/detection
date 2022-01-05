@@ -374,9 +374,12 @@ pythonw process_video.py
 ```
 **Примечание.** Важно! На данный момент, существует [bug](https://github.com/facebookresearch/detectron2/issues/3780) на класс
 `VideoVisualizer`. Чтобы его обойти, был использован класс `Visualizer`, который используется для изображений
-поэтому маски от кадра к кадру меняются. Возможно bug наблюдается только на M1 silicone
+поэтому маски от кадра к кадру меняются. Возможно bug наблюдается только на `M1 silicone`
 
-![](sample.gif)
+<p align="center">
+  <img src="sample.gif" alt="animated" />
+</p>
+
 
 ----
 [К содержанию](#link6)
@@ -864,7 +867,13 @@ The goal was to demonstrate various options for the model without delving into t
 
 <h4> 2. Script process_video.py</h4><a id='link11'></a>
 
-**Module usage**
+This module is designed to process video and display the processing result, if necessary.
+
+---
+
+<h3 align="center">Module usage</h3>
+
+---
 
 
 `Instance segmentation` with `COCO`
@@ -898,7 +907,10 @@ Press START and in the outputs folder you have the processed video. Takes some t
 `VideoVisualizer`. To get around it, the `Visualizer` class was used, which is used for images
 therefore the masks change from frame to frame. Probably the bug is only observed on M1 silicone
 
-![](sample.gif)
+<p align="center">
+  <img src="sample.gif" alt="animated" />
+</p>
+
 ----
 [Back to contest](#link7)
 
@@ -914,7 +926,7 @@ and you will have access to - `deploy from git`
 
 <p align="center"><img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0"></p>
 
-If you want to run locally, run `app_local.py`:
+If you want to run locally, run `app_local.py`, but you need `torch` and `detectron2`:
 
 
 ```python
@@ -931,7 +943,10 @@ An application with limited functionality will start at the address - `http: // 
 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
-<a id='linkdock'></a>
+
+<h3>Dockerfile</h3><a id='linkdock'></a>
+
+
 
 Another option is to run via Docker (local copy of https://detartyseg.herokuapp.com/) - weight of Image 14.4 GB:
 
@@ -993,7 +1008,7 @@ cd <your_app_name>
 ssh-keygen -t rsa
 
 ```
-<img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0">
+<p align="center"><img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0"></p>
 
 You will be prompted to create a key name and create passwords. Then you just need to read your public key and copy the output
 in a special field of the virtual machine
