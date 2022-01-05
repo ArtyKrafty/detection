@@ -17,6 +17,7 @@ RUS | [ENG](#ENG)
    - [Скрипт process_video.py](#link4)   
 - [Web-приложение](#link5) 
 - [Dockerfile](#link)
+- [Виртуальная машина](#linkvmru)
 - [Техническая поддержка](#linkprobru)
 - [Ссылки](#linkru001)
 
@@ -115,7 +116,11 @@ RUS | [ENG](#ENG)
 
 ---
 
-**Установка локально**  
+<h3 align="center">Установка локально</h3>
+
+---
+
+
 
 Рекомендуется устанавливать в `virtuenv`. Необязательный шаг - можно пропустить
 
@@ -159,6 +164,8 @@ conda install -c conda-forge compilers
 ```
 [Официальное руководство по установке Detectron2](https://github.com/facebookresearch/detectron2/blob/3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4/INSTALL.md).   
 [Официальное руководство по установке Detectron2. Installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
+
+Приложение должно быть готовым к работе, ниже приведены решения, если возникают трудности
 
 Для `Win` у вас должно быть установлено `Visual C++ 2015 build tools`   
 Если нет - установите [отсюда](https://www.microsoft.com/ru-ru/download/confirmation.aspx?id=48159)  - это необходимо для [Detectron2](https://github.com/philferriere/cocoapi)
@@ -372,7 +379,11 @@ pythonw process_video.py
 
 зеркало для `app.py`, который находится по адресу: https://detartyseg.herokuapp.com/ и дополнительно в [yaCloud](http://51.250.20.81:8080/) 
 К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Пришлось убрать паноптическую сегментацию -
-превышения памяти на приложение, на бесплатном сервере. Остался функционал в локальном приложении и `docker`
+превышения памяти на приложение, на бесплатном сервере. Остался функционал в локальном приложении и `docker`.
+Если захотите воспользоваться сервисом [heroku](https://dashboard.heroku.com/login) - Вам достаточно создать репозиторий с Вашим приложением,
+и вам будет доступно - `deploy from git`
+
+<img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0">
 
 > 📝 `Update` - Для удобства, приложение дополнительно `временно, в демонстрационных целях`, 
 > было развернуто на `ВМ` [ya.Cloud](https://cloud.yandex.ru/services/compute?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Other_All_LGEN_Compute_cloud|1665315027&utm_term=&utm_content=k50id|dsa-1095774648190|cid|1665315027|aid|536548145022|gid|115436434013|pos||src|g_|dvc|c|reg|9040981|rin||&gclid=Cj0KCQiA_c-OBhDFARIsAIFg3eyjfkECcbvr56__gTM6WeTu4I4CsK8_PNLkyYxi1niax0HbaNtwHrgaAp0jEALw_wcB) - доступно по [этой ссылке](http://51.250.20.81:8080/)
@@ -393,7 +404,9 @@ pythonw process_video.py
 
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
-<a id='link'></a>
+<h3>Dockerfile</h3><a id='link'></a>
+
+
 
 Другой вариант - запуск через `Docker` (локальная версия https://detartyseg.herokuapp.com/) - вес образа `~14.1 GB` (у вас должен быть установлен
 [Docker](https://www.docker.com/) - дополнительно ничего не требуется):
@@ -422,6 +435,69 @@ docker rm $(docker ps -qa)
 
 > 📝 Если у вас `MacOS` - зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ - иначе `С++` компилятор 
 не сможет собрать `torch`
+
+----
+[К содержанию](#link6)
+
+
+<h3>Виртуальная машина</h3><a id='linkvmru'></a>
+
+С помощью `Dockerfile` Вы можете установить `web-приложение` на виртуальную машину.  
+
+Регистрируемся на любом сервисе, предоставляющим услуги `ВМ` - например, я вопспользовался [Ya.Cloud](https://cloud.yandex.ru/?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Msk_All_LGEN_Brand_cloud|8671134894&utm_term=%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%20%D0%BA%D0%BB%D0%B0%D1%83%D0%B4&utm_content=k50id|kwd-972722615673|cid|8671134894|aid|428872413994|gid|85184818777|pos||src|g_|dvc|c|reg|9040981|rin|9047023|&gclid=Cj0KCQiAoNWOBhCwARIsAAiHnEjpHDU6WbRvwmOl1NYDg5M5Zi_pZ-bc0dDwlu8sDRvP555cSH-W4bQaApuWEALw_wcB)
+
+В консоли выбираем - `Compute Cloud`:
+
+<img src="https://i.ibb.co/qFrKRnF/2022-01-05-23-54-18.png" alt="2022-01-05-23-54-18" border="0">
+
+Выбираем в качестве операционной системы нашей ВМ - `Ubuntu`:
+
+<img src="https://i.ibb.co/RYgXGZR/2022-01-05-23-54-30.png" alt="2022-01-05-23-54-30" border="0">
+
+Нам необходимо создать `ssh-key` для обмена с виртуальной машиной и ввести его в это поле:
+
+<img src="https://i.ibb.co/Rgj1sVj/2022-01-05-23-54-36.png" alt="2022-01-05-23-54-36" border="0"> 
+
+Для того, чтобы создать ssh ключ, на `MacOS` достаточно зайти в терминал, на `Windows` - вы можете скачать [git](https://git-scm.com/) - в который входит 
+улитита, необходимая для создания ключа.  
+
+```python
+cd .ssh
+
+mkdir <your_app_name>
+cd <your_app_name>
+ssh-keygen -t rsa
+
+```
+<img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0">
+
+Вам будет предложено создать имя ключа и создать пароли. Дальше вам просто необходимо прочитать ваш публичный ключ и скопировать вывод 
+в специальное поле виртуальной машины
+
+
+```python
+cat test_key.pub
+
+```
+Копируем вывод и нажимаем создать ВМ. Теперь мы можем к ней подключить в терминале:
+
+```python
+
+ssh <ЛОГИН>@<публичный_IP-адрес_виртуальной машины> 
+
+```
+Публичный адрес Вам будет доступен после создания. Дальше, идем [сюда](https://www.digitalocean.com/community/tutorials/docker-ubuntu-18-04-1-ru) и устанавливаем на вашу `ВМ` `Docker`. После установки. все как и у вас локально:
+
+```python
+git clone https://github.com/ArtyKrafty/detection
+
+cd detection
+
+docker build . -f Dockerfile -t detectron2
+docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
+
+```
+Если при сборке `Docker` возникает ошибка `docker: Got permission denied issue` - просто выполняем команду: `sudo chmod 666 /var/run/docker.sock`
 
 ----
 [К содержанию](#link6)
@@ -476,6 +552,7 @@ Table of content:
    - [Script process_video.py](#link11)   
 - [Web-application](#link12) 
 - [Dockerfile](#linkdock)
+- [Virtual Machine](#linkvmeng)
 - [Help desk](#linkprobeng)
 - [Credits](#linkeng001)
 
@@ -564,7 +641,11 @@ For ease of launch, a simple `GUI` was added to this module, using [GOOEY](https
 
 ---
 
-**Install locally**
+<h3 align="center">Local Installation</h3>
+
+---
+
+
 
 It is recommended to install to `virtuenv`. Optional step - can be skipped
 
@@ -814,6 +895,10 @@ Script app_local.py - for local work
 mirror for `app.py`, which is located at: https://detartyseg.herokuapp.com/ and in [yaCloud](http://51.250.20.81:8080/) 
 Unfortunately - I had to cut the functionality, due to the size restrictions for the application. I had to remove the `panoptic segmentation` -
 memory excess on the application, on a free server. Remained functional in the local application and `docker`
+If you want to use the [heroku](https://dashboard.heroku.com/login) service  - you just need to create a repository with your application,
+and you will have access to - `deploy from git`
+
+<img src="https://i.ibb.co/p1KVj69/2022-01-06-00-11-48.png" alt="2022-01-06-00-11-48" border="0">
 
 If you want to run locally, run `app_local.py`:
 
@@ -860,6 +945,69 @@ You can also run the application on your `VM` using the `Dockerfile`.
 > 📝 If you `MacOS` user - go to` docker -> advanced` settings and increase `RAM` from 2 to 4 GB - otherwise` C ++ `compiler
 can't build `torch`. 
 
+
+----
+[Back to contest](#link7)
+
+
+<h3>Virtual machine</h3><a id='linkvmeng'></a>
+
+With the `Dockerfile` you can install a` web application` on a virtual machine. 
+
+We register on any service that provides VM services - for example, I used [Ya.Cloud](https://cloud.yandex.ru/?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Msk_All_LGEN_Brand_cloud|8671134894&utm_term=%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%20%D0%BA%D0%BB%D0%B0%D1%83%D0%B4&utm_content=k50id|kwd-972722615673|cid|8671134894|aid|428872413994|gid|85184818777|pos||src|g_|dvc|c|reg|9040981|rin|9047023|&gclid=Cj0KCQiAoNWOBhCwARIsAAiHnEjpHDU6WbRvwmOl1NYDg5M5Zi_pZ-bc0dDwlu8sDRvP555cSH-W4bQaApuWEALw_wcB)
+
+In the console, select - `Compute Cloud`:
+
+<img src="https://i.ibb.co/qFrKRnF/2022-01-05-23-54-18.png" alt="2022-01-05-23-54-18" border="0">
+
+We select `Ubuntu` as the operating system of our VM:
+
+<img src="https://i.ibb.co/RYgXGZR/2022-01-05-23-54-30.png" alt="2022-01-05-23-54-30" border="0">
+
+We need to create an `ssh-key` to communicate with the virtual machine and enter it in this field:
+
+<img src="https://i.ibb.co/Rgj1sVj/2022-01-05-23-54-36.png" alt="2022-01-05-23-54-36" border="0"> 
+
+In order to create an ssh key, on `MacOS` just go to the terminal, on` Windows` - you can download [git](https://git-scm.com/) - which includes
+the utility needed to create the key.
+
+```python
+cd .ssh
+
+mkdir <your_app_name>
+cd <your_app_name>
+ssh-keygen -t rsa
+
+```
+<img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0">
+
+You will be prompted to create a key name and create passwords. Then you just need to read your public key and copy the output
+in a special field of the virtual machine
+
+
+```python
+cat test_key.pub
+
+```
+Copy the output and click create VM. Now we can connect to it in the terminal:
+
+```python
+
+ssh <ЛОГИН>@<публичный_IP-адрес_виртуальной машины> 
+
+```
+The public address will be available to you after creation. Next, go [here](https://www.digitalocean.com/community/tutorials/docker-ubuntu-18-04-1-ru) and install Docker on your VM. After installation. everything is the same as yours locally:
+
+```python
+git clone https://github.com/ArtyKrafty/detection
+
+cd detection
+
+docker build . -f Dockerfile -t detectron2
+docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
+
+```
+If during building `Docker` the error` docker: Got permission denied issue` occurs - just execute the command: `sudo chmod 666/var/run/docker.sock`
 
 ----
 [Back to contest](#link7)
