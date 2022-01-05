@@ -508,7 +508,7 @@ git clone https://github.com/ArtyKrafty/detection
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
+docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 ```
 Если при сборке `Docker` возникает ошибка `docker: Got permission denied issue` - просто выполняем команду: `sudo chmod 666 /var/run/docker.sock`
@@ -1033,7 +1033,7 @@ git clone https://github.com/ArtyKrafty/detection
 cd detection
 
 docker build . -f Dockerfile -t detectron2
-docker run --name detectron2 -p 127.0.0.1:8080:8080 detectron2
+docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 ```
 If during building `Docker` the error` docker: Got permission denied issue` occurs - just execute the command: `sudo chmod 666/var/run/docker.sock`
