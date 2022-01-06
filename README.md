@@ -116,7 +116,8 @@ RUS | [ENG](#ENG)
 
 -- структура модуля --
 
-app.py работает с Flask - загрузка css и html из static и templates. Загрузка изображений через Api Cloudly
+app.py работает с Flask - загрузка css и html из static и templates. 
+Загрузка изображений через Api Cloudly
 
 ```
 
@@ -676,7 +677,8 @@ Video: process_vid.py -> detection.pipe.py -> detection.capture_vid.py ->
 
 -- module structure --
 
-app.py works with Flask - loading css and html from static and templates. Uploading images via Api Cloudly
+app.py works with Flask - loading css and html from static and templates. 
+Uploading images via Api Cloudly
 
 ```
 
