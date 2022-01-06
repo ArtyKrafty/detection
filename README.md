@@ -86,11 +86,11 @@ RUS | [ENG](#ENG)
 
 Изображения: process_img.py -> detection.pipe.py -> detction.capture_imgs.py -> 
 -> detection.predict.py -> detection.annotate_img.py или detection.separate_background.py -> 
--> save_img.py
+-> detection.save_img.py
 
 Видео: process_vid.py -> detection.pipe.py -> detection.capture_vid.py -> 
 -> detection.predict.py -> detection.annotate_vid.py -> 
--> save_vid.py -> detection.display_vid.py
+-> detection.save_vid.py -> detection.display_vid.py
 
 ```
   
@@ -648,11 +648,11 @@ The interface allows, without delving into the code, to perform image segmentati
 
 Images: process_img.py -> detection.pipe.py -> detction.capture_imgs.py ->
 -> detection.predict.py -> detection.annotate_img.py or detection.separate_background.py ->
--> save_img.py
+-> detection.save_img.py
 
 Video: process_vid.py -> detection.pipe.py -> detection.capture_vid.py ->
 -> detection.predict.py -> detection.annotate_vid.py ->
--> save_vid.py -> detection.display_vid.py
+-> detection.save_vid.py -> detection.display_vid.py
 
 ```
 
