@@ -78,6 +78,21 @@ RUS | [ENG](#ENG)
   
   
  > 📝 Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
+
+
+```python
+
+-- структура модуля --
+
+Изображения: process_img.py -> detection.pipe.py -> detction.capture_imgs.py -> 
+-> detection.predict.py -> detection.annotate_img.py или detection.separate_background.py -> 
+-> save_img.py
+
+Видео: process_vid.py -> detection.pipe.py -> detection.capture_vid.py -> 
+-> detection.predict.py -> detection.annotate_vid.py -> 
+-> save_vid.py -> detection.display_vid.py
+
+```
   
 2. **Web-приложение**. Реализовано дополнительно `web-приложение` с ограниченной функциональностью (только изображения) - Находится по адресу: https://detartyseg.herokuapp.com/ и по [этой ссылке в Ya.Cloud](http://51.250.20.81:8080/). К сожалению - пришлось обрезать функционал, из-за ограничений размера на приложение. Также, возможен запуск через [Docker](https://www.docker.com/) - инструкция в соответствующей части файла [Readme.md](#link) - локально, либо после клонирования репозитория и настройки окружения - запус через `app_local.py`  
 
@@ -96,6 +111,14 @@ RUS | [ENG](#ENG)
 <p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
  
 > 📝 Подойдет тем, кто не хочет тратить время на настройки - а сразу предпочитает получить результат. Есть альтернатива в виде [Docker](#link) сборки
+
+```python
+
+-- структура модуля --
+
+app.py работает с Flask - загрузка css и html из static и templates. Загрузка изображений через Api Cloudly
+
+```
 
 ----
 [К содержанию](#link6)
@@ -618,6 +641,20 @@ The interface allows, without delving into the code, to perform image segmentati
         - Weapon detection on video
         
   <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
+  
+```python
+
+-- module structure --
+
+Images: process_img.py -> detection.pipe.py -> detction.capture_imgs.py ->
+-> detection.predict.py -> detection.annotate_img.py or detection.separate_background.py ->
+-> save_img.py
+
+Video: process_vid.py -> detection.pipe.py -> detection.capture_vid.py ->
+-> detection.predict.py -> detection.annotate_vid.py ->
+-> save_vid.py -> detection.display_vid.py
+
+```
 
 2. **Web Application**. An additional web application with limited functionality has been implemented (only images) - Located at: https://detartyseg.herokuapp.com/ and at [this link in Ya.Cloud](http://51.250.20.81:8080/). Unfortunately, I had to cut the functionality due to the size restrictions for the application. Also, launching via [Docker](https://www.docker.com/) is possible - instructions in the corresponding part of the file [Readme.md](#linkdock) - locally, or after cloning the repository - launching via `app_local.py`
 
@@ -634,6 +671,14 @@ The interface allows, without delving into the code, to perform image segmentati
 
 
 <p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
+
+```python
+
+-- module structure --
+
+app.py works with Flask - loading css and html from static and templates. Uploading images via Api Cloudly
+
+```
 
 
 ----
