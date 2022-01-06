@@ -72,12 +72,15 @@ RUS | [ENG](#ENG)
         - Показ обработки в режиме реального времени
         - Детекция оружия на видео
         
+        Поддержка GPU!
+        
         
         
   <p align="center"><img src="https://i.ibb.co/ZJSL1yL/2021-12-28-10-43-20.png" alt="2021-12-28-10-43-20" border="0"></p>
   
   
  > 📝 Подойдет тем, кто хочет иметь доступ к коду и иметь больший контроль. 
+ > 📝 Примеры работы в папке `output` и по тексту `ReadMe`
 
 
 ```python
@@ -106,6 +109,8 @@ RUS | [ENG](#ENG)
         - Затемнение фона (separate background)
         - Blur эффект
         - Черно-белое изображение
+
+        только CPU
 
 
 <p align="center"><img src="https://i.ibb.co/mDCxTP3/2022-01-03-11-27-44.png" alt="2022-01-03-11-27-44" border="0"></p>
@@ -252,6 +257,7 @@ pythonw process_img.py
 ```
 <p align="center"><img src="https://i.ibb.co/pz0Twxx/0299ce77-30e4-4b31-b8e5-fad85b140111.jpg" alt="0299ce77-30e4-4b31-b8e5-fad85b140111" border="0"></p>
 
+> на стандартных моделях нет проблем с отработкой на основные классы в `COCO` датасете
 
 2. `Instance segmentation` для обнаружения оружия на кастомном [датасете](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). Названиями классов пришлось пренебречь - иначе потеряли в универсальности. Если собрать сет больше - можно использовать подобные модели для обнаружения
 наличия оружия у человека
@@ -287,6 +293,10 @@ pythonw process_img.py
 ```
 <p align="center"><img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0"></p>
 
+> здесь пришлось пожертвовать словарем классов, чтобы была универсальность - оружие не было основной целью данного приложения,
+> использовалось в качестве примера, как можно применять модель в реальном мире на реальных задачах, а также показать
+> `baseline` обучения своего детектора
+
 3. Отделение фона - работает аналогично - достаточно поставить отметку separate_background
 
 ```python
@@ -308,6 +318,8 @@ pythonw process_img.py
 Получаем изображение с `blur`-эффектом на фон - инвертируем маску и вместо предсказаний получаем выделенный от фона объектр
 
 <p align="center"><img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"></p>
+
+> моя любимая особенность данного приложения - помогает без навыков `photoshop` сделать небольшую обработку своего фото
 
 4. Построение ключевых точек:
 
@@ -332,6 +344,9 @@ pythonw process_img.py
 
 <p align="center"><img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0"></p>
 
+> здесь есть неточности, модель справляется несовершенно. Возможны улучшения, с помощью внедрения иной технологии `pose flow`.
+> например, можно взять решение от YuliangXiu [здесь](https://github.com/YuliangXiu/PoseFlow)
+
 5. Паноптическая сегментация изображений - достаточно указать адрес к конфигурации
 ```python
 Необходимо задать input. Это изображения, на которых будут предсказываться объекты. 
@@ -351,6 +366,9 @@ pythonw process_img.py
 ```
 
 <p align="center"><img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0"></p>
+
+> panoptic segmentation также удается, но не совершенно - можно взять более сложную и глубокую модель
+> либо выбрать другой фреймворк, или же просто - дообучить, собрав сет
 
 
 Целью было продемонстрировать различные варианты работы модели без углублений в код со стороны пользователя данного модуля
@@ -404,7 +422,8 @@ pythonw process_video.py
   <img src="sample.gif" alt="animated" />
 </p>
 
-
+> собственно, из минусов - наблюдаем изменчивость цвета маски, в идеале - маска должна быть статична и не менять цвет. На данный момент,
+> пришлось прибегнуть к хитрости - использовать разметку кадров и склеивать их в видео после обработки
 ----
 [К содержанию](#link6)
 
@@ -808,6 +827,7 @@ Press START and in the outputs folder you have processed images
 ```
 <p align="center"><img src="https://i.ibb.co/pz0Twxx/0299ce77-30e4-4b31-b8e5-fad85b140111.jpg" alt="0299ce77-30e4-4b31-b8e5-fad85b140111" border="0"></p>
 
+> on standard models of problems with working out the main classes in the `COCO` dataset
 
 2. `Instance segmentation` for detecting weapons on a custom [dataset](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). The class names had to be neglected - otherwise they lost in universality. If you collect a larger set, you can use similar models to detect whether a person has a weapon
 
@@ -842,6 +862,10 @@ Press START and in the outputs folder you have processed images
 ```
 <p align="center"><img src="https://i.ibb.co/8M9Bt3T/new-use-hotel-robber-with-gun-2.jpg" alt="new-use-hotel-robber-with-gun-2" border="0"></p>
 
+> here I had to sacrifice the class dictionary to have universality - weapons were not the main purpose of this application,
+> was used as an example of how the model can be applied in the real world to real-world problems, as well as to show
+> `baseline` training your detector
+
 3. Separating the background - works the same way - just check the separate_background
 
 ```python
@@ -863,6 +887,8 @@ Press START and in the outputs folder you have processed images
 Getting an image with a blur effect on the background
 
 <p align="center"><img src="https://i.ibb.co/Q9m5nHh/004.jpg" alt="004" border="0"></p>
+
+> my favorite feature of this application - it helps to do a little processing of your photo without `photoshop` skills
 
 4. Building key points - works similarly to weapons - just specify the address to the configuration
 ```python
@@ -886,6 +912,9 @@ We get an image with marked key points.
 
 <p align="center"><img src="https://i.ibb.co/0KY5Jh1/predict.jpg" alt="predict" border="0"></p>
 
+> there are inaccuracies here, the model does not do it perfectly. Improvements are possible through the introduction of another `pose flow` technology.
+> for example, you can take a solution from YuliangXiu [here](https://github.com/YuliangXiu/PoseFlow)
+
 5. Panoptic group of images - just specify the address to the configuration
 
 ```python
@@ -906,6 +935,9 @@ There is no need to set weights.
 ```
 
 <p align="center"><img src="https://i.ibb.co/Zx9zB1g/predict.jpg" alt="predict" border="0"></p>
+
+> panoptic segmentation is also successful, but not completely - you can take a more complex and deeper model
+> either choose another framework, or simply retrain by putting together a set
 
 The goal was to demonstrate various options for the model without delving into the code on the part of the user of this module - it is enough to specify the address to the configuration
 
@@ -957,6 +989,9 @@ therefore the masks change from frame to frame. Probably the bug is only observe
 <p align="center">
   <img src="sample.gif" alt="animated" />
 </p>
+
+> in fact, of the minuses - we observe the variability of the color of the mask, ideally - the mask should be static and not change color. Presently,
+> had to resort to a trick - to use frame markup and glue them in the video after processing
 
 ----
 [Back to contest](#link7)
