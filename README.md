@@ -3,6 +3,7 @@ RUS | [ENG](#ENG)
 <a id='RUS'></a>
 <h2 align="center">Модульная обработка изображений с использованием OpenCV и генераторов Python с помощью Detectron2. Pipeline, web-приложение и локальное приложение </h2>
 
+
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
 
 <a id='link6'></a>
@@ -133,7 +134,7 @@ app.py работает с Flask - загрузка css и html из static и t
 <h3 align="center">Локальная работа</h3><a id='link2'></a>
 <h4> 1. Скрипт process_img.py</h4><a id='link3'></a>
 
-Здесь представлено три варианта работы модели:   
+Здесь представлено пять вариантов работы модели:   
 
 - `instance segmentation` на классы `COCO`
 - `instance segmentation` для обнаружения оружия на кастомном [датасете](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). Изображения были взяты с репозитория [MLWhiz](https://github.com/MLWhiz/object_detection), которые я разметил вручную с помощью [supervise.ly](https://supervise.ly/).    
@@ -709,7 +710,7 @@ Uploading images via Api Cloudly
 <h3 align="center">Local execution</h3><a id='link9'></a>
 <h4> 1. Script process_img.py</h4><a id='link10'></a>
 
-Here are three options for how the model works:
+Here are five options for how the model works:
 
 - `instance segmentation` into classes` COCO`
 - `instance segmentation` for detecting weapons on a custom [dataset](https://github.com/ArtyKrafty/detection/blob/main/configs/COCO-InstanceSegmentation_weapon/weapon_data.tar). The images were taken from the [MLWhiz](https://github.com/MLWhiz/object_detection) repository, which I mapped out manually using [supervise.ly](https://supervise.ly/).
