@@ -20,6 +20,7 @@ RUS | [ENG](#ENG)
 - [Dockerfile](#link)
 - [Виртуальная машина](#linkvmru)
 - [Техническая поддержка](#linkprobru)
+- [Выводы](#summru)
 - [Ссылки](#linkru001)
 
 
@@ -576,6 +577,21 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 ----
 [К содержанию](#link6)
 
+<h3 align="center">Вывод</h3><a id='summru'></a>
+
+По результатам работы, удалось построить два полноценных модуля: локальный с поддержкой `GPU` и работой с группой файлов и `web`-версию, 
+которое работает с единичными изображениями без необходимости настройки и установки. Данный модуль является достаточно гибким, в него можно добавлять новые модели, улучшать их качество посредством дообучения или перенастраивать под нужды бизнеса или иных заинтересованных лиц с помощью обучения на свое сете 
+и встраивании моделей через добавление новых конфигураций
+
+Данный модуль может быть использован и с другими моделями и фреймворками, не только `detectron` - необходимо лишь заменить модели в исполнительных файлах.
+
+В локальной версии, модуль может быть использован продвинутыми разработчиками или заинтересованными лицами, а в `web`-версии - пользователям не 
+важно уметь владеть навыками работы с детекторами - без значительных усилией - может быть получен некоторый результат. Для удобства, 
+была реализована поддержка `Docker` и добавлена подробная инструкция по настройке модуля. Спасибо за прочтение
+
+----
+[К содержанию](#link6)
+
 <h3>Ссылки</h3><a id='linkru001'></a>
 
 1. [Курс Deep learning school](https://www.dlschool.org/pro-track) - обучают и направляют. 
@@ -612,6 +628,7 @@ Table of content:
 - [Dockerfile](#linkdock)
 - [Virtual Machine](#linkvmeng)
 - [Help desk](#linkprobeng)
+- [Summary](#summeng)
 - [Credits](#linkeng001)
 
 
@@ -1140,6 +1157,19 @@ Here are some solutions to help you install if you choose to work outside of `do
 ----
 [Back to contest](#link7)
 
+<h3 align="center">Summary</h3><a id='summeng'></a>
+
+Based on the results of the work, it was possible to build two full-fledged modules: a local one with `GPU` support and work with a group of files and a` web` version, Which works with single images without the need for setup and installation. This module is flexible enough, it is possible to add new models to it that improve their quality through additional training or overstretch for the needs of business or other individuals through training on their own network.
+and embedding models by adding new configurations
+
+This module can be used with other models and frameworks, not only `detectron` - you just need to replace the models in the executable files.
+
+In the local version, the module can be used by advanced developers or interested parties, and in the `web` version - by users who do not
+it is important to be proficient with detectors - without significant effort - some result may be obtained. For comfort,
+`Docker` support has been implemented and detailed instructions for configuring the module have been added. Thanks for reading
+
+----
+[Back to contest](#link7)
 
 <h3>Credits</h3><a id='linkeng001'></a>
 
