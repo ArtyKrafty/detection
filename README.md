@@ -501,7 +501,8 @@ docker rm $(docker ps -qa)
 
 <h3 align="center">Виртуальная машина</h3><a id='linkvmru'></a>
 
-С помощью `Dockerfile` Вы можете установить `web-приложение` на виртуальную машину.  
+С помощью `Dockerfile` Вы можете установить `web-приложение` на виртуальную машину.  Минимальные требования к `Vm` - `8gb Ram`, `vCpu - 50%`, 
+`20Gb HDD` - стоимость такой машины в месяц - примерно `1700 - 1900 руб`. `Gpu` подключать нет смысла - работаем с единичными изображениями
 
 Регистрируемся на любом сервисе, предоставляющим услуги `ВМ` - например, я воспользовался [Ya.Cloud](https://cloud.yandex.ru/?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Msk_All_LGEN_Brand_cloud|8671134894&utm_term=%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%20%D0%BA%D0%BB%D0%B0%D1%83%D0%B4&utm_content=k50id|kwd-972722615673|cid|8671134894|aid|428872413994|gid|85184818777|pos||src|g_|dvc|c|reg|9040981|rin|9047023|&gclid=Cj0KCQiAoNWOBhCwARIsAAiHnEjpHDU6WbRvwmOl1NYDg5M5Zi_pZ-bc0dDwlu8sDRvP555cSH-W4bQaApuWEALw_wcB)
 
@@ -557,6 +558,14 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 ```
 Если при сборке `Docker` возникает ошибка `docker: Got permission denied issue` - просто выполняем команду: `sudo chmod 666 /var/run/docker.sock`
+
+Приложение будет доступно тут:
+
+```python
+
+публичный_IP-адрес_виртуальной машины>:8080
+
+```
 
 ----
 [К содержанию](#link6)
@@ -1081,7 +1090,8 @@ can't build `torch`.
 
 <h3 align="center">Virtual machine</h3><a id='linkvmeng'></a>
 
-With the `Dockerfile` you can install a` web application` on a virtual machine. 
+With the `Dockerfile` you can install a` web application` on a virtual machine. Minimum requirements for `Vm` -` 8gb Ram`, `vCpu - 50%`,
+`20Gb HDD`.
 
 We register on any service that provides VM services - for example, I used [Ya.Cloud](https://cloud.yandex.ru/?utm_source=google&utm_medium=cpc&utm_campaign=Search_RU_Msk_All_LGEN_Brand_cloud|8671134894&utm_term=%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%20%D0%BA%D0%BB%D0%B0%D1%83%D0%B4&utm_content=k50id|kwd-972722615673|cid|8671134894|aid|428872413994|gid|85184818777|pos||src|g_|dvc|c|reg|9040981|rin|9047023|&gclid=Cj0KCQiAoNWOBhCwARIsAAiHnEjpHDU6WbRvwmOl1NYDg5M5Zi_pZ-bc0dDwlu8sDRvP555cSH-W4bQaApuWEALw_wcB)
 
@@ -1122,7 +1132,7 @@ Copy the output and click create VM. Now we can connect to it in the terminal:
 
 ```python
 
-ssh <ЛОГИН>@<публичный_IP-адрес_виртуальной машины> 
+ssh <LOGIN>@<public_IP_VM> 
 
 ```
 The public address will be available to you after creation. Next, go [here](https://www.digitalocean.com/community/tutorials/docker-ubuntu-18-04-1-ru) and install Docker on your VM. After installation. everything is the same as yours locally:
@@ -1137,6 +1147,14 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 ```
 If during building `Docker` the error` docker: Got permission denied issue` occurs - just execute the command: `sudo chmod 666/var/run/docker.sock`
+
+The application will be available here:
+
+```python
+
+public_IP_VM:8080
+
+```
 
 ----
 [Back to contest](#link7)
