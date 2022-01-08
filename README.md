@@ -596,7 +596,10 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 В локальной версии, модуль может быть использован продвинутыми разработчиками или заинтересованными лицами, а в `web`-версии - пользователям не 
 важно уметь владеть навыками работы с детекторами - без значительных усилией - может быть получен некоторый результат. Для удобства, 
-была реализована поддержка `Docker` и добавлена подробная инструкция по настройке модуля. Спасибо за прочтение
+была реализована поддержка `Docker` и добавлена подробная инструкция по настройке модуля. Если у вас появится желание реализовать подобное приложение
+для мобильных телефонов = вы можете воспользоваться `D2go`, репозиторий [тут](https://github.com/facebookresearch/d2go)
+
+Спасибо за прочтение
 
 ----
 [К содержанию](#link6)
@@ -1184,7 +1187,10 @@ This module can be used with other models and frameworks, not only `detectron` -
 
 In the local version, the module can be used by advanced developers or interested parties, and in the `web` version - by users who do not
 it is important to be proficient with detectors - without significant effort - some result may be obtained. For comfort,
-`Docker` support has been implemented and detailed instructions for configuring the module have been added. Thanks for reading
+`Docker` support has been implemented and detailed instructions for configuring the module have been added. If you have a desire to implement the application
+for mobiles = you can use `D2go` repository [here](https://github.com/facebookresearch/d2go)   
+
+Thanks for reading
 
 ----
 [Back to contest](#link7)
