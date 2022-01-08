@@ -465,7 +465,8 @@ pythonw process_video.py
 
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
-<h3>Dockerfile</h3><a id='link'></a>
+
+<h3 align="center">Dockerfile</h3><a id='link'></a>
 
 
 
@@ -1059,8 +1060,7 @@ An application with limited functionality will start at the address - `http: // 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
 
-<h3>Dockerfile</h3><a id='linkdock'></a>
-
+<h3 align="center">Dockerfile</h3><a id='linkdock'></a>
 
 
 Another option is to run via Docker (local copy of https://detartyseg.herokuapp.com/) - weight of Image 14.4 GB:
