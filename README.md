@@ -5,6 +5,8 @@ RUS | [ENG](#ENG)
 <p float="left">
   <img src='https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0'>
   <img src='https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white'> 
+  <img src='https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white'> 
+  
    
 </p>
 
@@ -649,6 +651,9 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 <p float="left">
   <img src='https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0'>
   <img src='https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white'> 
+  <img src='https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white'> 
+  
+   
 </p>
 
 <h2 align="center">Modular image and video processing with OpenCV and Detectron2. Pipeline, web-app and local-app </h2>
