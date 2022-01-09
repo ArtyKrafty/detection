@@ -1,6 +1,14 @@
 RUS | [ENG](#ENG)
 
 <a id='RUS'></a>
+
+<p float="left">
+  <img src='https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0'>
+  <img src='https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white'> 
+   
+</p>
+
+
 <h2 align="center">Модульная обработка изображений с использованием OpenCV и генераторов Python с помощью Detectron2. Pipeline, web-приложение и локальное приложение </h2>
 
 
@@ -578,6 +586,15 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 <h3 align="center">Техническая поддержка</h3><a id='linkprobru'></a>
 
+
+<p float="left">
+  <img src='https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white'>
+  <img src='https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white'> 
+  <img src='https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white'> 
+  <img src='https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white'> 
+   <img src='https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white'> 
+</p>
+
 Проблемы возникают не с приложением, а могут возникнуть при установки сопутствующего окружения - `Detectron2`, `torch` и так далее. 
 Здесь собрал решения, которые помогут вам в установке, если вы решите работать не через `docker`. Тестировалось на `MacOs` и `Windows` - на `Win` - основная проблема - отсутствие `Microsoft Visual C++`. Данный сборник поможет решить основные проблемы по установке `torch` и `Detectron2`. Также, рекомендую, чтобы у вас уже была `Anaconda`
 
@@ -628,6 +645,12 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 <a id='ENG'></a>
 
+
+<p float="left">
+  <img src='https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0'>
+  <img src='https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white'> 
+</p>
+
 <h2 align="center">Modular image and video processing with OpenCV and Detectron2. Pipeline, web-app and local-app </h2>
 
 
@@ -654,7 +677,7 @@ Table of content:
 
 
 📝 Web-Application is in sleep mode. It will take time to launch - about `30 sec`. Also, malfunctions are possible - the application is on a free server.
-Photos are deleted after upload. The download is performed using the [Cloudinary] service (https://cloudinary.com/console/c-d40c93f179ad3e2d4db90096a7d9fe/getting-started), since `heroku` does not allow downloading the download to their servers.
+Photos are deleted after upload. The download is performed using the [Cloudinary](https://cloudinary.com/console/c-d40c93f179ad3e2d4db90096a7d9fe/getting-started), since `heroku` does not allow downloading the download to their servers.
 Photos are deleted after upload.
 
 <p align="center"><img src="https://i.ibb.co/X4W8wCw/2022-01-03-02-23-14.png" alt="2022-01-03-02-23-14" border="0"></p>
@@ -1171,6 +1194,15 @@ public_IP_VM:8080
 [Back to contest](#link7)
 
 <h3 align="center">Help desk</h3><a id='linkprobeng'></a>
+
+
+<p float="left">
+  <img src='https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white'>
+  <img src='https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white'> 
+  <img src='https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white'> 
+  <img src='https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white'> 
+   <img src='https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white'> 
+</p>
 
 Problems do not arise with the application, but problems may arise when problems arise - `Detectron2`,` torch` and so on.
 Here are some solutions to help you install if you choose to work outside of `docker`. Tested on `MacOs` and` Windows` - on `Win` - the main problem is the lack of` Microsoft Visual C++ `. This collection will help to solve the main problems when installing `torch` and` Detectron2`. Also, it is recommended to have Anaconda on board
