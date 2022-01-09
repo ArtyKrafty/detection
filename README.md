@@ -1,4 +1,4 @@
-RUS | [ENG](#ENG)
+<a href="#ENG"><img src='https://img.shields.io/badge/RUS-ENG-blue'></a>
 
 <a id='RUS'></a>
 
@@ -141,7 +141,7 @@ app.py работает с Flask - загрузка css и html из static и t
 ```
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 
 <h3 align="center">Локальная работа</h3><a id='link2'></a>
@@ -388,7 +388,7 @@ pythonw process_img.py
 Целью было продемонстрировать различные варианты работы модели без углублений в код со стороны пользователя данного модуля
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 <h4> 2. Скрипт process_video.py</h4><a id='link4'></a>
 
@@ -439,7 +439,7 @@ pythonw process_video.py
 > собственно, из минусов - наблюдаем изменчивость цвета маски, в идеале - маска должна быть статична и не менять цвет. На данный момент,
 > пришлось прибегнуть к хитрости - использовать разметку кадров и склеивать их в видео после обработки
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 <h3 align="center">Web-приложение</h3><a id='link5'></a>
 
@@ -476,7 +476,7 @@ pythonw process_video.py
 Здесь вы можете загрузить изображение с рабочего стола, выделить маски на нем или затемнить фон. Также возможно загрузка изображений по `URL` - только instance segmentation
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 
 <h3 align="center">Dockerfile</h3><a id='link'></a>
@@ -512,7 +512,7 @@ docker rm $(docker ps -qa)
 не сможет собрать `torch`
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 
 <h3 align="center">Виртуальная машина</h3><a id='linkvmru'></a>
@@ -584,7 +584,7 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 ```
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 <h3 align="center">Техническая поддержка</h3><a id='linkprobru'></a>
 
@@ -609,7 +609,7 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 | Docker  | ошибка с `С++` при сборке или `os` | зайдите в настройки `docker -> advanced` и увеличьте память `RAM` с 2 до 4 ГБ|
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 <h3 align="center">Вывод</h3><a id='summru'></a>
 
@@ -627,7 +627,7 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 Спасибо за прочтение
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
 
 <h3>Ссылки</h3><a id='linkru001'></a>
 
@@ -641,10 +641,25 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 8. [MLWhiz](https://github.com/MLWhiz/object_detection) - предоставлены образцы изображений для разметки
 
 ----
-<a href="#link6"><img src='https://img.shields.io/badge/К-содержанию-blue'></a>
-
-[RUS](#RUS) | ENG
-
+<a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="#RUS"><img src='https://img.shields.io/badge/ENG-RUS-blue'></a>
 <a id='ENG'></a>
 
 
@@ -660,7 +675,7 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 
 <p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
-<a id='RUS'></a>
+
 <a id='link7'></a>
 
 
@@ -768,7 +783,7 @@ Uploading images via Api Cloudly
 
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 
 <h3 align="center">Local execution</h3><a id='link9'></a>
@@ -1007,7 +1022,7 @@ There is no need to set weights.
 The goal was to demonstrate various options for the model without delving into the code on the part of the user of this module - it is enough to specify the address to the configuration
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 <h4> 2. Script process_video.py</h4><a id='link11'></a>
 
@@ -1059,7 +1074,7 @@ therefore the masks change from frame to frame. Probably the bug is only observe
 > had to resort to a trick - to use frame markup and glue them in the video after processing
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 <h3 align="center">Web-application</h3><a id='link12'></a>
 Script app_local.py - for local work
@@ -1091,7 +1106,7 @@ An application with limited functionality will start at the address - `http: // 
 Here you can load an image from the desktop, select masks on it or darken the background. It is also possible to download images by `URL` - only instance segmentation
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 <h3 align="center">Dockerfile</h3><a id='linkdock'></a>
 
@@ -1124,7 +1139,7 @@ can't build `torch`.
 
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 
 <h3 align="center">Virtual machine</h3><a id='linkvmeng'></a>
@@ -1196,7 +1211,7 @@ public_IP_VM:8080
 ```
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 <h3 align="center">Help desk</h3><a id='linkprobeng'></a>
 
@@ -1221,7 +1236,7 @@ Here are some solutions to help you install if you choose to work outside of `do
 | Docker | error with `C ++` on assembly or `os` | go to `docker -> advanced` settings and increase the` RAM` memory from 2 GB to 4 GB |
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 <h3 align="center">Summary</h3><a id='summeng'></a>
 
@@ -1238,7 +1253,7 @@ for mobiles - you can use `D2go` repository [here](https://github.com/facebookre
 Thanks for reading
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
 
 <h3>Credits</h3><a id='linkeng001'></a>
 
@@ -1253,4 +1268,4 @@ Thanks for reading
 
 
 ----
-<a href="#link7"><img src='https://img.shields.io/badge/Back-to content-blue'></a>
+<a href="#link7"><img src='https://img.shields.io/badge/Back to content-&#x21A9-blue'></a>
