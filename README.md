@@ -642,23 +642,14 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 
 ----
 <a href="#link6"><img src='https://img.shields.io/badge/К содержанию-&#x21A9-blue'></a>
+
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <a href="#RUS"><img src='https://img.shields.io/badge/ENG-RUS-blue'></a>
 <a id='ENG'></a>
 
