@@ -624,6 +624,13 @@ docker run --rm --name detectron2 -p 8080:8080 detectron2
 была реализована поддержка `Docker` и добавлена подробная инструкция по настройке модуля. Если у вас появится желание реализовать подобное приложение
 для мобильных телефонов - вы можете воспользоваться `D2go`, репозиторий [тут](https://github.com/facebookresearch/d2go)
 
+___
+
+> Bonus  В этом ноутбуке, вы найдете `baseline` применения детектора для переноса стиля. В комбинации с `VGG19`. Встраивать 
+> данный модуль не стали - обязательно требуется наличие `GPU` - иначе процесс обучения достаточно долгий
+
+<a href="https://colab.research.google.com/drive/18_yI7pCEOFVsinkVO1eNrz7wKdizE-zt?usp=sharing"><img src='https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252'></a>
+
 Спасибо за прочтение
 
 ----
@@ -1240,6 +1247,14 @@ In the local version, the module can be used by advanced developers or intereste
 it is important to be proficient with detectors - without significant effort - some result may be obtained. For comfort,
 `Docker` support has been implemented and detailed instructions for configuring the module have been added. If you have a desire to implement the application
 for mobiles - you can use `D2go` repository [here](https://github.com/facebookresearch/d2go)   
+
+___
+
+> Bonus In this notebook app you will find a `basic` style transfer detector. As part of `VGG19`. intervene
+> the presence of the module did not become - a `GPU` is required - otherwise the learning process is quite long
+
+<a href="https://colab.research.google.com/drive/18_yI7pCEOFVsinkVO1eNrz7wKdizE-zt?usp=sharing"><img src='https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252'></a>
+
 
 Thanks for reading
 
