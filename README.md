@@ -428,9 +428,11 @@ pythonw process_video.py
 Нажимаем START и в папке outputs у вас обработанное видео. Занимает некоторое время
 
 ```
-**Примечание.** Важно! На данный момент, существует [bug](https://github.com/facebookresearch/detectron2/issues/3780) на класс
-`VideoVisualizer`. Чтобы его обойти, был использован класс `Visualizer`, который используется для изображений
-поэтому маски от кадра к кадру меняются. Возможно bug наблюдается только на `M1 silicone`
+> 📝  **Примечание.** Важно! На данный момент, существует [bug](https://github.com/facebookresearch/detectron2/issues/3780) на класс
+`VideoVisualizer`. Если возникает (видео не хочет склеиваться) - чтобы его обойти, можно использовать
+класс `Visualizer`, который используется для изображений, но маски от кадра к кадру будут меняться. 
+Возможно bug наблюдается только на `M1 silicone`. [Пример вывода](https://github.com/ArtyKrafty/detection/blob/main/output/sample_vis_visual.mp4)
+вы можете посмотреть в папке `outputs`
 
 <p align="center">
   <img src="sample.gif" alt="animated" />
@@ -1060,9 +1062,11 @@ also you can choose the confidence threshold.
 Press START and in the outputs folder you have the processed video. Takes some time
 
 ```
-> 📝 Important! At the moment, there is a [bug](https://github.com/facebookresearch/detectron2/issues/3780) for the class
-`VideoVisualizer`. To get around it, the `Visualizer` class was used, which is used for images
-therefore the masks change from frame to frame. Probably the bug is only observed on M1 silicone
+> 📝 Important! At the moment, there is a [bug](https://github.com/facebookresearch/detectron2/issues/3780) on the class
+`VideoVisualizer`. If it occurs (the video does not want to stick together) - to get around it, you can use
+the `Visualizer` class, which is used for images, but the masks will change from frame to frame.
+Perhaps the bug is observed only on `M1 silicone`. [Sample output](https://github.com/ArtyKrafty/detection/blob/main/output/sample_vis_visual.mp4)
+you can look in the `outputs` folder
 
 <p align="center">
   <img src="sample.gif" alt="animated" />
