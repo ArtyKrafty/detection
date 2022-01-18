@@ -99,11 +99,11 @@ def main(args):
         return
     finally:
         if isinstance(predict, CaptureVid):
-            capture_vid.cleanup()
-        if display_vid:
-            display_vid.cleanup()
+            capture_video.cleanup()
+        if display_video:
+            display_video.cleanup()
         if save_video:
-            save_vid.cleanup()
+            save_video.cleanup()
 
 
 if __name__ == "__main__":

@@ -17,9 +17,10 @@ class AnnotateVid(Pipeline):
 
     __________________________________________________________
 
-    примечание: на данный момент наблюдается bug у Detectron2
-    поэтому работает на Visualizer, вместо VideoVisualizer
-    код закомментирован под VideoVisualizer
+    примечание: если у вас не работает 
+    VideoVisualizer - замените на 
+    Visualizer, вместо VideoVisualizer
+    код закомментирован под Visualizer
 
 
     """
@@ -46,8 +47,8 @@ class AnnotateVid(Pipeline):
             return
         dst_image = data[self.vis]
         outputs = data["predictions"]    
-        visualizer = Visualizer(data["image"][..., ::-1], self.metadata)
-        vis_image = visualizer.draw_instance_predictions(outputs["instances"].to(self.cpu_device))
-        # vis_image = self.video_visualizer.draw_instance_predictions(data["image"][..., ::-1], outputs["instances"].to(self.cpu_device))
+        # visualizer = Visualizer(data["image"][..., ::-1], self.metadata)
+        # vis_image = visualizer.draw_instance_predictions(outputs["instances"].to(self.cpu_device))
+        vis_image = self.video_visualizer.draw_instance_predictions(data["image"][..., ::-1], outputs["instances"].to(self.cpu_device))
         vis_image = cv2.cvtColor(vis_image.get_image(), cv2.COLOR_RGB2BGR)
         data[self.vis] = vis_image
