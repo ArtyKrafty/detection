@@ -646,7 +646,7 @@ ___
 4. [OpenCV](https://opencv.org/) - средство обработки видео и изображений. Без этой библиотеки было бы сложнее. 
 5. [Heroku](https://www.heroku.com/) - быстрый способ разработки и размещения приложений. 
 6. [pyTorch](https://pytorch.org/docs/stable/torch.html) - фреймворк работы с нейронными сетями  
-7. [Docker](https://www.docker.com/) - средство упаковки и перемещения изображений  
+7. [Docker](https://www.docker.com/) - средство упаковки и перемещения приложений  
 8. [MLWhiz](https://github.com/MLWhiz/object_detection) - предоставлены образцы изображений для разметки
 
 ----
