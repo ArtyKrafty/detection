@@ -547,7 +547,6 @@ cd <your_app_name>
 ssh-keygen -t rsa
 
 ```
-<p align="center"><img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0"></p>
 
 Вам будет предложено создать имя ключа и создать пароли. Дальше вам просто необходимо прочитать ваш публичный ключ и скопировать вывод 
 в специальное поле виртуальной машины
@@ -1174,7 +1173,7 @@ cd <your_app_name>
 ssh-keygen -t rsa
 
 ```
-<p align="center"><img src="https://i.ibb.co/ChkD8qH/2022-01-06-00-00-42.png" alt="2022-01-06-00-00-42" border="0"></p>
+
 
 You will be prompted to create a key name and create passwords. Then you just need to read your public key and copy the output
 in a special field of the virtual machine
