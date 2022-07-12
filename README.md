@@ -15,7 +15,7 @@
 
 <h3 align="center">На данный момент доступно только в Ya.Cloud в связи с атаками и утечками Oath_tokens с Heroku </h3>
 
-<p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
+<p align="center"><img src="https://drive.google.com/uc?id=1abZpyccv5z0v8zrr4dQX65JxZpEslnic"  border="0"></a></p>
 
 <a id='link6'></a>
 
@@ -190,7 +190,7 @@ pip install -r requirements_loc.txt
 
 Detectron2 необходимо установить в соседний каталог с папкой модуля
 
-<p align="center"><img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0"></p>
+<p align="center"><img src="https://drive.google.com/uc?id=1Ce2KHx9lJSDbJ_igRQ8wKRmm_bQ3hAi_"  border="0"></a></p>
 
 Установка `Detectron2`
 
@@ -674,7 +674,7 @@ ___
 <h2 align="center">Modular image and video processing with OpenCV and Detectron2. Pipeline, web-app and local-app </h2>
 
 
-<p align="center"><img src='https://i.ibb.co/rbJmBSV/Computer-Vision-Object-Detection-original.jpg'></p>
+<p align="center"><img src="https://drive.google.com/uc?id=1abZpyccv5z0v8zrr4dQX65JxZpEslnic"  border="0"></a></p>
 
 <a id='link7'></a>
 
@@ -829,7 +829,7 @@ pip install -r requirements_loc.txt
 
 Detectron2 must be installed in the adjacent directory with the module folder
 
-<p align="center"><img src="https://i.ibb.co/R25y4Lx/2021-12-26-19-35-04.png" alt="2021-12-26-19-35-04" border="0"></p>
+<p align="center"><img src="https://drive.google.com/uc?id=1Ce2KHx9lJSDbJ_igRQ8wKRmm_bQ3hAi_"  border="0"></a></p>
 
 `Detectron2` installation
 
