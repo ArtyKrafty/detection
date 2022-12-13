@@ -2,7 +2,7 @@
 -f https://download.pytorch.org/whl/torch_stable.html
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.8/index.html
 detectron2
-torch== 1.8.1+cpu 
+torch== 1.13.0+cpu 
 torchvision==0.9.1+cpu
 pillow>=8.3.2
 opencv-python-headless
@@ -10,7 +10,7 @@ requests==2.22.0
 Flask==1.1.1
 Jinja2==2.11.3
 gunicorn==19.9.0
-certifi==2019.11.28
+certifi==2022.12.07
 itsdangerous==1.1.0
 docutils==0.16
 cloudinary
